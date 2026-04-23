@@ -27,7 +27,7 @@ export async function CTA() {
         <p className="mt-8 text-[15px] md:text-[17px] leading-[1.55] text-[var(--color-ink-muted)] max-w-[60ch] mx-auto">
           {t('body')}
         </p>
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div className="mt-12 flex flex-col items-center justify-center gap-5">
           <a
             href="mailto:wahb@diacorp.energy"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-[var(--color-sun)] text-[var(--color-bg)] font-mono text-[12px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
@@ -35,14 +35,24 @@ export async function CTA() {
             {t('primary')}
             <span className="ltr:rotate-0 rtl:rotate-180">→</span>
           </a>
-          <a
-            href="/DiaCorp_Energy_Pitch.pptx"
-            download
-            className="inline-flex items-center gap-2 px-7 py-3.5 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-mono text-[12px] tracking-[0.16em] uppercase hover:border-[var(--color-sun)] hover:text-[var(--color-sun)] transition-colors"
-          >
-            {t('deck')}
-            <span>↓</span>
-          </a>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <a
+              href="/DiaCorp_Energy_Pitch.pptx"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-mono text-[11px] tracking-[0.16em] uppercase hover:border-[var(--color-sun)] hover:text-[var(--color-sun)] transition-colors"
+            >
+              {t('deckFull')}
+              <span>↓</span>
+            </a>
+            <a
+              href="/DiaCorp_Projects_Explained.pptx"
+              download
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-mono text-[11px] tracking-[0.16em] uppercase hover:border-[var(--color-sun)] hover:text-[var(--color-sun)] transition-colors"
+            >
+              {t('deckProjects')}
+              <span>↓</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>

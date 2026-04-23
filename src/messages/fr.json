@@ -327,7 +327,9 @@
     "body": "Ces prototypes sont une démonstration visuelle — pas encore du code de production. Avec un budget de développement de 2 M$ sur 18 mois, la Phase 1 (Marché Énergie, Crédits Carbone, O&M) est livrable et défendable devant le board.",
     "primary": "Planifier une démonstration",
     "secondary": "Voir le code source",
-    "deck": "Télécharger le deck (PPTX)"
+    "deck": "Télécharger le deck (PPTX)",
+    "deckFull": "Deck complet · Pitch (PPTX)",
+    "deckProjects": "Deck Projets IT (PPTX)"
   },
   "footer": {
     "confidential": "Strictement confidentiel · Usage interne DiaCorp Energy",
