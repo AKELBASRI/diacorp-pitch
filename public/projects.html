@@ -84,6 +84,23 @@
     cursor: pointer;
     user-select: none;
   }
+  .controls .deck-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border: 1px solid var(--sun);
+    color: var(--sun);
+    font-family: inherit;
+    letter-spacing: inherit;
+    text-transform: inherit;
+    text-decoration: none;
+    transition: background .15s, color .15s;
+  }
+  .controls .deck-link:hover {
+    background: var(--sun);
+    color: white;
+  }
   .controls .darija-toggle .switch {
     width: 32px;
     height: 18px;
@@ -438,6 +455,11 @@
     <span class="en">Show Darija notes 🇲🇦</span>
     <span class="switch" role="switch" id="darija-switch" tabindex="0"></span>
   </label>
+  <a class="deck-link" href="DiaCorp_Projects_Explained.pptx" download>
+    <span class="fr">Télécharger PPTX</span>
+    <span class="en">Download PPTX</span>
+    <span>↓</span>
+  </a>
 </div>
 
 <header class="top">

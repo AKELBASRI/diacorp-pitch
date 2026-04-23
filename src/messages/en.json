@@ -326,7 +326,8 @@
     "heading": "Prototype all ten, ship the priority three.",
     "body": "These mockups are a visual demonstration — not yet production code. With a $2M engineering budget over 18 months, Phase 1 (Spot Market, Carbon Credits, O&M) is shippable and board-defensible.",
     "primary": "Book a demo",
-    "secondary": "View the source"
+    "secondary": "View the source",
+    "deck": "Download the deck (PPTX)"
   },
   "footer": {
     "confidential": "Strictly confidential · DiaCorp Energy internal use",
