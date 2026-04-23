@@ -27,22 +27,13 @@ export async function CTA() {
         <p className="mt-8 text-[15px] md:text-[17px] leading-[1.55] text-[var(--color-ink-muted)] max-w-[60ch] mx-auto">
           {t('body')}
         </p>
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-3">
+        <div className="mt-12 flex items-center justify-center">
           <a
             href="mailto:wahb@diacorp.energy"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-[var(--color-sun)] text-[var(--color-bg)] font-mono text-[12px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-[var(--color-sun)] text-[var(--color-bg)] font-mono text-[12px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
           >
             {t('primary')}
             <span className="ltr:rotate-0 rtl:rotate-180">→</span>
-          </a>
-          <a
-            href="https://github.com/AKELBASRI/diacorp-pitch"
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-2 px-7 py-3.5 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-mono text-[12px] tracking-[0.16em] uppercase hover:border-[var(--color-sun)] hover:text-[var(--color-sun)] transition-colors"
-          >
-            {t('secondary')}
-            <span>↗</span>
           </a>
         </div>
       </div>
