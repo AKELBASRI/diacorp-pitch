@@ -1,0 +1,326 @@
+{
+  "meta": {
+    "title": "DiaCorp Energy — Thèse Logicielle 1 GW",
+    "description": "Dix plateformes logicielles pour désintermédier ONEE et livrer l'énergie verte la moins chère du Maroc."
+  },
+  "nav": {
+    "thesis": "Thèse",
+    "strategies": "Stratégies",
+    "financials": "Financier",
+    "timeline": "Calendrier",
+    "contact": "Contact"
+  },
+  "hero": {
+    "kicker": "Mémorandum d'Information — Avril 2026",
+    "titleLine1": "Un gigawatt.",
+    "titleLine2": "Livré direct.",
+    "titleLine3": "Sans ONEE.",
+    "lede": "DiaCorp Energy construit 1 GW de solaire photovoltaïque dans l'Oriental marocain. Le plant vend des électrons à 0,07 $/kWh. Les dix plateformes logicielles que voici vendent des bits — et transforment 120 M$ de CAPEX en 2,7 Mds$ de revenus récurrents à l'horizon 2031.",
+    "ctaPrimary": "Explorer la thèse",
+    "ctaSecondary": "Télécharger le mémorandum",
+    "stats": {
+      "capex": "CAPEX initial",
+      "capexValue": "120 M$",
+      "capacity": "Capacité cible",
+      "capacityValue": "1 GW",
+      "revenue": "Revenu logiciel An 5",
+      "revenueValue": "2,67 Mds$",
+      "margin": "Marge logicielle moy.",
+      "marginValue": "56%"
+    }
+  },
+  "thesis": {
+    "eyebrow": "La thèse en une phrase",
+    "heading": "ONEE vend des électrons à 1,20 MAD/kWh. Nous vendons la même énergie — verte — à 0,70 MAD/kWh, plus la couche logicielle qui la distribue.",
+    "subPoints": {
+      "0": {
+        "title": "Le goulot d'étranglement n'est pas la production",
+        "body": "Le Maroc a 3 000 kWh/m²/an d'irradiation. Le vrai goulot est la distribution monopolistique et la tarification industrielle non-compétitive d'ONEE."
+      },
+      "1": {
+        "title": "Le contournement légal existe",
+        "body": "Loi 13-09 et le décret 47-09 autorisent l'autoproduction et la vente directe via PPA. ONEE ne transporte que — moyennant un péage de 0,007 $/kWh."
+      },
+      "2": {
+        "title": "La couche logicielle capture 10× la valeur",
+        "body": "Vendre 1 MWh = 70 $. Vendre l'API, le marché, la donnée carbone, le jumeau numérique qui l'entoure = 700 $. C'est là que sont les milliards."
+      }
+    }
+  },
+  "positioning": {
+    "eyebrow": "Positionnement",
+    "heading": "Face à ONEE — comparaison",
+    "onee": "ONEE (monopole historique)",
+    "diacorp": "DiaCorp (nouvelle plateforme)",
+    "rows": {
+      "price": {
+        "label": "Tarif industriel moyen",
+        "onee": "1,20 MAD/kWh",
+        "diacorp": "0,70 MAD/kWh"
+      },
+      "green": {
+        "label": "Part renouvelable garantie",
+        "onee": "~20% (mix)",
+        "diacorp": "100% PV + stockage"
+      },
+      "cbam": {
+        "label": "Conformité CBAM Europe",
+        "onee": "Non certifiée",
+        "diacorp": "Certificats on-chain"
+      },
+      "flex": {
+        "label": "Tarification dynamique",
+        "onee": "Contrats rigides",
+        "diacorp": "Marché spot H+1"
+      },
+      "time": {
+        "label": "Délai de raccordement",
+        "onee": "18-36 mois",
+        "diacorp": "8 mois (zone industrielle)"
+      }
+    }
+  },
+  "strategies": {
+    "eyebrow": "Dix plateformes",
+    "heading": "Le portefeuille logiciel",
+    "subheading": "Chaque fiche est un produit autonome, avec son propre business model, son stack, et son calendrier. Ensemble ils forment un conglomérat énergétique-numérique d'une valeur de 15 Mds$+.",
+    "items": {
+      "data-center": {
+        "name": "Colocation IA Hyperscale",
+        "pitch": "500 MW de capacité GPU verte pour Microsoft, OpenAI et les souverains IA européens.",
+        "description": "L'Europe a besoin de calcul vert. L'Afrique du Nord est à 50 ms. Nous colocalisons un data center Tier-IV dans la zone industrielle DIA1 et vendons du GPU-as-a-Service certifié 100% solaire. Partenariat ancre Equinix / Microsoft à signer avant DIA2.",
+        "mockup": {
+          "title": "DiaCorp Compute",
+          "subtitle": "Oriental-1 · H100 Cluster",
+          "metrics": {
+            "utilization": "Utilisation",
+            "pue": "PUE",
+            "carbon": "Intensité CO₂",
+            "contracted": "Contracté"
+          }
+        }
+      },
+      "energy-market": {
+        "name": "Marché Énergie-Spot",
+        "pitch": "Le premier carnet d'ordres électrique du Maroc. PPA programmables, règlement H+15.",
+        "description": "Les off-takers achètent des blocs MWh en temps réel, prix dynamique selon la production PV. Smart contracts on-chain (Base L2) automatisent exécution et règlement. VPP agrégateur qui mutualise petits producteurs solaires et batteries distribuées.",
+        "mockup": {
+          "title": "DiaCorp Market",
+          "subtitle": "Order Book · Delivery J+1",
+          "columns": {
+            "bids": "Achats",
+            "asks": "Ventes",
+            "last": "Dernier échange"
+          }
+        }
+      },
+      "carbon-tokens": {
+        "name": "Crédits Carbone Tokenisés",
+        "pitch": "RECs on-chain pour exportateurs marocains soumis au CBAM dès 2026.",
+        "description": "OCP, Renault-Tanger, Citic-Dicastal paient déjà la taxe carbone aux frontières de l'UE. Nous émettons des certificats d'énergie renouvelable vérifiables Verra/Gold Standard sur Polygon. Le token représente 1 MWh + 0,6 tCO₂ évitée.",
+        "mockup": {
+          "title": "DiaCorp Carbon",
+          "subtitle": "REC Ledger · Polygon",
+          "labels": {
+            "portfolio": "Portefeuille",
+            "retired": "Retirés",
+            "price": "Prix au comptant",
+            "vintage": "Millésime"
+          }
+        }
+      },
+      "predictive-om": {
+        "name": "Jumeau Numérique O&M",
+        "pitch": "Vision par ordinateur + LSTM pour réduire le LCOE de 20% et licencier en Afrique.",
+        "description": "Ingestion capteurs onduleurs, imagerie drone, météo. Détection automatique de panneaux souillés, micro-fissures, points chauds. Réduit l'indisponibilité de 15% à 3%. Vendu en SaaS (~500 k$/GW/an) à NOOR, ONEE, et opérateurs Afrique de l'Ouest.",
+        "mockup": {
+          "title": "DiaCorp O&M",
+          "subtitle": "DIA1 · Digital Twin",
+          "labels": {
+            "healthy": "Sain",
+            "warning": "Alerte",
+            "critical": "Critique",
+            "yield": "Rendement jour"
+          }
+        }
+      },
+      "industrial-zone": {
+        "name": "ERP Zone Industrielle Verte",
+        "pitch": "SaaS multi-locataire pour les 50 entreprises installées autour de chaque plant.",
+        "description": "Facturation énergie, comptabilité carbone par locataire (Scope 1/2/3), marché intra-zone de chaleur fatale, pooling logistique. 5-50 k$/tenant/mois × 400 tenants à maturité.",
+        "mockup": {
+          "title": "DiaCorp Zones",
+          "subtitle": "Ain Beni Mathar · 42 locataires",
+          "labels": {
+            "tenant": "Locataire",
+            "consumption": "Conso MWh",
+            "scope": "Scope",
+            "bill": "Facture"
+          }
+        }
+      },
+      "green-hydrogen": {
+        "name": "Optimiseur H₂ Vert",
+        "pitch": "Arbitrage logiciel électron → hydrogène → ammoniac pour export Rotterdam.",
+        "description": "Algorithme de décision temps réel : vendre l'électron, le stocker (BESS), ou l'électrolyser en H₂/NH₃ selon les prix marché. Export via Jorf Lasfar et Nador West Med. Marché H₂ vert estimé à 1 000 Mds$ en 2035.",
+        "mockup": {
+          "title": "DiaCorp H₂",
+          "subtitle": "Decision Engine · Live",
+          "labels": {
+            "sell": "Vendre",
+            "store": "Stocker",
+            "electrolyze": "Électrolyser",
+            "forecast": "Prévision 72h"
+          }
+        }
+      },
+      "bess-arbitrage": {
+        "name": "Arbitrage BESS par RL",
+        "pitch": "Tesla Autobidder à la marocaine — 40% IRR sur les batteries grid-scale.",
+        "description": "Agent d'apprentissage par renforcement qui achète l'énergie excédentaire midi (prix négatif possible) et la revend au pic du soir. 300 MWh de BESS colocalisés. Revenus additionnels : services auxiliaires grille (réserve primaire).",
+        "mockup": {
+          "title": "DiaCorp BESS",
+          "subtitle": "RL Agent · 300 MWh",
+          "labels": {
+            "soc": "SOC",
+            "buy": "Achat",
+            "sell": "Vente",
+            "pnl": "P&L jour"
+          }
+        }
+      },
+      "corporate-ppa": {
+        "name": "Marketplace PPA Corporate",
+        "pitch": "Mettre en relation OCP, Stellantis, Citic avec notre capacité — 2% commission.",
+        "description": "Plateforme où l'acheteur corporate saisit ses besoins (MW, durée, géo). L'algorithme matche avec notre capacité disponible, génère automatiquement le PPA, intègre le contrat de transport ONEE. Commission 1-3% × 100 M$ par contrat × 20 ans.",
+        "mockup": {
+          "title": "DiaCorp PPA",
+          "subtitle": "Deal Desk · Pipeline",
+          "labels": {
+            "counterparty": "Contrepartie",
+            "capacity": "Capacité",
+            "term": "Durée",
+            "lcoe": "LCOE"
+          }
+        }
+      },
+      "retail-solar": {
+        "name": "Solar-as-a-Service B2C",
+        "pitch": "Installation gratuite, 50 $/mois. 1 million de toits marocains visés.",
+        "description": "App mobile grand public. Le client signe, nous installons les panneaux + micro-onduleur, financement intégré via BMCE (le CFO Imchichi vient de BMCE). L'abonnement mensuel remplace sa facture ONEE. Scale B2C massif, revenu récurrent SaaS-like.",
+        "mockup": {
+          "title": "DiaCorp Chems",
+          "subtitle": "Abonnement Solaire",
+          "labels": {
+            "saved": "Économisé ce mois",
+            "offset": "CO₂ évité",
+            "produced": "Produit",
+            "consumed": "Consommé"
+          }
+        }
+      },
+      "gis-permitting": {
+        "name": "GIS Foncier Solaire",
+        "pitch": "La base de données 'où construire le prochain GW' — vendue aux IPP africains.",
+        "description": "SIG propriétaire combinant irradiance solaire, proximité grille, disponibilité foncière, statut administratif. Monétisation : SaaS aux IPP, gouvernements africains, DFIs (AfDB, BEI). Nous l'avons déjà construit pour DIA — autant le vendre.",
+        "mockup": {
+          "title": "DiaCorp Atlas",
+          "subtitle": "Morocco · Site Scoring",
+          "labels": {
+            "irradiance": "Irradiance",
+            "grid": "Grille proche",
+            "land": "Foncier",
+            "score": "Score composite"
+          }
+        }
+      }
+    },
+    "tags": {
+      "revenue": "Revenu An 5",
+      "margin": "Marge",
+      "capex": "CAPEX",
+      "phase": "Phase"
+    }
+  },
+  "financials": {
+    "eyebrow": "Agrégation financière",
+    "heading": "Du plant à la plateforme",
+    "subheading": "Vendre le kWh rapporte 120 M$/an en régime établi. Les plateformes multiplient la revenue par 22× — à marge double.",
+    "cards": {
+      "plant": {
+        "label": "Plant physique (1 GW)",
+        "value": "120 M$",
+        "note": "Revenu annuel · marge 18%"
+      },
+      "software": {
+        "label": "Plateformes logicielles",
+        "value": "2,67 Mds$",
+        "note": "Revenu An 5 · marge moyenne 56%"
+      },
+      "combined": {
+        "label": "Valorisation cible",
+        "value": "15 Mds$",
+        "note": "Multiple SaaS 6× × revenu"
+      }
+    }
+  },
+  "timeline": {
+    "eyebrow": "Exécution",
+    "heading": "Trois phases, un GW",
+    "phases": {
+      "0": {
+        "label": "Phase 1 · 2026-2027",
+        "title": "Fondations logicielles",
+        "items": [
+          "Marché Énergie-Spot (MVP privé)",
+          "Crédits Carbone Tokenisés (émission pilote)",
+          "Jumeau Numérique O&M (sur DIA1)",
+          "Arbitrage BESS (300 MWh)",
+          "GIS Foncier Solaire (commercialisation)"
+        ],
+        "investment": "Invest. logiciel : 15 M$",
+        "revenue": "Revenu projeté : 80 M$"
+      },
+      "1": {
+        "label": "Phase 2 · 2027-2029",
+        "title": "Échelle & ancres hyperscale",
+        "items": [
+          "Colocation IA (signature Microsoft / Equinix)",
+          "ERP Zone Industrielle (lancement multi-tenants)",
+          "Marketplace PPA Corporate (OCP, Stellantis)",
+          "DIA2 + DIA3 opérationnels (450 MW)"
+        ],
+        "investment": "Invest. logiciel + infra : 480 M$",
+        "revenue": "Revenu projeté : 1,5 Mds$"
+      },
+      "2": {
+        "label": "Phase 3 · 2029-2032",
+        "title": "Plateforme continentale",
+        "items": [
+          "H₂ Vert (export Rotterdam, Corée)",
+          "Solar-as-a-Service B2C (app, 1M clients)",
+          "Extension Dakhla, Laayoune, Tiznit",
+          "Capacité totale 1 GW + 1 GW H₂"
+        ],
+        "investment": "Invest. logiciel + infra : 1,2 Mds$",
+        "revenue": "Revenu projeté : 2,67 Mds$"
+      }
+    }
+  },
+  "team": {
+    "eyebrow": "L'équipe DiaCorp / KermaSys",
+    "heading": "25 ans dans l'énergie marocaine",
+    "body": "Wahb Kermadi (CEO) a dirigé des EPC gaz et solaire au Maroc, en Libye, au Maghreb depuis 2005. Imchichi (CFO) vient de BMCE Bank et d'AttijariWafa — les deux banques qui financeront la Phase 1. Mohammed (BD) a 38 ans d'expérience du marché africain. Ce dossier logiciel complète cette crédibilité industrielle par la seule capacité manquante : construire, déployer et vendre du code."
+  },
+  "cta": {
+    "eyebrow": "Prochaine étape",
+    "heading": "Prototyper les dix, livrer les trois prioritaires.",
+    "body": "Ces prototypes sont une démonstration visuelle — pas encore du code de production. Avec un budget de développement de 2 M$ sur 18 mois, la Phase 1 (Marché Énergie, Crédits Carbone, O&M) est livrable et défendable devant le board.",
+    "primary": "Planifier une démonstration",
+    "secondary": "Voir le code source"
+  },
+  "footer": {
+    "confidential": "Strictement confidentiel · Usage interne DiaCorp Energy",
+    "version": "Version prototype · Avril 2026"
+  }
+}
