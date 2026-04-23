@@ -8,7 +8,15 @@
     "strategies": "Stratégies",
     "financials": "Financier",
     "timeline": "Calendrier",
-    "contact": "Contact"
+    "contact": "Contact",
+    "gallery": "Prototypes"
+  },
+  "gallery": {
+    "kicker": "Galerie · Tous les prototypes",
+    "title": "Dix produits, une page.",
+    "lede": "Chaque stratégie condensée en un mockup d'interface — le geste, le ton, la densité d'information. Rien que les écrans, sans la narration de l'offre.",
+    "back": "Retour à la thèse",
+    "count": "0{n} / 10"
   },
   "hero": {
     "kicker": "Mémorandum d'Information — Avril 2026",

@@ -8,7 +8,15 @@
     "strategies": "Strategies",
     "financials": "Financials",
     "timeline": "Timeline",
-    "contact": "Contact"
+    "contact": "Contact",
+    "gallery": "Prototypes"
+  },
+  "gallery": {
+    "kicker": "Gallery · All prototypes",
+    "title": "Ten products, one page.",
+    "lede": "Each strategy distilled down to its interface mockup — the gesture, the tone, the information density. Just the screens, no pitch copy.",
+    "back": "Back to the thesis",
+    "count": "0{n} / 10"
   },
   "hero": {
     "kicker": "Information Memorandum — April 2026",

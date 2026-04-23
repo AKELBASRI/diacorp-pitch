@@ -1,4 +1,5 @@
 import {getTranslations} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
 import {LocaleSwitcher} from './LocaleSwitcher';
 
 export async function Nav() {
@@ -7,7 +8,7 @@ export async function Nav() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-line)] bg-[var(--color-bg)]/85 backdrop-blur-xl">
       <div className="mx-auto max-w-[1400px] px-6 lg:px-12 flex items-center justify-between h-14">
-        <a href="#top" className="flex items-center gap-2.5 group">
+        <Link href="/" className="flex items-center gap-2.5 group">
           <svg
             viewBox="0 0 24 24"
             className="w-5 h-5 text-[var(--color-sun)]"
@@ -21,20 +22,26 @@ export async function Nav() {
           <span className="font-display text-[15px] tracking-tight">
             DiaCorp<span className="text-[var(--color-ink-muted)]">.</span>Energy
           </span>
-        </a>
+        </Link>
         <nav className="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--color-ink-muted)]">
-          <a href="#thesis" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/#thesis" className="hover:text-[var(--color-ink)] transition-colors">
             {t('thesis')}
-          </a>
-          <a href="#strategies" className="hover:text-[var(--color-ink)] transition-colors">
+          </Link>
+          <Link href="/#strategies" className="hover:text-[var(--color-ink)] transition-colors">
             {t('strategies')}
-          </a>
-          <a href="#financials" className="hover:text-[var(--color-ink)] transition-colors">
+          </Link>
+          <Link
+            href="/prototypes"
+            className="text-[var(--color-sun)] hover:text-[var(--color-ink)] transition-colors"
+          >
+            {t('gallery')}
+          </Link>
+          <Link href="/#financials" className="hover:text-[var(--color-ink)] transition-colors">
             {t('financials')}
-          </a>
-          <a href="#timeline" className="hover:text-[var(--color-ink)] transition-colors">
+          </Link>
+          <Link href="/#timeline" className="hover:text-[var(--color-ink)] transition-colors">
             {t('timeline')}
-          </a>
+          </Link>
         </nav>
         <LocaleSwitcher />
       </div>
