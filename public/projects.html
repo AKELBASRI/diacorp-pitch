@@ -450,11 +450,6 @@
     <button id="btn-fr" class="active" aria-label="Français">FR</button>
     <button id="btn-en" aria-label="English">EN</button>
   </div>
-  <label class="darija-toggle" for="darija-switch">
-    <span class="fr">Afficher en darija 🇲🇦</span>
-    <span class="en">Show Darija notes 🇲🇦</span>
-    <span class="switch" role="switch" id="darija-switch" tabindex="0"></span>
-  </label>
   <a class="deck-link" href="DiaCorp_Projects_Explained.pptx" download>
     <span class="fr">Télécharger PPTX</span>
     <span class="en">Download PPTX</span>
@@ -1114,7 +1109,6 @@
     var body = document.body;
     var fr = document.getElementById('btn-fr');
     var en = document.getElementById('btn-en');
-    var dar = document.getElementById('darija-switch');
 
     function setLang(l) {
       body.classList.toggle('lang-en', l === 'en');
@@ -1124,28 +1118,13 @@
       document.documentElement.lang = l;
       try { localStorage.setItem('dia-lang', l); } catch (e) {}
     }
-    function setDarija(on) {
-      body.classList.toggle('show-darija', !!on);
-      try { localStorage.setItem('dia-darija', on ? '1' : '0'); } catch (e) {}
-    }
 
     fr.addEventListener('click', function () { setLang('fr'); });
     en.addEventListener('click', function () { setLang('en'); });
-    dar.addEventListener('click', function () {
-      setDarija(!body.classList.contains('show-darija'));
-    });
-    dar.addEventListener('keydown', function (e) {
-      if (e.key === ' ' || e.key === 'Enter') {
-        e.preventDefault();
-        setDarija(!body.classList.contains('show-darija'));
-      }
-    });
 
     try {
       var savedLang = localStorage.getItem('dia-lang');
       if (savedLang === 'fr' || savedLang === 'en') setLang(savedLang);
-      var savedDar = localStorage.getItem('dia-darija');
-      if (savedDar === '1') setDarija(true);
     } catch (e) {}
   })();
 </script>
