@@ -1,0 +1,1131 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DiaCorp Energy — IT Projects Explained</title>
+<style>
+  :root {
+    --bg: #f6f1e7;
+    --bg2: #ede6d6;
+    --ink: #1c1a15;
+    --ink2: #4a4638;
+    --ink3: #7a7563;
+    --line: #d8cfb9;
+    --line2: #c4b89c;
+    --sun: #b46b1a;
+    --copper: #8a4d16;
+    --green: #3f7a3a;
+    --red: #a4371f;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; padding: 50px 28px 80px; }
+
+  /* Language toggle logic — hide/show by body class */
+  body:not(.lang-en) .en { display: none !important; }
+  body.lang-en .fr { display: none !important; }
+  body:not(.show-darija) .darija { display: none !important; }
+
+  /* CONTROLS BAR */
+  .controls {
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    padding: 10px 0;
+    margin: -50px -28px 30px;
+    padding-left: 28px;
+    padding-right: 28px;
+    z-index: 50;
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .controls .lang-group {
+    display: flex;
+    border: 1px solid var(--line2);
+  }
+  .controls .lang-group button {
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 7px 14px;
+    cursor: pointer;
+    color: var(--ink3);
+    border-right: 1px solid var(--line2);
+    transition: background .15s;
+  }
+  .controls .lang-group button:last-child { border-right: none; }
+  .controls .lang-group button.active {
+    background: var(--sun);
+    color: white;
+  }
+  .controls .lang-group button:not(.active):hover { background: var(--bg2); }
+
+  .controls .darija-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    color: var(--ink3);
+    cursor: pointer;
+    user-select: none;
+  }
+  .controls .darija-toggle .switch {
+    width: 32px;
+    height: 18px;
+    border: 1px solid var(--line2);
+    border-radius: 9px;
+    position: relative;
+    transition: background .2s;
+  }
+  .controls .darija-toggle .switch::after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--ink3);
+    transition: left .2s, background .2s;
+  }
+  body.show-darija .controls .darija-toggle .switch {
+    background: var(--sun);
+    border-color: var(--sun);
+  }
+  body.show-darija .controls .darija-toggle .switch::after {
+    left: 15px;
+    background: white;
+  }
+
+  /* HEADER */
+  header.top {
+    border-bottom: 1.5px solid var(--ink);
+    padding-bottom: 18px;
+    margin-bottom: 40px;
+  }
+  header.top .brand {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    margin-bottom: 18px;
+  }
+  header.top .brand b {
+    color: var(--sun);
+    letter-spacing: 0.3em;
+  }
+  header.top h1 {
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 0 0 10px;
+    letter-spacing: -0.02em;
+    font-weight: 500;
+  }
+  header.top .sub {
+    color: var(--ink2);
+    font-size: 17px;
+    font-style: italic;
+  }
+
+  /* INTRO BLOCK */
+  .intro {
+    background: var(--bg2);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--sun);
+    padding: 22px 26px;
+    margin-bottom: 40px;
+  }
+  .intro h2 {
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--copper);
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+  .intro p { margin: 0 0 10px; }
+  .intro p:last-child { margin-bottom: 0; }
+  .intro strong { color: var(--sun); font-weight: 700; }
+
+  /* FOCUS BOX */
+  .focus {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--line2);
+    margin-bottom: 50px;
+  }
+  .focus > div { padding: 18px 22px; }
+  .focus .yes {
+    background: rgba(180, 107, 26, 0.08);
+    border-right: 1px solid var(--line2);
+  }
+  .focus .no { background: rgba(164, 55, 31, 0.04); }
+  .focus .label {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .focus .yes .label { color: var(--green); }
+  .focus .no .label { color: var(--red); }
+  .focus ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--ink2);
+    font-size: 14px;
+  }
+  .focus li { margin: 4px 0; }
+
+  /* SECTION TITLES */
+  h2.section-title {
+    font-size: 28px;
+    letter-spacing: -0.01em;
+    margin: 50px 0 8px;
+    font-weight: 500;
+  }
+  .section-intro {
+    color: var(--ink2);
+    font-size: 15px;
+    margin-bottom: 28px;
+    max-width: 68ch;
+  }
+
+  /* PROJECT CARD */
+  .project {
+    background: #fff;
+    border: 1px solid var(--line);
+    margin-bottom: 22px;
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    position: relative;
+  }
+  .project-body { padding: 22px 26px; }
+  .project .num {
+    position: absolute;
+    top: -10px;
+    left: 22px;
+    background: var(--bg);
+    color: var(--sun);
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    padding: 2px 8px;
+    border: 1px solid var(--line2);
+  }
+  .project h3 {
+    margin: 6px 0 4px;
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 500;
+    color: var(--ink);
+  }
+  .project .darija {
+    font-family: ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--copper);
+    margin: 8px 0 14px;
+    letter-spacing: 0.02em;
+    padding: 6px 10px;
+    background: rgba(180, 107, 26, 0.06);
+    border-left: 2px solid var(--sun);
+  }
+  .project .darija::before { content: "🇲🇦 "; }
+
+  .project dl {
+    margin: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 6px 14px;
+    font-size: 14px;
+  }
+  .project dt {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    padding-top: 2px;
+  }
+  .project dd { margin: 0; color: var(--ink2); }
+  .project .money {
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: rgba(180, 107, 26, 0.08);
+    border-left: 3px solid var(--sun);
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .project .money b { color: var(--copper); font-weight: 700; }
+
+  /* MOCKUP */
+  .mockup-rail {
+    border-left: 1px solid var(--line);
+    background: var(--bg2);
+    padding: 18px;
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .mockup-title {
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    padding-bottom: 6px;
+    border-bottom: 1px dashed var(--line2);
+  }
+  .mockup-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+    border-bottom: 1px dotted var(--line);
+    color: var(--ink2);
+  }
+  .mockup-row b { color: var(--ink); font-weight: 600; }
+  .mockup-row .ok { color: var(--green); }
+  .mockup-row .ko { color: var(--red); }
+  .mockup-bar {
+    height: 6px;
+    background: var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .mockup-bar::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; height: 100%;
+    background: var(--sun);
+    width: var(--w, 50%);
+  }
+  .mockup-btn {
+    margin-top: 4px;
+    background: var(--sun);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    font-size: 10px;
+  }
+
+  /* PHONE */
+  .phone {
+    width: 110px;
+    margin: 0 auto;
+    border: 2px solid var(--ink2);
+    border-radius: 16px;
+    padding: 14px 8px 10px;
+    background: white;
+    font-size: 9px;
+    font-family: ui-monospace, monospace;
+  }
+  .phone .notch {
+    width: 40px;
+    height: 4px;
+    background: var(--ink2);
+    border-radius: 4px;
+    margin: -8px auto 10px;
+  }
+  .phone .big {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--sun);
+    font-family: Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  /* SUMMARY TABLE */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+  .summary-table th, .summary-table td {
+    padding: 10px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+  }
+  .summary-table thead th {
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    font-weight: 500;
+    border-bottom: 1.5px solid var(--ink2);
+  }
+  .summary-table tbody tr:hover { background: var(--bg2); }
+  .summary-table .phase {
+    display: inline-block;
+    font-family: ui-monospace, monospace;
+    font-size: 10px;
+    padding: 2px 6px;
+    border: 1px solid var(--line2);
+    color: var(--ink2);
+  }
+  .summary-table .phase-1 { border-color: var(--green); color: var(--green); }
+  .summary-table .phase-2 { border-color: var(--sun); color: var(--sun); }
+  .summary-table .phase-3 { border-color: var(--copper); color: var(--copper); }
+
+  footer.bottom {
+    margin-top: 60px;
+    padding-top: 22px;
+    border-top: 1.5px solid var(--ink);
+    font-family: ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink3);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  @media (max-width: 700px) {
+    .focus { grid-template-columns: 1fr; }
+    .focus .yes { border-right: none; border-bottom: 1px solid var(--line2); }
+    .project { grid-template-columns: 1fr; }
+    .mockup-rail { border-left: none; border-top: 1px solid var(--line); }
+    .controls { flex-wrap: wrap; }
+    .controls .darija-toggle { margin-left: 0; }
+  }
+
+  @media print {
+    body { background: white; font-size: 11pt; }
+    .controls { display: none; }
+    .project { break-inside: avoid; box-shadow: none; }
+  }
+</style>
+</head>
+<body class="lang-fr">
+<div class="wrap">
+
+<div class="controls">
+  <div class="lang-group" role="tablist">
+    <button id="btn-fr" class="active" aria-label="Français">FR</button>
+    <button id="btn-en" aria-label="English">EN</button>
+  </div>
+  <label class="darija-toggle" for="darija-switch">
+    <span class="fr">Afficher en darija 🇲🇦</span>
+    <span class="en">Show Darija notes 🇲🇦</span>
+    <span class="switch" role="switch" id="darija-switch" tabindex="0"></span>
+  </label>
+</div>
+
+<header class="top">
+  <div class="brand">
+    <b>DIACORP</b><span>·</span><span>ENERGY</span><span>·</span><span>ORIENTAL / MAROC</span>
+  </div>
+  <h1>
+    <span class="fr">Les projets informatiques — expliqués simplement</span>
+    <span class="en">The IT projects — simply explained</span>
+  </h1>
+  <div class="sub">
+    <span class="fr">Le logiciel que DiaCorp doit construire pour opérer, facturer, et concurrencer ONEE dans la région Oriental.</span>
+    <span class="en">The software DiaCorp must build to operate, invoice, and undercut ONEE across the Oriental region.</span>
+  </div>
+</header>
+
+<div class="intro">
+  <h2>
+    <span class="fr">Contexte</span>
+    <span class="en">Context</span>
+  </h2>
+  <p class="fr">DiaCorp Energy construit <strong>1 GW de solaire photovoltaïque</strong> entièrement dans la <strong>région Oriental du Maroc</strong> (Ain Beni Mathar, Oujda, Jerada, Figuig, Nador, Driouch). CAPEX initial : 120 M$.</p>
+  <p class="en">DiaCorp Energy is building <strong>1 GW of solar PV</strong> entirely in the <strong>Oriental region of Morocco</strong> (Ain Beni Mathar, Oujda, Jerada, Figuig, Nador, Driouch). Initial CAPEX: $120M.</p>
+  <p class="fr">L'activité principale — vendre le kWh aux industriels locaux <strong>moins cher qu'ONEE</strong> — est un business classique à marge 15-20 %.</p>
+  <p class="en">The core business — selling kWh to local industrial clients at a price <strong>below ONEE</strong> — is a classic 15-20% margin business.</p>
+  <p class="fr">Ce document décrit les <strong>12 applications logicielles</strong> à développer pour faire tourner cette activité, facturer correctement les clients, et ouvrir des revenus supplémentaires (certificats verts, zone industrielle, app B2C). Pas de slogans IA — des outils opérationnels concrets avec un ROI chiffré.</p>
+  <p class="en">This document describes the <strong>12 software applications</strong> that need to be built to run the core business, invoice clients properly, and open additional revenue streams (green certificates, industrial zone, B2C app). No AI slogans — concrete operational tools, each with a measurable ROI.</p>
+</div>
+
+<div class="focus">
+  <div class="yes">
+    <div class="label">
+      <span class="fr">✓ Zone cible</span>
+      <span class="en">✓ Target scope</span>
+    </div>
+    <ul>
+      <li>Ain Beni Mathar <span class="fr">(site du plant DIA1)</span><span class="en">(DIA1 plant site)</span></li>
+      <li>Oujda <span class="fr">(siège régional)</span><span class="en">(regional HQ)</span></li>
+      <li>Jerada, Figuig, Nador</li>
+      <li>Driouch, Berkane, Taourirt</li>
+      <li>Maghrawa, Guenfouda, Bouarfa</li>
+    </ul>
+  </div>
+  <div class="no">
+    <div class="label">
+      <span class="fr">✗ Hors scope</span>
+      <span class="en">✗ Out of scope</span>
+    </div>
+    <ul>
+      <li><span class="fr">Casablanca, Rabat, Marrakech</span><span class="en">Casablanca, Rabat, Marrakech</span></li>
+      <li><span class="fr">Dakhla, Laayoune (Phase 3, plus tard)</span><span class="en">Dakhla, Laayoune (later — Phase 3)</span></li>
+      <li><span class="fr">Export Europe / Afrique</span><span class="en">Europe / Africa export</span></li>
+      <li><span class="fr">Clients hors Oriental</span><span class="en">Clients outside the Oriental</span></li>
+    </ul>
+  </div>
+</div>
+
+<h2 class="section-title">
+  <span class="fr">Les 12 applications</span>
+  <span class="en">The 12 applications</span>
+</h2>
+<p class="section-intro">
+  <span class="fr">Pour chacune : <b>à qui ça sert</b>, <b>ce que ça fait</b>, et <b>comment ça rapporte</b> à DiaCorp. Les mockups à droite sont des aperçus visuels schématiques, pas des captures d'écran réelles.</span>
+  <span class="en">For each one: <b>who it's for</b>, <b>what it does</b>, and <b>how it earns</b> money for DiaCorp. Mockups on the right are schematic previews, not real screenshots.</span>
+</p>
+
+<!-- 01 -->
+<article class="project">
+  <span class="num">01</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Portail Client B2B — Espace Entreprise</span>
+      <span class="en">B2B Client Portal — Company Workspace</span>
+    </h3>
+    <div class="darija">l'client (Managem, OCP, Stellantis…) kayduel b login dyalo, kaychouf contrat, consommation, w les factures dyalo fi blasa wa7da.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Les 30 à 50 entreprises industrielles clientes de DiaCorp dans l'Oriental.</span>
+        <span class="en">The 30 to 50 industrial client companies of DiaCorp in the Oriental region.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Chaque client accède à son espace privé : contrat PPA signé, consommation kWh en temps réel, historique des factures, documents (certificats, rapports), tickets de support.</span>
+        <span class="en">Each client gets a private workspace: signed PPA contract, real-time kWh consumption, invoice history, documents (certificates, reports), support tickets.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>Next.js + PostgreSQL + SSO + <span class="fr">API compteurs intelligents</span><span class="en">smart-meter API</span></dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> réduction de ~80 % des appels au service client. La confiance augmente le taux de renouvellement PPA sur 20 ans.</span>
+      <span class="en"> ~80% fewer support calls. Higher client trust drives 20-year PPA renewal rates.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title">Managem · Contrat #1042</div>
+    <div class="mockup-row"><span class="fr">Consommation mois</span><span class="en">Monthly usage</span><b>412 MWh</b></div>
+    <div class="mockup-row"><span class="fr">Facture courante</span><span class="en">Current invoice</span><b>€31,240</b></div>
+    <div class="mockup-row"><span class="fr">Statut</span><span class="en">Status</span><span class="ok">● <span class="fr">Payée</span><span class="en">Paid</span></span></div>
+    <div class="mockup-row"><span class="fr">Prochain prélèvement</span><span class="en">Next debit</span><b>15/05/2026</b></div>
+    <div class="mockup-bar" style="--w: 72%"></div>
+    <div style="font-size:10px;color:var(--ink3)">
+      <span class="fr">72 % du quota mensuel</span>
+      <span class="en">72% of monthly quota</span>
+    </div>
+  </div>
+</article>
+
+<!-- 02 -->
+<article class="project">
+  <span class="num">02</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Application de Paiement des Factures</span>
+      <span class="en">Invoice Payment Application</span>
+    </h3>
+    <div class="darija">l-application li fiha l'client kaykhelles la facture dyalo b CMI, CIH, BMCE, wla virement — bla y-ji b-cheque l-maktab.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Clients B2B industriels + locataires de la zone industrielle.</span>
+        <span class="en">B2B industrial clients + industrial-zone tenants.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Intégration CMI (Carte Monétique Interbancaire Maroc), Attijari, BMCE Direct, CIH Bank. Paiement par virement RIB, chèque scanné. Rappels SMS/email. Reçu PDF automatique.</span>
+        <span class="en">CMI (Morocco interbank card), Attijari, BMCE Direct, and CIH Bank integrations. Payment by RIB transfer or scanned cheque. SMS/email reminders. Automatic PDF receipt.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>CMI API + <span class="fr">passerelle Stripe Morocco</span><span class="en">Stripe Morocco gateway</span> + Twilio SMS</dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> paiement client à 15 jours au lieu de 45. Meilleur cash flow. Commission optionnelle 0,5 % sur le paiement = <b>~600 k$/an</b> à l'échelle 1 GW.</span>
+      <span class="en"> 15-day payment cycle instead of 45. Healthier cash flow. An optional 0.5% processing fee yields <b>~$600k/yr</b> at the 1 GW scale.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Paiement facture F-2604</span><span class="en">Paying invoice F-2604</span></div>
+    <div class="mockup-row"><span class="fr">Montant</span><span class="en">Amount</span><b>MAD 312,400</b></div>
+    <div class="mockup-row"><span class="fr">Échéance</span><span class="en">Due date</span><b>30/04/2026</b></div>
+    <div class="mockup-row"><span>— CIH Direct</span><span>→</span></div>
+    <div class="mockup-row"><span>— CMI <span class="fr">(carte)</span><span class="en">(card)</span></span><span>→</span></div>
+    <div class="mockup-row"><span>— <span class="fr">Virement SEPA</span><span class="en">SEPA transfer</span></span><span>→</span></div>
+    <div class="mockup-btn"><span class="fr">PAYER MAINTENANT</span><span class="en">PAY NOW</span></div>
+  </div>
+</article>
+
+<!-- 03 -->
+<article class="project">
+  <span class="num">03</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Système de Facturation Automatique</span>
+      <span class="en">Automated Invoicing Engine</span>
+    </h3>
+    <div class="darija">back-office li kay-sift les factures l-kol client fi la fin du mois 3la 7sab consommation mesurée b les compteurs.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Équipe finance DiaCorp (5 à 10 personnes).</span>
+        <span class="en">DiaCorp finance team (5-10 people).</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Lit les compteurs toutes les 15 min, applique le tarif PPA, génère la facture PDF conforme DGI (TVA, ICE, identifiant fiscal), envoie par email, archive. Connecté à la comptabilité (Sage, Oracle).</span>
+        <span class="en">Reads meters every 15 min, applies PPA tariff, generates DGI-compliant PDF invoices (VAT, ICE, tax ID), emails them, archives. Wired into the accounting system (Sage, Oracle).</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>Node.js scheduler + Puppeteer PDF + <span class="fr">API DGI</span><span class="en">DGI API</span></dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> 200 h/mois de travail manuel actuel → 5 h/mois. Économie <b>~250 k$/an</b>. Zéro erreur de calcul.</span>
+      <span class="en"> 200 hrs/month of current manual work → 5 hrs/month. Payroll saving: <b>~$250k/yr</b>. Zero calculation errors.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Batch fin de mois · Avril 2026</span><span class="en">Month-end batch · April 2026</span></div>
+    <div class="mockup-row"><span class="fr">Clients traités</span><span class="en">Clients processed</span><b>42 / 42</b></div>
+    <div class="mockup-row"><span class="fr">Factures générées</span><span class="en">Invoices generated</span><b class="ok">42 ✓</b></div>
+    <div class="mockup-row"><span class="fr">Montant total</span><span class="en">Total amount</span><b>€1.84M</b></div>
+    <div class="mockup-row"><span class="fr">TVA collectée</span><span class="en">VAT collected</span><b>€368k</b></div>
+    <div class="mockup-row"><span class="fr">Envoyées</span><span class="en">Sent</span><span class="ok">42 / 42</span></div>
+    <div style="font-size:10px;color:var(--ink3);margin-top:4px">
+      <span class="fr">Temps total : 3 min 12 s</span>
+      <span class="en">Total runtime: 3 min 12 s</span>
+    </div>
+  </div>
+</article>
+
+<!-- 04 -->
+<article class="project">
+  <span class="num">04</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">CRM Commercial — Suivi des Contrats</span>
+      <span class="en">Commercial CRM — Deal Pipeline</span>
+    </h3>
+    <div class="darija">outil bach l'équipe commerciale t-track kol client potentiel mn la première réunion htta la signature PPA.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Équipe commerciale (3 à 6 personnes, dirigée par M. Mohammed, BD).</span>
+        <span class="en">Commercial team (3-6 people, led by M. Mohammed, BD).</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Chaque prospect (Stellantis Kénitra, usine textile Oujda, etc.) a une fiche : contacts, derniers échanges, documents, étape (lead → meeting → LOI → term-sheet → signed). Rappels automatiques.</span>
+        <span class="en">Each prospect (Stellantis Kenitra, Oujda textile plant, etc.) has a deal card: contacts, recent interactions, documents, stage (lead → meeting → LOI → term sheet → signed). Automated follow-ups.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>HubSpot <span class="fr">personnalisé</span><span class="en">customized</span> <span class="fr">ou app interne</span><span class="en">or a custom build</span> (Next.js + Postgres)</dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> visibilité claire sur le pipeline (MW en négociation, probabilités, valeur). <b>+20 % de taux de conversion</b> attendu.</span>
+      <span class="en"> full pipeline visibility (MW under negotiation, probabilities, value). Expected <b>+20% conversion rate</b>.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Pipeline Avril 2026</span><span class="en">Pipeline · April 2026</span></div>
+    <div class="mockup-row"><span>Stellantis Kénitra</span><span class="ok">85 MW · 75%</span></div>
+    <div class="mockup-row"><span>Managem Jerada</span><span>42 MW · 45%</span></div>
+    <div class="mockup-row"><span>Textile Oujda SA</span><span>12 MW · 30%</span></div>
+    <div class="mockup-row"><span>OCP Khouribga</span><span class="ok">250 MW · 90%</span></div>
+    <div class="mockup-row"><span>Ynna <span class="fr">(groupe)</span><span class="en">(group)</span></span><span>35 MW · 20%</span></div>
+    <div class="mockup-row" style="border:none;padding-top:8px"><b><span class="fr">Pipeline total</span><span class="en">Total pipeline</span></b><b>424 MW</b></div>
+  </div>
+</article>
+
+<!-- 05 -->
+<article class="project">
+  <span class="num">05</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Dashboard Production Temps Réel</span>
+      <span class="en">Real-Time Production Dashboard</span>
+    </h3>
+    <div class="darija">écran kbir f centre de contrôle à Oujda — kayweriw kolchi : kam MW ka-ntekhrjo daba, météo, w les alertes.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Équipe d'exploitation à Ain Beni Mathar + siège régional Oujda.</span>
+        <span class="en">Ops team at Ain Beni Mathar + the Oujda regional HQ.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Production solaire en direct, températures onduleurs, météo locale, comparaison vs prévision. Une vue d'ensemble en un coup d'œil.</span>
+        <span class="en">Live solar output, inverter temperatures, local weather, variance vs forecast. One-glance situational awareness.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>
+        <span class="fr">Lecture SCADA industriel + Grafana ou dashboard sur mesure</span>
+        <span class="en">Industrial SCADA read + Grafana or custom dashboard</span>
+      </dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> détection rapide des anomalies → moins d'arrêts. <b>+1 % de disponibilité ≈ +1,2 M$/an</b> sur 1 GW.</span>
+      <span class="en"> faster anomaly detection → less downtime. <b>+1% availability ≈ +$1.2M/yr</b> at 1 GW.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title">DIA1 · Ain Beni Mathar · 14:32</div>
+    <div class="mockup-row"><span class="fr">Production</span><span class="en">Output</span><b class="ok">118 MW</b></div>
+    <div class="mockup-row"><span class="fr">Capacité</span><span class="en">Capacity</span><span>150 MW (79%)</span></div>
+    <div class="mockup-row"><span class="fr">Irradiance</span><span class="en">Irradiance</span><b>842 W/m²</b></div>
+    <div class="mockup-row"><span class="fr">Temp. panneaux</span><span class="en">Panel temp.</span><b>52°C</b></div>
+    <div class="mockup-row"><span class="fr">Onduleurs actifs</span><span class="en">Inverters up</span><span class="ok">48 / 48</span></div>
+    <div class="mockup-row"><span class="fr">Alertes critiques</span><span class="en">Critical alerts</span><span class="ok">0</span></div>
+  </div>
+</article>
+
+<!-- 06 -->
+<article class="project">
+  <span class="num">06</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">GMAO — Gestion de la Maintenance</span>
+      <span class="en">CMMS — Field Maintenance</span>
+    </h3>
+    <div class="darija">application mobile l-techniciens f terrain : kayakhdo les ordres d'intervention, kay-reportiw b-photos, kay-commandiw pièces de rechange.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Techniciens terrain (15 à 30 en régime 1 GW), managers maintenance.</span>
+        <span class="en">Field technicians (15-30 at 1 GW scale), maintenance managers.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Créer un ticket quand un panneau tombe en panne, l'assigner au technicien le plus proche, suivre le temps d'intervention, stocker photos avant/après. Historique par panneau. Planning préventif (nettoyage tous les 2 mois).</span>
+        <span class="en">Open a ticket when a panel fails, assign it to the closest technician, track intervention time, store before/after photos. Per-panel history. Preventive schedule (bi-monthly cleaning).</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>React Native + <span class="fr">backend léger</span><span class="en">lightweight backend</span> (<span class="fr">assistance IA pour pré-diagnostic, optionnelle</span><span class="en">optional AI pre-diagnosis assist</span>)</dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> techniciens passent de 4 à 6 interventions/jour. L'app est <b>revendable en SaaS</b> à ONEE, NOOR, opérateurs africains = ~500 k$/an.</span>
+      <span class="en"> technicians go from 4 to 6 interventions/day. The app can be <b>resold as SaaS</b> to ONEE, NOOR, and African operators ≈ $500k/yr.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title">Ticket #TK-3412</div>
+    <div class="mockup-row"><span class="fr">Zone</span><span class="en">Zone</span><b>DIA1 / N-8 / P-14</b></div>
+    <div class="mockup-row"><span class="fr">Type</span><span class="en">Type</span><span>Hotspot 68°C</span></div>
+    <div class="mockup-row"><span class="fr">Priorité</span><span class="en">Priority</span><span class="ko">● <span class="fr">Haute</span><span class="en">High</span></span></div>
+    <div class="mockup-row"><span class="fr">Assigné à</span><span class="en">Assigned to</span><b>Y. Benhaddou</b></div>
+    <div class="mockup-row"><span class="fr">Temps estimé</span><span class="en">Estimated time</span><span>45 min</span></div>
+    <div class="mockup-btn"><span class="fr">ACCEPTER</span><span class="en">ACCEPT</span></div>
+  </div>
+</article>
+
+<!-- 07 -->
+<article class="project">
+  <span class="num">07</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Plateforme Certificats Verts (REC)</span>
+      <span class="en">Green Certificate Platform (RECs)</span>
+    </h3>
+    <div class="darija">kay-issuer certificats digitaux li kayproviw li l-kahraba dyal la charika khadra 100% — mohim bezzaf l-charikat li kay-exportiw l-Europe (CBAM).</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Entreprises marocaines qui exportent vers l'UE (CBAM), banques, auditeurs.</span>
+        <span class="en">Moroccan exporters to the EU (CBAM), banks, auditors.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Pour chaque MWh livré, émettre un certificat numérique signé (blockchain optionnelle pour l'infalsifiabilité). Le client le présente aux auditeurs Verra / Gold Standard. Évite la taxe carbone frontalière européenne.</span>
+        <span class="en">For every MWh delivered, issue a signed digital certificate (optional blockchain for tamper-proofing). The client presents it to Verra / Gold Standard auditors. Bypasses the EU carbon border tax.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>PostgreSQL + <span class="fr">signature numérique</span><span class="en">digital signing</span> + Polygon (optional)</dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> vente des certificats <b>€15-25 / tCO₂</b> en plus de l'énergie. 1 GW = ~2 Mt CO₂ évitées/an → <b>30-50 M$/an de revenu additionnel</b>.</span>
+      <span class="en"> certificates sold at <b>€15-25 / tCO₂</b> on top of the energy. 1 GW avoids ~2 Mt CO₂/yr → <b>$30-50M/yr in additional revenue</b>.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title">REC #2026-00412</div>
+    <div class="mockup-row"><span class="fr">Bénéficiaire</span><span class="en">Beneficiary</span><b>Renault Tanger</b></div>
+    <div class="mockup-row"><span class="fr">Quantité</span><span class="en">Quantity</span><b>1 MWh · 0.62 tCO₂</b></div>
+    <div class="mockup-row"><span class="fr">Source</span><span class="en">Source</span><span>DIA1 · Ain Beni Mathar</span></div>
+    <div class="mockup-row"><span class="fr">Période</span><span class="en">Period</span><span><span class="fr">Mars</span><span class="en">March</span> 2026</span></div>
+    <div class="mockup-row"><span class="fr">Statut</span><span class="en">Status</span><span class="ok">● <span class="fr">Retiré (CBAM)</span><span class="en">Retired (CBAM)</span></span></div>
+    <div class="mockup-row"><span class="fr">Vérificateur</span><span class="en">Verifier</span><b>Verra</b></div>
+  </div>
+</article>
+
+<!-- 08 -->
+<article class="project">
+  <span class="num">08</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Marketplace Énergie Oriental</span>
+      <span class="en">Oriental Energy Marketplace</span>
+    </h3>
+    <div class="darija">site web fih les entreprises dial l'Oriental kay-reserviw blocks dial MWh — kif wahed kayachri mn Amazon, mais hna l-kahraba.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Acheteurs industriels de l'Oriental (Managem, Citic si installation, textile Oujda, agro-industrie Berkane).</span>
+        <span class="en">Industrial buyers in the Oriental (Managem, Citic if it sets up locally, Oujda textile, Berkane agri-industry).</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Affiche la capacité disponible, prix dynamique selon l'offre/demande, réservation en ligne. L'acheteur paie d'avance, reçoit sa confirmation. Prix 30-50 % moins cher qu'ONEE.</span>
+        <span class="en">Shows available capacity, dynamic pricing based on supply/demand, online reservation. Buyer prepays, gets confirmation. 30-50% cheaper than ONEE.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd><span class="fr">App web + moteur de matching + wheeling ONEE</span><span class="en">Web app + matching engine + ONEE wheeling integration</span></dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> vend la capacité résiduelle non contractée au meilleur prix spot. <b>+10 à 15 %</b> de revenus vs contrats fixes uniquement.</span>
+      <span class="en"> sells residual uncontracted capacity at top spot price. <b>+10-15%</b> of revenue vs fixed-contract only.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Marché spot · Oriental</span><span class="en">Spot market · Oriental</span></div>
+    <div class="mockup-row"><span class="fr">Capacité dispo</span><span class="en">Available</span><b>38 MWh</b></div>
+    <div class="mockup-row"><span class="fr">Prix spot</span><span class="en">Spot price</span><b class="ok">$0.065 /kWh</b></div>
+    <div class="mockup-row"><span class="fr">ONEE équivalent</span><span class="en">ONEE equivalent</span><span class="ko">$0.12 /kWh</span></div>
+    <div class="mockup-row"><span class="fr">Livraison</span><span class="en">Delivery</span><span><span class="fr">Demain 08h-20h</span><span class="en">Tomorrow 08:00-20:00</span></span></div>
+    <div class="mockup-btn"><span class="fr">RÉSERVER 10 MWh</span><span class="en">BOOK 10 MWh</span></div>
+  </div>
+</article>
+
+<!-- 09 -->
+<article class="project">
+  <span class="num">09</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Gestion Zone Industrielle DIA</span>
+      <span class="en">DIA Industrial Zone ERP</span>
+    </h3>
+    <div class="darija">l-barnamaj dial les 50+ charikat li ghadi yt7atto f la zone industrielle khadra : les lots, les contrats, les loyers, conso par locataire.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">DiaCorp opérateur de la zone + les 50 entreprises installées autour de DIA1.</span>
+        <span class="en">DiaCorp as zone operator + the 50 companies located around DIA1.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Chaque locataire a son espace : lot alloué, bail, consommation kWh, eau, déchets, factures mensuelles. DiaCorp vend lot + énergie + services communs (sécurité, internet).</span>
+        <span class="en">Each tenant gets its own workspace: allocated plot, lease, kWh / water / waste metering, monthly invoices. DiaCorp sells plot + energy + shared services (security, internet).</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd><span class="fr">App web + ERP simple + compteurs IoT</span><span class="en">Web app + lightweight ERP + IoT meters</span></dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> loyers zone industrielle = <b>5 000 à 50 000 $/locataire/mois</b>. 50 locataires → <b>6 à 30 M$/an</b> au-delà de l'énergie.</span>
+      <span class="en"> industrial-zone rent = <b>$5k-50k/tenant/month</b>. With 50 tenants → <b>$6-30M/yr</b> on top of energy.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Zone DIA1 · 42 locataires</span><span class="en">DIA1 zone · 42 tenants</span></div>
+    <div class="mockup-row"><span class="fr">Lots occupés</span><span class="en">Plots occupied</span><b>42 / 60</b></div>
+    <div class="mockup-row"><span class="fr">Revenu loyers</span><span class="en">Rent revenue</span><b class="ok">$1.2M/<span class="fr">mois</span><span class="en">mo</span></b></div>
+    <div class="mockup-row"><span class="fr">Énergie servie</span><span class="en">Energy served</span><b>128 MWh</b></div>
+    <div class="mockup-row"><span class="fr">Taux d'occupation</span><span class="en">Occupancy rate</span><span class="ok">70%</span></div>
+    <div class="mockup-bar" style="--w: 70%"></div>
+  </div>
+</article>
+
+<!-- 10 -->
+<article class="project">
+  <span class="num">10</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Application Mobile Grand Public (B2C)</span>
+      <span class="en">Consumer Mobile App (B2C)</span>
+    </h3>
+    <div class="darija">l-app li kaykhalli les familles marocaines yshriw solaire b abonnement chhari (50-150 $/mois), bla y-khellso kolchi b-mera wahda.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Ménages marocains de l'Oriental (Oujda, Nador, Berkane) en premier lieu.</span>
+        <span class="en">Moroccan households in the Oriental (Oujda, Nador, Berkane) first.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Le client télécharge l'app, photographie son toit, reçoit une estimation. On installe gratuitement les panneaux + micro-onduleur. Il paie un abonnement mensuel qui remplace sa facture ONEE. L'app affiche la production, les économies, le CO₂ évité.</span>
+        <span class="en">The customer downloads the app, photographs their roof, gets a quote. We install panels + microinverter for free. They pay a monthly subscription that replaces their ONEE bill. App shows production, savings, CO₂ avoided.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>React Native + <span class="fr">financement BMCE intégré</span><span class="en">BMCE embedded financing</span> + <span class="fr">logistique installateurs</span><span class="en">installer logistics</span></dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> 10 000 foyers × 70 $/mois × 12 = <b>8,4 M$/an</b>. À 100 000 foyers dans l'Oriental → <b>84 M$/an</b>. Revenu récurrent type SaaS.</span>
+      <span class="en"> 10,000 households × $70/mo × 12 = <b>$8.4M/yr</b>. Scale to 100,000 across the Oriental → <b>$84M/yr</b>. SaaS-grade recurring revenue.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="phone">
+      <div class="notch"></div>
+      <div style="font-size:10px;color:var(--ink3);margin-bottom:4px">
+        <span class="fr">Ce mois</span>
+        <span class="en">This month</span>
+      </div>
+      <div class="big">1,240<span style="font-size:9px"> MAD</span></div>
+      <div style="font-size:8px;color:var(--ink3);margin-bottom:10px">
+        <span class="fr">économisés vs ONEE</span>
+        <span class="en">saved vs ONEE</span>
+      </div>
+      <div style="font-size:8px;border-top:1px solid var(--line);padding-top:6px">
+        <div style="display:flex;justify-content:space-between">
+          <span><span class="fr">Produit</span><span class="en">Produced</span></span><b>286 kWh</b>
+        </div>
+        <div style="display:flex;justify-content:space-between">
+          <span><span class="fr">CO₂ évité</span><span class="en">CO₂ avoided</span></span><b>184 kg</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+<!-- 11 -->
+<article class="project">
+  <span class="num">11</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Cartographie des Sites — GIS Oriental</span>
+      <span class="en">Site Mapping — Oriental GIS</span>
+    </h3>
+    <div class="darija">outil bach n-identifiyiw fin ghadi n-bniw les prochains plants f Oriental : ensoleillement, qorb mn la ligne haute tension, foncier.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Équipe développement DiaCorp + DGCL régionale, CRI Oriental.</span>
+        <span class="en">DiaCorp development team + regional DGCL, CRI Oriental.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Carte interactive de l'Oriental. Pour chaque parcelle : score d'ensoleillement (kWh/m²/an), distance à la ligne HT ONEE, statut foncier (privé/public/agricole), population locale. Aide à décider DIA2, DIA3.</span>
+        <span class="en">Interactive Oriental map. For each parcel: irradiance score (kWh/m²/yr), distance to the ONEE high-voltage line, land status (private/public/agricultural), local population. Informs DIA2, DIA3 decisions.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd>Leaflet + ANRE <span class="fr">données</span><span class="en">datasets</span> + <span class="fr">cadastre numérique</span><span class="en">digital cadastre</span> + MétéoNorm API</dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> évite les mauvais choix de site (étude ratée = 500 k$). Revendable à d'autres IPP ou bailleurs (BEI, BAD, BM).</span>
+      <span class="en"> avoids bad site choices (a failed feasibility study = $500k). Resellable to other IPPs and DFIs (EIB, AfDB, World Bank).</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Oriental · scoring sites</span><span class="en">Oriental · site scoring</span></div>
+    <div class="mockup-row"><span>DIA1 · Ain Beni Mathar</span><span class="ok">97/100</span></div>
+    <div class="mockup-row"><span>Figuig Sud</span><span class="ok">92/100</span></div>
+    <div class="mockup-row"><span>Jerada Est</span><span>88/100</span></div>
+    <div class="mockup-row"><span>Driouch Plateau</span><span>85/100</span></div>
+    <div class="mockup-row"><span>Bouarfa</span><span>83/100</span></div>
+    <div style="font-size:10px;color:var(--ink3);margin-top:6px">
+      <span class="fr">Candidats DIA2 / DIA3</span>
+      <span class="en">DIA2 / DIA3 candidates</span>
+    </div>
+  </div>
+</article>
+
+<!-- 12 -->
+<article class="project">
+  <span class="num">12</span>
+  <div class="project-body">
+    <h3>
+      <span class="fr">Portail Autorités &amp; Reporting</span>
+      <span class="en">Authority &amp; Reporting Portal</span>
+    </h3>
+    <div class="darija">kay-sift l-papiers automatiquement l-ONEE, AMDIE, CRI Oriental, Ministère de l'Énergie — chno khasshom chhar b chhar, bla kharsa.</div>
+    <dl>
+      <dt><span class="fr">Pour qui</span><span class="en">For whom</span></dt>
+      <dd>
+        <span class="fr">Direction DiaCorp + conformité + ministères marocains.</span>
+        <span class="en">DiaCorp leadership + compliance + Moroccan ministries.</span>
+      </dd>
+      <dt><span class="fr">Ce que ça fait</span><span class="en">What it does</span></dt>
+      <dd>
+        <span class="fr">Rapports mensuels de production, taxes TVA/IS, déclarations environnementales, compte rendu AMDIE. Tout automatique, signé électroniquement. Évite les pénalités de retard.</span>
+        <span class="en">Monthly production reports, VAT/corporate tax, environmental filings, AMDIE reports. All automated and electronically signed. Avoids late-filing penalties.</span>
+      </dd>
+      <dt><span class="fr">Stack</span><span class="en">Stack</span></dt>
+      <dd><span class="fr">Générateur PDF + signature numérique Maroc + archivage légal 10 ans</span><span class="en">PDF generator + Morocco-compliant e-signature + 10-year legal archive</span></dd>
+    </dl>
+    <div class="money">
+      <b><span class="fr">Retour DiaCorp :</span><span class="en">DiaCorp upside:</span></b>
+      <span class="fr"> évite des pénalités jusqu'à 200 k$/an. Rassure les autorités → facilite les autorisations DIA2, DIA3.</span>
+      <span class="en"> avoids up to $200k/yr in penalties. Reassures authorities → smoother DIA2, DIA3 permitting.</span>
+    </div>
+  </div>
+  <div class="mockup-rail">
+    <div class="mockup-title"><span class="fr">Reporting Avril 2026</span><span class="en">April 2026 reports</span></div>
+    <div class="mockup-row"><span>ONEE · <span class="fr">Production</span><span class="en">Output</span></span><span class="ok">✓ <span class="fr">Envoyé</span><span class="en">Sent</span></span></div>
+    <div class="mockup-row"><span>DGI · <span class="fr">TVA</span><span class="en">VAT</span></span><span class="ok">✓ <span class="fr">Payé</span><span class="en">Paid</span></span></div>
+    <div class="mockup-row"><span>AMDIE · <span class="fr">Trimestriel</span><span class="en">Quarterly</span></span><span>⏳ 15 <span class="fr">jours</span><span class="en">days</span></span></div>
+    <div class="mockup-row"><span>CRI Oriental · <span class="fr">RSE</span><span class="en">CSR</span></span><span class="ok">✓ <span class="fr">Envoyé</span><span class="en">Sent</span></span></div>
+    <div class="mockup-row"><span><span class="fr">Min. Énergie</span><span class="en">Min. of Energy</span></span><span class="ok">✓ <span class="fr">Envoyé</span><span class="en">Sent</span></span></div>
+    <div class="mockup-row"><span><span class="fr">Min. Environnement</span><span class="en">Min. of Environment</span></span><span>⏳ 22 <span class="fr">jours</span><span class="en">days</span></span></div>
+  </div>
+</article>
+
+<h2 class="section-title">
+  <span class="fr">Récapitulatif — Priorités et coûts</span>
+  <span class="en">Summary — Priorities and costs</span>
+</h2>
+<p class="section-intro">
+  <span class="fr">Trois phases. On ne démarre pas tout en même temps : on commence par les outils opérationnels (portail, facturation, production) avant les projets plus ambitieux (marketplace, certificats, zone industrielle).</span>
+  <span class="en">Three phases. We don't start everything at once: the operational tools come first (portal, invoicing, production) — then the more ambitious bets (marketplace, certificates, industrial zone).</span>
+</p>
+
+<table class="summary-table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th><span class="fr">Application</span><span class="en">Application</span></th>
+      <th><span class="fr">Coût dév</span><span class="en">Dev cost</span></th>
+      <th><span class="fr">Délai</span><span class="en">Timeline</span></th>
+      <th><span class="fr">Priorité</span><span class="en">Priority</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>01</td><td><span class="fr">Portail Client B2B</span><span class="en">B2B Client Portal</span></td><td>$80k</td><td>3 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-1">Phase 1</span></td></tr>
+    <tr><td>02</td><td><span class="fr">Paiement Factures</span><span class="en">Invoice Payment</span> (CMI/CIH)</td><td>$60k</td><td>2 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-1">Phase 1</span></td></tr>
+    <tr><td>03</td><td><span class="fr">Facturation Auto</span><span class="en">Automated Invoicing</span></td><td>$40k</td><td>2 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-1">Phase 1</span></td></tr>
+    <tr><td>04</td><td><span class="fr">CRM Commercial</span><span class="en">Commercial CRM</span></td><td>$30k</td><td>1 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-1">Phase 1</span></td></tr>
+    <tr><td>05</td><td><span class="fr">Dashboard Production</span><span class="en">Production Dashboard</span></td><td>$50k</td><td>2 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-1">Phase 1</span></td></tr>
+    <tr><td>06</td><td><span class="fr">GMAO Maintenance</span><span class="en">CMMS Maintenance</span></td><td>$70k</td><td>3 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-2">Phase 2</span></td></tr>
+    <tr><td>07</td><td><span class="fr">Certificats Verts</span><span class="en">Green Certificates</span> (REC)</td><td>$120k</td><td>4 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-2">Phase 2</span></td></tr>
+    <tr><td>08</td><td><span class="fr">Marketplace Énergie</span><span class="en">Energy Marketplace</span></td><td>$200k</td><td>6 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-2">Phase 2</span></td></tr>
+    <tr><td>09</td><td><span class="fr">Zone Industrielle DIA</span><span class="en">DIA Industrial Zone</span></td><td>$100k</td><td>4 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-2">Phase 2</span></td></tr>
+    <tr><td>10</td><td><span class="fr">App Mobile Grand Public</span><span class="en">Consumer Mobile App</span></td><td>$250k</td><td>6-8 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-3">Phase 3</span></td></tr>
+    <tr><td>11</td><td><span class="fr">GIS Cartographie Oriental</span><span class="en">Oriental Site GIS</span></td><td>$80k</td><td>3 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-3">Phase 3</span></td></tr>
+    <tr><td>12</td><td><span class="fr">Portail Autorités</span><span class="en">Authority Portal</span></td><td>$45k</td><td>2 <span class="fr">mois</span><span class="en">mo</span></td><td><span class="phase phase-3">Phase 3</span></td></tr>
+    <tr style="background:var(--bg2);font-weight:700">
+      <td colspan="2"><span class="fr">TOTAL ESTIMATIF</span><span class="en">ESTIMATED TOTAL</span></td>
+      <td>$1.125M</td>
+      <td>~18 <span class="fr">mois</span><span class="en">mo</span></td>
+      <td>—</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="intro" style="margin-top:40px;border-left-color:var(--green)">
+  <h2 style="color:var(--green)">
+    <span class="fr">Conclusion</span>
+    <span class="en">Bottom line</span>
+  </h2>
+  <p class="fr">En résumé, en trois temps :</p>
+  <p class="en">In short, in three moves:</p>
+  <p>
+    <strong>Phase 1</strong>
+    <span class="fr"> (5 applications · 260 k$ · 3 mois) : faire tourner DIA1 avec de vrais outils et non des tableurs. C'est le socle minimum.</span>
+    <span class="en"> (5 apps · $260k · 3 months): run DIA1 on real tools, not spreadsheets. This is the non-negotiable baseline.</span>
+  </p>
+  <p>
+    <strong>Phase 2</strong>
+    <span class="fr"> (4 applications · 490 k$ · 6 mois) : créer des revenus supplémentaires (certificats verts, marketplace, zone industrielle). C'est là que la valeur se multiplie.</span>
+    <span class="en"> (4 apps · $490k · 6 months): open new revenue streams (green certificates, marketplace, industrial zone). This is where the value compounds.</span>
+  </p>
+  <p>
+    <strong>Phase 3</strong>
+    <span class="fr"> (3 applications · 375 k$ · 8 mois) : attaquer le B2C de masse et préparer DIA2 / DIA3. On passe à l'échelle.</span>
+    <span class="en"> (3 apps · $375k · 8 months): go after mass-market B2C and prepare DIA2 / DIA3. Scale-up time.</span>
+  </p>
+  <p class="fr">Au total, ~1,1 M$ d'investissement logiciel sur 18 mois — soit <strong>moins de 1 % du CAPEX total</strong> du projet DIA (120 M$) — pour un potentiel de <strong>30 à 50 M$/an</strong> de revenus supplémentaires à maturité.</p>
+  <p class="en">In total, ~$1.1M of software investment over 18 months — <strong>less than 1% of total CAPEX</strong> for the DIA project ($120M) — for a potential <strong>$30-50M/yr</strong> in additional revenue at maturity.</p>
+</div>
+
+<footer class="bottom">
+  <div>
+    <span class="fr">DiaCorp Energy · Région Oriental · Maroc</span>
+    <span class="en">DiaCorp Energy · Oriental Region · Morocco</span>
+  </div>
+  <div>
+    <span class="fr">Document interne · Avril 2026</span>
+    <span class="en">Internal document · April 2026</span>
+  </div>
+</footer>
+
+</div>
+
+<script>
+  (function () {
+    var body = document.body;
+    var fr = document.getElementById('btn-fr');
+    var en = document.getElementById('btn-en');
+    var dar = document.getElementById('darija-switch');
+
+    function setLang(l) {
+      body.classList.toggle('lang-en', l === 'en');
+      body.classList.toggle('lang-fr', l === 'fr');
+      fr.classList.toggle('active', l === 'fr');
+      en.classList.toggle('active', l === 'en');
+      document.documentElement.lang = l;
+      try { localStorage.setItem('dia-lang', l); } catch (e) {}
+    }
+    function setDarija(on) {
+      body.classList.toggle('show-darija', !!on);
+      try { localStorage.setItem('dia-darija', on ? '1' : '0'); } catch (e) {}
+    }
+
+    fr.addEventListener('click', function () { setLang('fr'); });
+    en.addEventListener('click', function () { setLang('en'); });
+    dar.addEventListener('click', function () {
+      setDarija(!body.classList.contains('show-darija'));
+    });
+    dar.addEventListener('keydown', function (e) {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        setDarija(!body.classList.contains('show-darija'));
+      }
+    });
+
+    try {
+      var savedLang = localStorage.getItem('dia-lang');
+      if (savedLang === 'fr' || savedLang === 'en') setLang(savedLang);
+      var savedDar = localStorage.getItem('dia-darija');
+      if (savedDar === '1') setDarija(true);
+    } catch (e) {}
+  })();
+</script>
+</body>
+</html>

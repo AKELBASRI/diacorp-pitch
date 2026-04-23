@@ -1,17 +1,18 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 import {LocaleSwitcher} from './LocaleSwitcher';
+import {ThemeToggle} from './ThemeToggle';
 
 export async function Nav() {
   const t = await getTranslations('nav');
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-line)] bg-[var(--color-bg)]/85 backdrop-blur-xl">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12 flex items-center justify-between h-14">
-        <Link href="/" className="flex items-center gap-2.5 group">
+      <div className="mx-auto max-w-[1400px] px-6 lg:px-12 flex items-center justify-between h-14 gap-4">
+        <Link href="/" className="flex items-center gap-2.5 group shrink-0">
           <svg
             viewBox="0 0 24 24"
-            className="w-5 h-5 text-[var(--color-sun)]"
+            className="w-5 h-5 text-[var(--color-sun)] group-hover:rotate-45 transition-transform duration-500"
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
@@ -23,7 +24,7 @@ export async function Nav() {
             DiaCorp<span className="text-[var(--color-ink-muted)]">.</span>Energy
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-8 font-mono text-[11px] tracking-[0.18em] uppercase text-[var(--color-ink-muted)]">
+        <nav className="hidden lg:flex items-center gap-7 font-mono text-[11px] tracking-[0.16em] uppercase text-[var(--color-ink-muted)]">
           <Link href="/#thesis" className="hover:text-[var(--color-ink)] transition-colors">
             {t('thesis')}
           </Link>
@@ -36,6 +37,15 @@ export async function Nav() {
           >
             {t('gallery')}
           </Link>
+          <a
+            href="/projects.html"
+            target="_blank"
+            rel="noopener"
+            className="hover:text-[var(--color-ink)] transition-colors flex items-center gap-1"
+          >
+            {t('projects')}
+            <span className="text-[9px] opacity-60">↗</span>
+          </a>
           <Link href="/#financials" className="hover:text-[var(--color-ink)] transition-colors">
             {t('financials')}
           </Link>
@@ -43,7 +53,10 @@ export async function Nav() {
             {t('timeline')}
           </Link>
         </nav>
-        <LocaleSwitcher />
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <LocaleSwitcher />
+        </div>
       </div>
     </header>
   );

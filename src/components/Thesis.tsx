@@ -11,11 +11,11 @@ export async function Thesis() {
             <SectionEyebrow index="i" label={t('eyebrow')} />
           </div>
           <div className="lg:col-span-8">
-            <h2 className="font-display text-[34px] md:text-[52px] lg:text-[64px] leading-[1.02] tracking-[-0.03em]">
+            <h2 className="reveal-up font-display text-[34px] md:text-[52px] lg:text-[64px] leading-[1.02] tracking-[-0.03em]">
               {t('heading')}
             </h2>
 
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 border-t border-[var(--color-line)] pt-10">
+            <div className="reveal-stagger mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 border-t border-[var(--color-line)] pt-10">
               {[0, 1, 2].map((i) => (
                 <div key={i}>
                   <div className="font-mono text-[11px] text-[var(--color-sun)] tracking-[0.2em] mb-3">

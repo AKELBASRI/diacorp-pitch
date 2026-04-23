@@ -21,7 +21,7 @@ export async function Positioning() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] border border-[var(--color-line)]">
+        <div className="reveal-up grid grid-cols-1 md:grid-cols-[1.5fr_1fr_1fr] border border-[var(--color-line)]">
           {/* Header row */}
           <div className="hidden md:block py-4 px-6 border-b border-[var(--color-line)] bg-[var(--color-bg)]/40" />
           <div className="py-4 px-6 border-b border-[var(--color-line)] bg-[var(--color-bg)]/40">

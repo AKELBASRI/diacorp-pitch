@@ -62,7 +62,7 @@ export async function StrategyCard({
   return (
     <article
       id={strategy.id}
-      className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 md:py-24 border-t border-[var(--color-line)]"
+      className="reveal-up relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start py-16 md:py-24 border-t border-[var(--color-line)]"
     >
       {/* Left text column */}
       <div

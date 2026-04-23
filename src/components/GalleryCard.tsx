@@ -44,7 +44,7 @@ export async function GalleryCard({strategy}: {strategy: Strategy}) {
   return (
     <article
       id={strategy.id}
-      className="relative border border-[var(--color-line)] bg-[var(--color-bg)]/60 backdrop-blur p-5 md:p-7 hover:border-[var(--color-line-strong)] transition-colors"
+      className="reveal-up lift relative border border-[var(--color-line)] bg-[var(--color-bg)]/60 backdrop-blur p-5 md:p-7"
     >
       <header className="flex items-start justify-between mb-5 gap-4">
         <div className="flex items-baseline gap-3">

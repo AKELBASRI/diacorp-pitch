@@ -24,14 +24,14 @@ export async function Financials() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           <Card label={t('cards.plant.label')} value={t('cards.plant.value')} note={t('cards.plant.note')} />
           <Card label={t('cards.software.label')} value={t('cards.software.value')} note={t('cards.software.note')} highlight />
           <Card label={t('cards.combined.label')} value={t('cards.combined.value')} note={t('cards.combined.note')} />
         </div>
 
         {/* Revenue stack visualization */}
-        <div className="mt-12 border border-[var(--color-line)] bg-[var(--color-bg)] p-6 md:p-8">
+        <div className="reveal-up mt-12 border border-[var(--color-line)] bg-[var(--color-bg)] p-6 md:p-8">
           <div className="flex items-center justify-between mb-6">
             <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--color-ink-faint)]">
               REVENUE STACK · YEAR 5 (USD, M)

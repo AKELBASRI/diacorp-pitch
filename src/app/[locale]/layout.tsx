@@ -10,6 +10,7 @@ import {
   Noto_Kufi_Arabic
 } from 'next/font/google';
 import {routing, type Locale} from '@/i18n/routing';
+import {Providers} from '@/components/Providers';
 import '../globals.css';
 
 const fraunces = Fraunces({
@@ -83,9 +84,11 @@ export default async function LocaleLayout({
       suppressHydrationWarning
     >
       <body className="min-h-screen">
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          {children}
-        </NextIntlClientProvider>
+        <Providers>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            {children}
+          </NextIntlClientProvider>
+        </Providers>
       </body>
     </html>
   );

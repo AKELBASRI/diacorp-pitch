@@ -18,7 +18,7 @@ export async function Timeline() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[var(--color-line)]">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-3 gap-[1px] bg-[var(--color-line)]">
           {[0, 1, 2].map((i) => {
             const items = t.raw(`phases.${i}.items`) as string[];
             const accent = i === 0 ? 'var(--color-spark)' : i === 1 ? 'var(--color-sun)' : 'var(--color-copper)';
