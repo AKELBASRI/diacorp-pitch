@@ -241,6 +241,47 @@
       "onlineBody": "5 étapes, 5 minutes. Nous générons votre LOI pré-remplie avec les bons modèles en fonction de votre activité.",
       "onlineCta": "Ouvrir l'espace off-taker"
     },
+    "services": {
+      "kicker": "SERVICES",
+      "title": "Tout l'écosystème solaire, sous un seul toit.",
+      "sub": "Au-delà de l'IPP utility-scale, DiaCorp / KermaSys propose une palette complète de services pour accompagner votre transition énergétique — de l'étude à l'exploitation.",
+      "items": {
+        "feasibility": {
+          "name": "Étude de faisabilité",
+          "body": "Analyse d'irradiance, potentiel kWc, scoring foncier, simulation production (PVsyst, SAM, MétéoNorm) et modélisation financière."
+        },
+        "utility": {
+          "name": "Central utility-scale PPA",
+          "body": "Conception, financement, construction et exploitation de centrales 10-500 MW. Livraison via PPA long terme avec garantie de performance."
+        },
+        "onsite": {
+          "name": "PV on-site & toitures",
+          "body": "Installation photovoltaïque sur vos propres toitures, parkings, ou terrains. Auto-consommation partielle, revente du surplus."
+        },
+        "om": {
+          "name": "Maintenance & O&M",
+          "body": "Opérations et maintenance 24/7, nettoyage programmé, détection prédictive de pannes, rapports mensuels de performance."
+        },
+        "audit": {
+          "name": "Audit énergétique",
+          "body": "Diagnostic détaillé de votre consommation, identification des gisements d'économie, recommandations d'optimisation chiffrées."
+        },
+        "thermal": {
+          "name": "Solaire thermique",
+          "body": "Production d'eau chaude et chaleur process : agro-industrie, hôtellerie, cold storage (cycle frigorifique à absorption)."
+        }
+      }
+    },
+    "impact": {
+      "capacity": "Puissance cible",
+      "capacityValue": "1 GW",
+      "energy": "Énergie annuelle",
+      "energyValue": "2,5 TWh",
+      "co2": "Émissions évitées",
+      "co2Value": "1,5 Mt CO₂/an",
+      "offtakers": "Off-takers ciblés",
+      "offtakersValue": "42+"
+    },
     "team": {
       "kicker": "ÉQUIPE",
       "title": "Vingt-cinq ans d'énergie marocaine.",

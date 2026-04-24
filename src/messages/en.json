@@ -241,6 +241,47 @@
       "onlineBody": "5 steps, 5 minutes. We generate your pre-filled LOI based on your activity profile.",
       "onlineCta": "Open the Off-taker Portal"
     },
+    "services": {
+      "kicker": "SERVICES",
+      "title": "The whole solar stack, under one roof.",
+      "sub": "Beyond utility-scale IPP, DiaCorp / KermaSys delivers a full range of services to support your energy transition — from feasibility study to daily operations.",
+      "items": {
+        "feasibility": {
+          "name": "Feasibility study",
+          "body": "Irradiance analysis, kWc potential, land scoring, production simulation (PVsyst, SAM, MeteoNorm) and financial modeling."
+        },
+        "utility": {
+          "name": "Utility-scale PPA plants",
+          "body": "Design, financing, construction and operation of 10-500 MW plants. Long-term PPA delivery with performance guarantees."
+        },
+        "onsite": {
+          "name": "On-site PV & rooftops",
+          "body": "Solar installation on your own rooftops, parking lots, or land. Partial self-consumption, surplus resale."
+        },
+        "om": {
+          "name": "O&M / Maintenance",
+          "body": "24/7 operations and maintenance, scheduled cleaning, predictive fault detection, monthly performance reports."
+        },
+        "audit": {
+          "name": "Energy audit",
+          "body": "Detailed diagnostic of your consumption, identification of savings opportunities, quantified optimization recommendations."
+        },
+        "thermal": {
+          "name": "Solar thermal",
+          "body": "Hot-water and process-heat generation: agri-industry, hospitality, cold storage (absorption refrigeration cycle)."
+        }
+      }
+    },
+    "impact": {
+      "capacity": "Target capacity",
+      "capacityValue": "1 GW",
+      "energy": "Annual energy",
+      "energyValue": "2.5 TWh",
+      "co2": "CO₂ avoided",
+      "co2Value": "1.5 Mt/yr",
+      "offtakers": "Targeted off-takers",
+      "offtakersValue": "42+"
+    },
     "team": {
       "kicker": "TEAM",
       "title": "Twenty-five years inside Moroccan energy.",
