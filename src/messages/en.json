@@ -274,7 +274,7 @@
         "industry": {
           "tag": "01 · INDUSTRY",
           "name": "Heavy industry & manufacturing",
-          "body": "Mining (Managem Jerada), steel, cement, bricks, ceramics, textiles, automotive. 15-25 year PPAs, fixed indexed tariff, private line or ONEE wheeling."
+          "body": "Managem Jerada mines, Touissit lead-zinc, Oujda brickworks, ceramics, Oujda textiles, cement. 15-25 year PPAs, fixed indexed tariff, private line or ONEE wheeling."
         },
         "agro": {
           "tag": "02 · AGRI-INDUSTRY",
@@ -311,7 +311,7 @@
           "location": "Ain Beni Mathar",
           "status": "Financial close in progress",
           "commissioning": "Q3 2027",
-          "offtakers": "Managem · Stellantis · 1 large EU industrial"
+          "offtakers": "Managem Jerada · Oujda textile · Berkane cold storage"
         },
         {
           "code": "DIA2",
@@ -319,7 +319,7 @@
           "location": "Jerada / Guenfouda",
           "status": "Site studies underway",
           "commissioning": "Q4 2028",
-          "offtakers": "OCP · citrus exporter · industrial zone"
+          "offtakers": "Berkane citrus exporters · Nador West Med · Oujda brickworks"
         },
         {
           "code": "DIA3",
@@ -327,7 +327,7 @@
           "location": "Figuig / Bouarfa",
           "status": "Identified · regional MoU",
           "commissioning": "Q2 2029",
-          "offtakers": "Citic-Dicastal · agri-industrial consortium"
+          "offtakers": "Oriental farming cooperatives · Bouarfa mining · Moulouya irrigation"
         }
       ],
       "extensions": "Identified extensions: Driouch · Taourirt · Midelt — toward 1 GW."
@@ -361,15 +361,15 @@
       "onlineCta": "Open the Off-taker Portal"
     },
     "track": {
-      "kicker": "TRACK RECORD · SINCE 2005",
-      "title": "Real plants, already delivered.",
-      "sub": "Before taking DIA forward, the KermaSys team has designed, built and operated major power plants in Morocco, Libya and Spain for clients such as ONEE, ABENGOA and METRAGAZ.",
+      "kicker": "TRACK RECORD · ORIENTAL · SINCE 2008",
+      "title": "Already at work in the Oriental.",
+      "sub": "Before taking DIA forward, the KermaSys team has designed, built and operated power plants in the Oriental region for clients such as ONEE, ABENGOA and METRAGAZ.",
       "items": [
         {
           "code": "ISCC",
           "name": "Ain Beni Mathar ISCC Thermosolar Plant",
           "client": "ONEE / ABENGOA Group",
-          "location": "Oujda, Morocco",
+          "location": "Ain Beni Mathar · Jerada",
           "capacity": "470 MW combined · 25 MW CSP",
           "role": "Partial EPC · O&M",
           "year": "2010-2013",
@@ -379,31 +379,31 @@
           "code": "GSP",
           "name": "Maghreb-Europe Gas Pipeline — Distribution Plant",
           "client": "METRAGAZ (Morocco / Spain)",
-          "location": "Ain Ben Mathar, Morocco",
+          "location": "Ain Ben Mathar · Jerada",
           "capacity": "105 MW gas · 5 MW solar turbines",
           "role": "Partial engineering · Partial EPC",
           "year": "2008-2010",
-          "scope": "Gas compression and distribution station. 2 Solar 2.5 MW turbines + 3 RB211 G24 35 MW turbines. Installation and commissioning together with OEMs."
+          "scope": "Gas compression and distribution station. 2 Solar 2.5 MW turbines + 3 RB211 G24 35 MW turbines. Installation and commissioning alongside the OEMs."
         },
         {
-          "code": "NOOR",
-          "name": "NOOR Solar Complex (regional benchmark)",
-          "client": "MASEN / ACWA-ENGIE consortium",
-          "location": "Ouarzazate, Morocco",
-          "capacity": "580 MW CSP + PV",
-          "role": "Ecosystem references",
-          "year": "2015-2018",
-          "scope": "Africa's largest concentrated solar complex. The expertise accumulated in the Moroccan solar ecosystem directly benefits the DIA rollout."
+          "code": "DIA2",
+          "name": "Site studies — Jerada / Guenfouda",
+          "client": "DiaCorp Energy SPV",
+          "location": "Jerada · Guenfouda",
+          "capacity": "150 MW PV planned",
+          "role": "Topography, irradiance & land-tenure studies",
+          "year": "2025-2026",
+          "scope": "Land sourcing, on-site pyranometer irradiance readings, topographic and geotechnical surveys. Financial close targeted Q4 2027 for a Q4 2028 commissioning."
         },
         {
-          "code": "JBK",
-          "name": "Jbel Khalladi Wind Farm",
-          "client": "ACWA Power / ONEE",
-          "location": "Tangier-Tetouan, Morocco",
-          "capacity": "120 MW wind",
-          "role": "Ecosystem reference",
-          "year": "2018",
-          "scope": "IPP wind farm connected to the ONEE grid with a 20-year PPA — a commercial template that directly inspires DIA."
+          "code": "DIA3",
+          "name": "Regional MoU — Figuig / Bouarfa",
+          "client": "CRI Oriental · Province of Figuig",
+          "location": "Figuig · Bouarfa",
+          "capacity": "150 MW PV identified",
+          "role": "Regional framework agreement · pre-development",
+          "year": "2026",
+          "scope": "Memorandum of Understanding with the Province and CRI Oriental to reserve 400 ha of domain land close to the Bouarfa ONEE HV line. Studies to start Q3 2026."
         }
       ]
     },
