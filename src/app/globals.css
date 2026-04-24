@@ -342,3 +342,327 @@ html[dir="rtl"] .corner-ornament::after {
   transform: translateY(-2px);
   box-shadow: var(--shadow-elev);
 }
+
+/* ==========  Smooth scroll & anchor offset  ========== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ==========  Scroll progress bar (fixed top)  ========== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 100;
+  background: transparent;
+  pointer-events: none;
+}
+.scroll-progress::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--color-sun),
+    var(--color-copper),
+    var(--color-spark-deep)
+  );
+  transform-origin: left;
+  transform: scaleX(0);
+}
+html[dir="rtl"] .scroll-progress::after {
+  transform-origin: right;
+}
+@supports (animation-timeline: scroll()) {
+  .scroll-progress::after {
+    animation: progress-fill linear both;
+    animation-timeline: scroll(root);
+  }
+}
+@keyframes progress-fill {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ==========  Parallax background (scroll-driven)  ========== */
+@keyframes parallax-rise {
+  from {
+    transform: translate3d(0, 10%, 0);
+  }
+  to {
+    transform: translate3d(0, -10%, 0);
+  }
+}
+@keyframes parallax-drift {
+  from {
+    transform: translate3d(-6%, 4%, 0);
+  }
+  to {
+    transform: translate3d(6%, -4%, 0);
+  }
+}
+@supports (animation-timeline: scroll()) {
+  .parallax-slow {
+    animation: parallax-rise linear both;
+    animation-timeline: scroll(root);
+  }
+  .parallax-drift {
+    animation: parallax-drift linear both;
+    animation-timeline: scroll(root);
+  }
+}
+
+/* ==========  Text reveal line-by-line  ========== */
+.reveal-lines > * {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1.05;
+  padding-bottom: 0.04em;
+}
+.reveal-lines > * > span {
+  display: inline-block;
+  transform: translateY(100%);
+  opacity: 0;
+  animation: reveal-line 1s cubic-bezier(0.2, 0.65, 0.2, 1) both;
+}
+.reveal-lines > *:nth-child(1) > span { animation-delay: 0.05s; }
+.reveal-lines > *:nth-child(2) > span { animation-delay: 0.18s; }
+.reveal-lines > *:nth-child(3) > span { animation-delay: 0.3s; }
+.reveal-lines > *:nth-child(4) > span { animation-delay: 0.42s; }
+
+@keyframes reveal-line {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ==========  Nav scroll-shrink  ========== */
+@keyframes nav-shrink {
+  0%, 2% {
+    background-color: rgba(10, 11, 13, 0);
+    backdrop-filter: blur(0);
+    border-bottom-color: transparent;
+  }
+  100% {
+    background-color: rgba(10, 11, 13, 0.92);
+    backdrop-filter: blur(20px) saturate(140%);
+    border-bottom-color: var(--color-line);
+  }
+}
+[data-theme="light"] {
+  --nav-bg-start: rgba(246, 241, 231, 0);
+  --nav-bg-end: rgba(246, 241, 231, 0.9);
+}
+@supports (animation-timeline: scroll()) {
+  .nav-shrink {
+    animation: nav-shrink linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 120px;
+  }
+}
+
+/* ==========  Marquee (infinite scroll)  ========== */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 50s linear infinite;
+}
+.marquee:hover {
+  animation-play-state: paused;
+}
+html[dir="rtl"] .marquee {
+  animation-direction: reverse;
+}
+
+/* ==========  Magnetic underline  ========== */
+.underline-sweep {
+  position: relative;
+  display: inline-block;
+}
+.underline-sweep::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.45s cubic-bezier(0.2, 0.65, 0.2, 1);
+}
+.underline-sweep:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+html[dir="rtl"] .underline-sweep::after {
+  transform-origin: left;
+}
+html[dir="rtl"] .underline-sweep:hover::after {
+  transform-origin: right;
+}
+
+/* ==========  Subtle section glow on entry  ========== */
+@keyframes section-border-sweep {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+@supports (animation-timeline: view()) {
+  .hr-sweep {
+    animation: section-border-sweep cubic-bezier(0.2, 0.65, 0.2, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+}
+
+/* ==========  Number-flip (CSS)  ========== */
+@keyframes digit-in {
+  from {
+    transform: translateY(80%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@supports (animation-timeline: view()) {
+  .digit-in {
+    animation: digit-in 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+  }
+}
+
+/* ==========  Animated gradient mesh  ========== */
+@keyframes mesh-drift {
+  0%   { background-position: 0% 0%, 100% 100%, 50% 50%; }
+  50%  { background-position: 20% 30%, 80% 70%, 60% 40%; }
+  100% { background-position: 0% 0%, 100% 100%, 50% 50%; }
+}
+.mesh-bg {
+  background-image:
+    radial-gradient(ellipse 70% 50% at 20% 0%, color-mix(in oklch, var(--color-brand) 14%, transparent), transparent 55%),
+    radial-gradient(ellipse 55% 55% at 100% 80%, color-mix(in oklch, var(--color-accent-spark) 10%, transparent), transparent 60%),
+    radial-gradient(ellipse 40% 40% at 60% 100%, color-mix(in oklch, var(--color-copper) 8%, transparent), transparent 60%);
+  background-size: 200% 200%, 200% 200%, 200% 200%;
+  animation: mesh-drift 32s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .mesh-bg { animation: none; }
+}
+
+/* ==========  Magnetic underline sweep (already in .underline-sweep)  ========== */
+/* Extend with a "magnetic" lift on cards + buttons. */
+.magnetic {
+  position: relative;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+  will-change: transform;
+}
+.magnetic:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-elev);
+}
+.magnetic::before {
+  content: "";
+  position: absolute; inset: -1px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--color-bg), var(--color-bg)) padding-box,
+    linear-gradient(135deg, var(--color-brand), transparent 40%, var(--color-accent-spark) 100%) border-box;
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+.magnetic:hover::before { opacity: 1; }
+
+/* ==========  Accent-color halo (useful for cards)  ========== */
+.accent-halo {
+  position: relative;
+}
+.accent-halo::after {
+  content: "";
+  position: absolute; inset: -40px;
+  background: radial-gradient(ellipse 40% 40% at 50% 50%, var(--color-brand), transparent 60%);
+  opacity: 0;
+  transition: opacity .5s ease;
+  pointer-events: none;
+  filter: blur(40px);
+  z-index: -1;
+}
+.accent-halo:hover::after { opacity: 0.25; }
+
+/* ==========  Section divider (subtle inner frame)  ========== */
+.section-frame {
+  position: relative;
+}
+.section-frame::before,
+.section-frame::after {
+  content: "";
+  position: absolute;
+  left: 24px; right: 24px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-line-strong), transparent);
+  opacity: 0.6;
+}
+.section-frame::before { top: 0; }
+.section-frame::after { bottom: 0; }
+
+/* ==========  Typographic emphasis  ========== */
+/* Use .display-shadow on very large headings for a chromatic-aberration feel */
+.display-shadow {
+  text-shadow:
+    -1px 0 0 color-mix(in oklch, var(--color-brand) 55%, transparent),
+     1px 0 0 color-mix(in oklch, var(--color-accent-spark) 45%, transparent);
+}
+
+/* ==========  Subtle tilt on cards (3D feel)  ========== */
+.tilt {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+  transition: transform 0.5s cubic-bezier(0.2, 0.65, 0.2, 1);
+}
+.tilt:hover { transform: rotateX(1.5deg) rotateY(-1.5deg); }
+
+/* ==========  Soft glow for CTAs  ========== */
+.cta-glow {
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, var(--color-brand) 25%, transparent),
+    0 18px 40px -18px color-mix(in oklch, var(--color-brand) 55%, transparent);
+}
+
+/* ==========  Utility: dashed rule  ========== */
+.dashed-rule {
+  background-image: linear-gradient(90deg, var(--color-line-strong) 50%, transparent 50%);
+  background-size: 8px 1px;
+  background-repeat: repeat-x;
+  height: 1px;
+}

@@ -79,7 +79,7 @@ export const STRATEGIES: Strategy[] = [
     marginPct: 40,
     capexMusd: 180,
     phase: 3,
-    tags: ['H2 / NH3 Export', 'Electrolyzer Control', 'Port Jorf Lasfar', 'Optimization'],
+    tags: ['H2 / NH3 Export', 'Electrolyzer Control', 'Ports marocains', 'Optimization'],
     tintHsl: '200 78% 58%'
   },
   {
@@ -99,7 +99,7 @@ export const STRATEGIES: Strategy[] = [
     marginPct: 80,
     capexMusd: 2,
     phase: 2,
-    tags: ['Managem / Unimer / Sonasid', 'Wheeling Automation', 'LCOE Analyzer', '2% fees'],
+    tags: ['Industriels Oriental', 'Wheeling Automation', 'LCOE Analyzer', '2% fees'],
     tintHsl: '24 80% 62%'
   },
   {

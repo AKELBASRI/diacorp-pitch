@@ -11,6 +11,7 @@ import {
 } from 'next/font/google';
 import {routing, type Locale} from '@/i18n/routing';
 import {Providers} from '@/components/Providers';
+import {getSiteSettings} from '@/lib/settings';
 import '../globals.css';
 
 const fraunces = Fraunces({
@@ -73,8 +74,24 @@ export default async function LocaleLayout({
     notFound();
   }
   setRequestLocale(locale);
-  const messages = await getMessages();
+  const [messages, settings] = await Promise.all([
+    getMessages(),
+    getSiteSettings()
+  ]);
   const dir = (locale as Locale) === 'ar' ? 'rtl' : 'ltr';
+
+  // Inject brand settings as CSS vars so every subtree can honour them.
+  const brandVars = `:root, [data-theme="dark"], [data-theme="light"] {
+  --color-brand: ${settings.brandColor};
+  --color-accent-spark: ${settings.accentSpark};
+}
+[data-brand-hero-photo="1"] .hero-photo-bg {
+  background-image:
+    linear-gradient(180deg, rgba(10,11,13,0.55) 0%, rgba(10,11,13,0.85) 60%, rgba(10,11,13,0.96) 100%),
+    url("${settings.heroImageUrl ?? ''}");
+  background-size: cover;
+  background-position: center;
+}`;
 
   return (
     <html
@@ -82,8 +99,13 @@ export default async function LocaleLayout({
       dir={dir}
       className={`${fraunces.variable} ${archivo.variable} ${plexMono.variable} ${plexArabic.variable} ${kufi.variable}`}
       suppressHydrationWarning
+      data-brand-hero-photo={settings.heroImageUrl ? '1' : '0'}
     >
+      <head>
+        <style dangerouslySetInnerHTML={{__html: brandVars}} />
+      </head>
       <body className="min-h-screen">
+        <div className="scroll-progress" aria-hidden />
         <Providers>
           <NextIntlClientProvider messages={messages} locale={locale}>
             {children}

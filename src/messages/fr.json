@@ -17,7 +17,9 @@
     "pitch": "Thèse investisseurs",
     "loi": "LOI",
     "services": "Services",
-    "references": "Références"
+    "references": "Références",
+    "about": "À propos",
+    "produits": "Produits"
   },
   "servicesPage": {
     "meta": {
@@ -40,42 +42,78 @@
         "name": "Étude de faisabilité",
         "tagline": "Transformer une intuition en dossier défendable devant un board.",
         "body": "Notre équipe ingénierie combine données d'irradiance satellitaires (MétéoNorm), simulation de production (PVsyst, SAM, PVSOL), modélisation financière (IRR, NPV, LCOE) et screening foncier pour produire un dossier d'investissement bancable.",
-        "deliverables": ["Rapport d'irradiance + productible", "Plan de masse indicatif", "CAPEX et OPEX estimés", "Modèle financier à 25 ans", "Cartographie des risques"],
+        "deliverables": [
+          "Rapport d'irradiance + productible",
+          "Plan de masse indicatif",
+          "CAPEX et OPEX estimés",
+          "Modèle financier à 25 ans",
+          "Cartographie des risques"
+        ],
         "typical": "4 à 8 semaines · à partir de 15 k$"
       },
       "utility": {
         "name": "Centrale utility-scale PPA",
         "tagline": "Un plant de 10 à 500 MW, conçu pour livrer un PPA de 20 ans.",
         "body": "Conception-réalisation clef en main. DiaCorp porte la SPV, mobilise le financement, pilote l'EPC (via KermaSys ou un consortium), gère le wheeling ONEE, et opère le plant sur toute la durée du PPA.",
-        "deliverables": ["Développement complet du projet", "Financement & clôture bancable", "EPC avec performance guarantees", "O&M 20+ ans", "Facturation & gestion commerciale"],
+        "deliverables": [
+          "Développement complet du projet",
+          "Financement & clôture bancable",
+          "EPC avec performance guarantees",
+          "O&M 20+ ans",
+          "Facturation & gestion commerciale"
+        ],
         "typical": "Construction 8 à 18 mois selon capacité"
       },
       "onsite": {
         "name": "PV on-site & toitures industrielles",
         "tagline": "Vous avez du toit, nous avons les panneaux.",
         "body": "Installation photovoltaïque sur vos propres actifs : toitures d'usine, ombrières de parking, terrains non-exploités. Modèle d'auto-consommation partielle, avec option de rachat du surplus par DiaCorp ou vente directe.",
-        "deliverables": ["Audit structurel du toit", "Dimensionnement", "Installation certifiée", "Connexion réseau", "Monitoring temps réel 5 ans"],
+        "deliverables": [
+          "Audit structurel du toit",
+          "Dimensionnement",
+          "Installation certifiée",
+          "Connexion réseau",
+          "Monitoring temps réel 5 ans"
+        ],
         "typical": "2 à 6 mois selon taille"
       },
       "om": {
         "name": "Opérations & Maintenance",
         "tagline": "Disponibilité 98%+, à la minute près.",
         "body": "Plateforme d'exploitation 24/7, détection prédictive d'anomalies par vision par ordinateur, équipes d'intervention sur site, reporting mensuel à vos actionnaires. Applicable à vos actifs existants comme aux nôtres.",
-        "deliverables": ["Monitoring temps réel", "Interventions correctives", "Nettoyage programmé", "Rapports mensuels", "Garantie de performance"],
+        "deliverables": [
+          "Monitoring temps réel",
+          "Interventions correctives",
+          "Nettoyage programmé",
+          "Rapports mensuels",
+          "Garantie de performance"
+        ],
         "typical": "Contrats de 5 à 25 ans"
       },
       "audit": {
         "name": "Audit énergétique",
         "tagline": "Comprendre chaque kWh, avant d'en acheter un de plus.",
         "body": "Diagnostic détaillé de votre consommation énergétique : répartition par poste, identification des gisements d'économie, recommandations chiffrées avec ROI. Conforme au référentiel AMEE / ISO 50001.",
-        "deliverables": ["Relevés 15 min sur 2 semaines", "Cartographie consommation", "Rapport AMEE conforme", "Plan d'action priorisé", "Accompagnement mise en œuvre"],
+        "deliverables": [
+          "Relevés 15 min sur 2 semaines",
+          "Cartographie consommation",
+          "Rapport AMEE conforme",
+          "Plan d'action priorisé",
+          "Accompagnement mise en œuvre"
+        ],
         "typical": "3 à 6 semaines · à partir de 8 k$"
       },
       "thermal": {
         "name": "Solaire thermique",
         "tagline": "Pour la chaleur, pas seulement pour l'électricité.",
         "body": "Production d'eau chaude sanitaire et de chaleur de process par capteurs thermiques. Utilisations : agro-transformation (pasteurisation, séchage), hôtellerie (piscines, sanitaire), cold storage (cycle frigorifique à absorption).",
-        "deliverables": ["Étude thermique", "Installation capteurs", "Réservoir & échangeurs", "Régulation auto", "Maintenance annuelle"],
+        "deliverables": [
+          "Étude thermique",
+          "Installation capteurs",
+          "Réservoir & échangeurs",
+          "Régulation auto",
+          "Maintenance annuelle"
+        ],
         "typical": "2 à 4 mois"
       }
     },
@@ -165,10 +203,22 @@
       "title": "Votre secteur d'activité",
       "sub": "Le modèle de LOI que nous générerons en dépend.",
       "options": {
-        "industry": {"label": "Industrie lourde", "note": "Mines, sidérurgie, cimenteries, briqueteries, céramique, textile"},
-        "agro": {"label": "Agriculture & agro-industrie", "note": "Irrigation, cold storage, transformation agrumes / maraîchage / huile"},
-        "zone": {"label": "Zone industrielle", "note": "Plusieurs locataires, besoins mutualisés"},
-        "other": {"label": "Autre", "note": "Services, tertiaire, public — à préciser"}
+        "industry": {
+          "label": "Industrie lourde",
+          "note": "Mines, sidérurgie, cimenteries, briqueteries, céramique, textile"
+        },
+        "agro": {
+          "label": "Agriculture & agro-industrie",
+          "note": "Irrigation, cold storage, transformation agrumes / maraîchage / huile"
+        },
+        "zone": {
+          "label": "Zone industrielle",
+          "note": "Plusieurs locataires, besoins mutualisés"
+        },
+        "other": {
+          "label": "Autre",
+          "note": "Services, tertiaire, public — à préciser"
+        }
       }
     },
     "step2": {
@@ -176,7 +226,7 @@
       "sub": "Informations de base pour la pré-qualification.",
       "fields": {
         "company": "Raison sociale",
-        "companyPlaceholder": "ex : Managem Jerada SA",
+        "companyPlaceholder": "ex : ex : votre entreprise SA",
         "ice": "Identifiant commun de l'entreprise (ICE)",
         "icePlaceholder": "15 chiffres",
         "city": "Ville / site principal",
@@ -274,7 +324,7 @@
         "industry": {
           "tag": "01 · INDUSTRIE",
           "name": "Industrie lourde & transformation",
-          "body": "Mines Managem Jerada, plomb-zinc Touissit, briqueteries Oujda, céramique, textile Oujda, cimenteries. PPA 15-25 ans, tarif fixe indexé, livraison par ligne privée ou wheeling ONEE."
+          "body": "Mines, plomb-zinc, briqueteries, céramique, textile, cimenteries de l'Oriental. PPA 15-25 ans, tarif fixe indexé, livraison par ligne privée ou wheeling ONEE."
         },
         "agro": {
           "tag": "02 · AGRO-INDUSTRIE",
@@ -292,6 +342,41 @@
           "body": "Parcs industriels greenfield autour des plants. Un lot, un contrat énergie, les services communs. Installation 8 mois, au lieu de 24-36 mois via ONEE."
         }
       }
+    },
+    "models": {
+      "kicker": "MODÈLES COMMERCIAUX · OFFTAKE",
+      "title": "Deux façons d'acheter notre solaire.",
+      "sub": "On vous livre l'énergie depuis notre centrale par câble — ou on vous pose les panneaux directement chez vous. Le choix dépend de votre site.",
+      "items": [
+        {
+          "badge": "Option 1 · Abonnement",
+          "title": "Livraison par câble",
+          "subtitle": "L'énergie vient de notre centrale DIA1 jusqu'à chez vous.",
+          "body": "Vous ne touchez à rien sur votre site. Nous produisons à Ain Beni Mathar et nous vous livrons via le réseau ONEE (wheeling), ou via un câble privé direct si votre site est suffisamment proche de la centrale. Vous payez une facture mensuelle indexée sur le long terme.",
+          "features": [
+            "Aucun équipement chez vous",
+            "Aucun CAPEX client",
+            "PPA 15 – 25 ans, tarif fixe indexé",
+            "Wheeling ONEE ou câble direct selon la géographie"
+          ],
+          "bestFor": "Vous consommez de l'électricité industrielle et vous voulez simplement une facture verte, indexée, sans investissement."
+        },
+        {
+          "badge": "Option 2 · Installation sur site",
+          "title": "Panneaux PV chez vous",
+          "subtitle": "Nous posons les photovoltaïques sur votre toit, parking ou terrain.",
+          "body": "Nous installons une centrale PV complète directement sur votre propre foncier : toiture industrielle, ombrières de parking, terrain agricole non exploité. Étude, panneaux, onduleurs, montage, raccordement, mise en service. Vous payez une seule fois à la livraison — ensuite l'énergie produite est à vous.",
+          "features": [
+            "Panneaux installés sur vos actifs",
+            "Paiement unique à la mise en service",
+            "Production et énergie = vôtres",
+            "Option contrat O&M pour la maintenance"
+          ],
+          "bestFor": "Vous avez une toiture, un parking ou du foncier disponible, et vous voulez devenir propriétaire de votre propre production solaire."
+        }
+      ],
+      "footnote": "Vous ne savez pas quelle option correspond à votre site ? Notre équipe vous oriente gratuitement après un premier échange.",
+      "cta": "Demander une orientation"
     },
     "projects": {
       "kicker": "RÉALISATIONS & PIPELINE",
@@ -311,7 +396,7 @@
           "location": "Ain Beni Mathar",
           "status": "Clôture financière en cours",
           "commissioning": "Q3 2027",
-          "offtakers": "Managem Jerada · textile Oujda · cold storage Berkane"
+          "offtakers": "Mines · textile · cold storage"
         },
         {
           "code": "DIA2",
@@ -319,7 +404,7 @@
           "location": "Jerada / Guenfouda",
           "status": "Études de site en cours",
           "commissioning": "Q4 2028",
-          "offtakers": "Exportateurs agrumes Berkane · Nador West Med · briqueteries Oujda"
+          "offtakers": "Exportateurs agrumes · plateforme portuaire · briqueteries"
         },
         {
           "code": "DIA3",
@@ -343,6 +428,17 @@
         "inverters": "Onduleurs",
         "institutional": "Institutionnels"
       }
+    },
+    "anchor": {
+      "kicker": "PREMIER OFFTAKER SIGNÉ",
+      "title": "Premier accord signé.",
+      "sub": "Un partenaire industriel a signé une lettre d'intention avec DiaCorp pour s'approvisionner en énergie renouvelable. D'autres discussions sont en cours.",
+      "code": "LOI · 2026",
+      "tagline": "Plateforme agri-export",
+      "name": "Taza Global",
+      "pitch": "Groupe agri-export opérant au Maroc avec une ambition d'expansion régionale vers l'Union Européenne et le Golfe. DiaCorp fournira la couche énergie renouvelable.",
+      "badge": "SIGNÉ · 2026",
+      "footnote": "Lettre d'intention non-contraignante. Détails commerciaux confidentiels."
     },
     "loi": {
       "kicker": "LETTRES D'INTENTION",
@@ -438,6 +534,74 @@
         }
       }
     },
+    "products": {
+      "kicker": "PRODUITS & TECHNOLOGIES",
+      "title": "Nous installons ce que nous recommanderions à nous-mêmes.",
+      "sub": "Partenariats directs avec les fabricants Tier-1. Nous n'intégrons que ce qui a prouvé sa fiabilité sur 10+ ans de terrain marocain.",
+      "categories": [
+        {
+          "key": "panels",
+          "label": "Panneaux photovoltaïques",
+          "desc": "Monocristallins TOPCon & HJT, garanties 25-30 ans.",
+          "brands": [
+            "Jinko Solar",
+            "JA Solar",
+            "Trina Solar",
+            "LONGi",
+            "Canadian Solar"
+          ]
+        },
+        {
+          "key": "inverters",
+          "label": "Onduleurs on-grid",
+          "desc": "Utility-scale et string, rendement > 98,5 %.",
+          "brands": [
+            "Sungrow",
+            "Huawei",
+            "Fronius"
+          ]
+        },
+        {
+          "key": "hybrid",
+          "label": "Onduleurs hybrides / off-grid",
+          "desc": "Autonomie & résilience, BMS intégré.",
+          "brands": [
+            "Sungrow",
+            "Huawei"
+          ]
+        },
+        {
+          "key": "pumps",
+          "label": "Variateurs solaires",
+          "desc": "Pompage agricole, irrigation autonome.",
+          "brands": [
+            "ABB",
+            "Schneider"
+          ]
+        },
+        {
+          "key": "storage",
+          "label": "Stockage batterie",
+          "desc": "LiFePO4, cycles 8000+, MW-scale.",
+          "brands": [
+            "CATL",
+            "BYD",
+            "Sungrow"
+          ]
+        },
+        {
+          "key": "monitoring",
+          "label": "Supervision & comptage",
+          "desc": "SCADA, datalogger, télémétrie 15-min.",
+          "brands": [
+            "Solarman",
+            "Huawei FusionSolar"
+          ]
+        }
+      ],
+      "note": "Configurations sur mesure — étude préalable systématique avant toute recommandation.",
+      "cta": "Demander une étude"
+    },
     "impact": {
       "capacity": "Puissance cible",
       "capacityValue": "1 GW",
@@ -447,6 +611,33 @@
       "co2Value": "1,5 Mt CO₂/an",
       "offtakers": "Off-takers ciblés",
       "offtakersValue": "42+"
+    },
+    "capabilities": {
+      "kicker": "POURQUOI DIACORP",
+      "title": "Quatre raisons de bâtir avec nous.",
+      "sub": "L'équipe technique a signé, construit et maintenu des plants à travers le Maroc depuis 2005. On ne vend pas de l'énergie — on l'opère.",
+      "items": [
+        {
+          "n": "01",
+          "title": "Expertise multi-technologie",
+          "body": "PV, thermique, stockage, hybride gaz-solaire. Équipe intégrée ingénierie + EPC + O&M. 20 ans de retours d'expérience sur le terrain marocain."
+        },
+        {
+          "n": "02",
+          "title": "Qualité & support continu",
+          "body": "Équipements Tier-1 exclusivement. Supervision 24/7 depuis Casablanca. Interventions terrain sous 48 h partout dans l'Oriental."
+        },
+        {
+          "n": "03",
+          "title": "Une réponse par projet",
+          "body": "Aucun projet n'est identique. Nous dimensionnons à votre production, vos pointes, vos contraintes foncières et réseau — pas à un catalogue."
+        },
+        {
+          "n": "04",
+          "title": "Rapport qualité-prix imbattable",
+          "body": "Accès direct aux fabricants (Jinko, JA, Trina, Sungrow, Huawei). LCOE mesuré, pas promis. Tarifs indexés à long terme, transparents."
+        }
+      ]
     },
     "team": {
       "kicker": "ÉQUIPE",
@@ -578,7 +769,7 @@
       "carbon-tokens": {
         "name": "Crédits Carbone Tokenisés",
         "pitch": "RECs on-chain pour exportateurs marocains soumis au CBAM dès 2026.",
-        "description": "Les exportateurs agrumes de Berkane, Unimer Nador, Sonasid Nador, Ciments Holcim Oujda sont déjà exposés à la taxe carbone CBAM dès 2026. Nous émettons des certificats d'énergie renouvelable vérifiables Verra/Gold Standard sur Polygon. Le token représente 1 MWh + 0,6 tCO₂ évitée.",
+        "description": "Les exportateurs agricoles, agro-industriels, sidérurgiques et cimentiers de l'Oriental sont déjà exposés à la taxe carbone CBAM dès 2026. Nous émettons des certificats d'énergie renouvelable vérifiables Verra/Gold Standard sur Polygon. Le token représente 1 MWh + 0,6 tCO₂ évitée.",
         "mockup": {
           "title": "DiaCorp Carbon",
           "subtitle": "REC Ledger · Polygon",
@@ -623,7 +814,7 @@
       "green-hydrogen": {
         "name": "Optimiseur H₂ Vert",
         "pitch": "Arbitrage logiciel électron → hydrogène → ammoniac pour export Rotterdam.",
-        "description": "Algorithme de décision temps réel : vendre l'électron, le stocker (BESS), ou l'électrolyser en H₂/NH₃ selon les prix marché. Export via Jorf Lasfar et Nador West Med. Marché H₂ vert estimé à 1 000 Mds$ en 2035.",
+        "description": "Algorithme de décision temps réel : vendre l'électron, le stocker (BESS), ou l'électrolyser en H₂/NH₃ selon les prix marché. Export via les ports marocains. Marché H₂ vert estimé à 1 000 Mds$ en 2035.",
         "mockup": {
           "title": "DiaCorp H₂",
           "subtitle": "Decision Engine · Live",
@@ -652,7 +843,7 @@
       },
       "corporate-ppa": {
         "name": "Marketplace PPA Corporate",
-        "pitch": "Mettre en relation Managem, Unimer, Sonasid, Nador West Med avec notre capacité — 2% commission.",
+        "pitch": "Mettre en relation les industriels, agro-industriels et opérateurs portuaires de l'Oriental avec notre capacité — 2% commission.",
         "description": "Plateforme où l'acheteur corporate saisit ses besoins (MW, durée, géo). L'algorithme matche avec notre capacité disponible, génère automatiquement le PPA, intègre le contrat de transport ONEE. Commission 1-3% × 100 M$ par contrat × 20 ans.",
         "mockup": {
           "title": "DiaCorp PPA",
@@ -748,7 +939,7 @@
         "items": [
           "Colocation IA (signature Microsoft / Equinix)",
           "ERP Zone Industrielle (lancement multi-tenants)",
-          "Marketplace PPA Corporate (Managem, Nador West Med, Sonasid)",
+          "Marketplace PPA Corporate (industriels Oriental)",
           "DIA2 + DIA3 opérationnels (450 MW)"
         ],
         "investment": "Invest. logiciel + infra : 480 M$",
@@ -785,6 +976,26 @@
   },
   "footer": {
     "confidential": "Strictement confidentiel · Usage interne DiaCorp Energy",
-    "version": "Version prototype · Avril 2026"
+    "version": "Version prototype · Avril 2026",
+    "regional": {
+      "title": "Contacts régionaux",
+      "lines": [
+        {
+          "label": "Siège · Casablanca",
+          "phone": "+212 5 22 xx xx xx"
+        },
+        {
+          "label": "Opérations · Ain Beni Mathar",
+          "phone": "+212 5 36 xx xx xx"
+        },
+        {
+          "label": "Commercial Oriental · Oujda",
+          "phone": "+212 5 36 xx xx xx"
+        }
+      ],
+      "hours": "Lundi — Vendredi · 9h00 — 18h00 (GMT+1)"
+    },
+    "tagline": "Développeur-opérateur solaire — 1 GW dans l'Oriental marocain. Études, construction, exploitation, tout sous un seul toit.",
+    "nav": "Navigation"
   }
 }

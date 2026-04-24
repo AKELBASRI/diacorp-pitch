@@ -2,18 +2,18 @@ import {getTranslations} from 'next-intl/server';
 import {MockupFrame} from './MockupFrame';
 
 const BIDS = [
-  {qty: 42, price: 0.071, who: 'Managem Jerada'},
-  {qty: 18, price: 0.070, who: 'Unimer Nador'},
-  {qty: 25, price: 0.069, who: 'Copag Berkane'},
-  {qty: 60, price: 0.068, who: 'Nador West Med'},
-  {qty: 14, price: 0.067, who: 'Ciments Oujda'}
+  {qty: 42, price: 0.071, who: 'Buyer 01'},
+  {qty: 18, price: 0.070, who: 'Buyer 02'},
+  {qty: 25, price: 0.069, who: 'Buyer 03'},
+  {qty: 60, price: 0.068, who: 'Buyer 04'},
+  {qty: 14, price: 0.067, who: 'Buyer 05'}
 ];
 const ASKS = [
-  {qty: 50, price: 0.072, who: 'DIA1 · N-8'},
-  {qty: 28, price: 0.074, who: 'DIA1 · S-3'},
-  {qty: 12, price: 0.075, who: 'VPP · Berkane'},
-  {qty: 40, price: 0.078, who: 'DIA1 · E-2'},
-  {qty: 22, price: 0.082, who: 'VPP · Oujda'}
+  {qty: 50, price: 0.072, who: 'Plant A · N-8'},
+  {qty: 28, price: 0.074, who: 'Plant A · S-3'},
+  {qty: 12, price: 0.075, who: 'VPP · Cluster 1'},
+  {qty: 40, price: 0.078, who: 'Plant A · E-2'},
+  {qty: 22, price: 0.082, who: 'VPP · Cluster 2'}
 ];
 
 export async function EnergyMarketMockup({tint}: {tint: string}) {

@@ -1,29 +1,76 @@
 import {getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
+import {getSectionContent} from '@/lib/content';
+import {getSiteSettings} from '@/lib/settings';
+
+type HeroContent = {
+  kicker: string;
+  title: string;
+  sub: string;
+  ctaLoi: string;
+  ctaScroll: string;
+  stat1: string;
+  stat1v: string;
+  stat2: string;
+  stat2v: string;
+  stat3: string;
+  stat3v: string;
+  stat4: string;
+  stat4v: string;
+};
 
 export async function HomeHero() {
-  const t = await getTranslations('home.hero');
+  const [t, db, settings] = await Promise.all([
+    getTranslations('home.hero'),
+    getSectionContent<HeroContent>('home.hero'),
+    getSiteSettings()
+  ]);
+  const tAny = t as unknown as (k: string) => string;
+  const k = <K extends keyof HeroContent>(key: K): string =>
+    db?.[key] ?? tAny(key as string);
+  const hasPhoto = Boolean(settings.heroImageUrl);
 
   return (
     <section className="relative overflow-hidden border-b border-[var(--color-line)]">
-      {/* Background — layered gradient + subtle zellige pattern */}
-      <div
-        aria-hidden
-        className="absolute inset-0"
-        style={{
-          background:
-            'radial-gradient(ellipse 80% 55% at 20% 0%, rgba(232,169,72,0.14), transparent 60%), radial-gradient(ellipse 60% 60% at 100% 80%, rgba(86,240,200,0.045), transparent 55%)'
-        }}
-      />
-      <div aria-hidden className="absolute inset-0 zellige opacity-[0.028]" />
-
-      {/* Panels illustration (right) — minimal SVG */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute right-0 bottom-0 w-[55%] h-[70%] hidden lg:block opacity-30"
-      >
-        <SolarPanelsSvg />
-      </div>
+      {/* Optional hero photo background (editable from /admin/settings). */}
+      {hasPhoto && (
+        <>
+          <div
+            aria-hidden
+            className="hero-photo-bg absolute inset-0"
+          />
+          {/* Gradient mesh overlay on top of the photo */}
+          <div
+            aria-hidden
+            className="absolute inset-0 opacity-70 mix-blend-soft-light"
+            style={{
+              background:
+                'radial-gradient(ellipse 60% 60% at 20% 0%, var(--color-brand), transparent 60%), radial-gradient(ellipse 50% 50% at 100% 100%, var(--color-accent-spark), transparent 60%)'
+            }}
+          />
+          <div aria-hidden className="absolute inset-0 grain" />
+        </>
+      )}
+      {/* Default background (when no photo) — layered gradient + zellige + SVG panels */}
+      {!hasPhoto && (
+        <>
+          <div
+            aria-hidden
+            className="absolute inset-0"
+            style={{
+              background:
+                'radial-gradient(ellipse 80% 55% at 20% 0%, color-mix(in oklch, var(--color-brand) 14%, transparent), transparent 60%), radial-gradient(ellipse 60% 60% at 100% 80%, color-mix(in oklch, var(--color-accent-spark) 10%, transparent), transparent 55%)'
+            }}
+          />
+          <div aria-hidden className="absolute inset-0 zellige opacity-[0.028]" />
+          <div
+            aria-hidden
+            className="pointer-events-none absolute right-0 bottom-0 w-[55%] h-[70%] hidden lg:block opacity-30"
+          >
+            <SolarPanelsSvg />
+          </div>
+        </>
+      )}
 
       <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 pt-20 pb-16 lg:pt-32 lg:pb-24">
         <div className="max-w-[880px]">
@@ -31,7 +78,7 @@ export async function HomeHero() {
           <div className="flex items-center gap-3 mb-10 rise">
             <span className="block w-10 h-px bg-[var(--color-sun)]" />
             <span className="font-mono text-[11px] tracking-[0.24em] uppercase text-[var(--color-sun)]">
-              {t('kicker')}
+              {k('kicker')}
             </span>
           </div>
 
@@ -40,7 +87,7 @@ export async function HomeHero() {
             className="font-display text-[42px] sm:text-[54px] lg:text-[72px] leading-[1.02] tracking-[-0.03em] rise whitespace-pre-line"
             style={{animationDelay: '120ms'}}
           >
-            {t('title')}
+            {k('title')}
           </h1>
 
           {/* Sub */}
@@ -48,7 +95,7 @@ export async function HomeHero() {
             className="mt-8 lg:mt-10 text-[17px] lg:text-[19px] leading-[1.6] text-[var(--color-ink)]/85 max-w-[62ch] rise"
             style={{animationDelay: '280ms'}}
           >
-            {t('sub')}
+            {k('sub')}
           </p>
 
           {/* CTAs */}
@@ -58,16 +105,16 @@ export async function HomeHero() {
           >
             <Link
               href="/register"
-              className="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[var(--color-sun)] text-[var(--color-bg)] font-mono text-[12px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
+              className="cta-glow inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-[var(--color-brand)] text-[var(--color-bg)] font-mono text-[12px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
             >
-              {t('ctaLoi')}
+              {k('ctaLoi')}
               <span className="ltr:rotate-0 rtl:rotate-180">→</span>
             </Link>
             <a
               href="#activites"
               className="inline-flex items-center justify-center gap-2 px-7 py-3.5 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-mono text-[12px] tracking-[0.16em] uppercase hover:border-[var(--color-sun)] hover:text-[var(--color-sun)] transition-colors"
             >
-              {t('ctaScroll')}
+              {k('ctaScroll')}
               <span>↓</span>
             </a>
           </div>
@@ -95,10 +142,10 @@ export async function HomeHero() {
               }`}
             >
               <div className="font-mono text-[10px] tracking-[0.2em] uppercase text-[var(--color-ink-faint)] mb-3">
-                {t(labelKey)}
+                {k(labelKey)}
               </div>
-              <div className="font-display num text-3xl lg:text-[40px] tracking-tight">
-                {t(valueKey)}
+              <div className="font-display num text-3xl lg:text-[40px] tracking-tight digit-in" style={{animationDelay: `${i * 90}ms`}}>
+                {k(valueKey)}
               </div>
             </div>
           ))}

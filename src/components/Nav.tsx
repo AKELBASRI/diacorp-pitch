@@ -25,16 +25,19 @@ export async function Nav() {
           </span>
         </Link>
         <nav className="hidden xl:flex items-center gap-5 font-mono text-[10.5px] tracking-[0.14em] uppercase text-[var(--color-ink-muted)]">
-          <Link href="/#activites" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/#activites" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('activites')}
           </Link>
-          <Link href="/services" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/services" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('services')}
           </Link>
-          <Link href="/#projets" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/#produits" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
+            {t('produits')}
+          </Link>
+          <Link href="/#projets" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('realisations')}
           </Link>
-          <Link href="/#references" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/#references" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('references')}
           </Link>
           <Link
@@ -43,19 +46,10 @@ export async function Nav() {
           >
             {t('loi')}
           </Link>
-          <Link href="/pitch" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/pitch" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('pitch')}
           </Link>
-          <a
-            href="/projects.html"
-            target="_blank"
-            rel="noopener"
-            className="hover:text-[var(--color-ink)] transition-colors flex items-center gap-1"
-          >
-            {t('projects')}
-            <span className="text-[9px] opacity-60">↗</span>
-          </a>
-          <Link href="/contact" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/contact" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('contact')}
           </Link>
         </nav>
