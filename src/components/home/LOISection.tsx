@@ -1,8 +1,12 @@
-import {getTranslations} from 'next-intl/server';
+import {getLocale, getTranslations} from 'next-intl/server';
 import {Link} from '@/i18n/navigation';
 
 export async function LOISection() {
   const t = await getTranslations('home.loi');
+  const locale = await getLocale();
+  const suffix = locale === 'en' ? '_EN' : '';
+  const industryHref = locale === 'en' ? '/LOI_Industry_EN.pdf' : '/LOI_Industrie.pdf';
+  const agroHref = `/LOI_Agriculture${suffix}.pdf`;
 
   return (
     <section id="loi" className="relative border-b border-[var(--color-line)] bg-[var(--color-bg-elev)]/30 overflow-hidden">
@@ -35,7 +39,7 @@ export async function LOISection() {
             title={t('industryTitle')}
             body={t('industryBody')}
             cta={t('industryCta')}
-            href="/LOI_Industrie.pdf"
+            href={industryHref}
             accent="var(--color-sun)"
             iconKind="industry"
           />
@@ -43,7 +47,7 @@ export async function LOISection() {
             title={t('agroTitle')}
             body={t('agroBody')}
             cta={t('agroCta')}
-            href="/LOI_Agriculture.pdf"
+            href={agroHref}
             accent="var(--color-spark-deep)"
             iconKind="agro"
           />

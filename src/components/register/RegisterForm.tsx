@@ -1,13 +1,14 @@
 'use client';
 
 import {useState, useMemo} from 'react';
-import {useTranslations} from 'next-intl';
+import {useTranslations, useLocale} from 'next-intl';
 import {Link} from '@/i18n/navigation';
 import {
   generateLoiPdf,
   triggerDownload,
   buildMailto,
-  type LoiData
+  type LoiData,
+  type LoiLocale
 } from '@/lib/generateLoi';
 
 type Activity = 'industry' | 'agro' | 'zone' | 'other';
@@ -55,6 +56,7 @@ const ACTIVITY_TINTS: Record<Activity, string> = {
 
 export function RegisterForm() {
   const t = useTranslations('register');
+  const locale = useLocale() as LoiLocale;
   const [step, setStep] = useState(0);
   const [state, setState] = useState<FormState>(INITIAL);
   const [submitted, setSubmitted] = useState<{
@@ -98,10 +100,10 @@ export function RegisterForm() {
   async function submit() {
     if (!state.activity) return;
     const data: LoiData = {...state, activity: state.activity as Activity};
-    const bytes = await generateLoiPdf(data);
+    const bytes = await generateLoiPdf(data, locale);
     const filename = `LOI_${data.company.replace(/\s+/g, '_')}_${data.mw}MW.pdf`;
     triggerDownload(bytes, filename);
-    setSubmitted({pdfBytes: bytes, mailto: buildMailto(data)});
+    setSubmitted({pdfBytes: bytes, mailto: buildMailto(data, locale)});
   }
 
   if (submitted) {
@@ -109,7 +111,7 @@ export function RegisterForm() {
       data={state}
       onDownload={() => {
         const data: LoiData = {...state, activity: state.activity as Activity};
-        generateLoiPdf(data).then(b => triggerDownload(b, `LOI_${data.company.replace(/\s+/g, '_')}.pdf`));
+        generateLoiPdf(data, locale).then(b => triggerDownload(b, `LOI_${data.company.replace(/\s+/g, '_')}.pdf`));
       }}
       mailto={submitted.mailto}
       t={t}
