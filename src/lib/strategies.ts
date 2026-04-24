@@ -99,7 +99,7 @@ export const STRATEGIES: Strategy[] = [
     marginPct: 80,
     capexMusd: 2,
     phase: 2,
-    tags: ['OCP / Stellantis / Citic', 'Wheeling Automation', 'LCOE Analyzer', '2% fees'],
+    tags: ['Managem / Unimer / Sonasid', 'Wheeling Automation', 'LCOE Analyzer', '2% fees'],
     tintHsl: '24 80% 62%'
   },
   {

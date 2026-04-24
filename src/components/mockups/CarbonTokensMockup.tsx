@@ -2,11 +2,11 @@ import {getTranslations} from 'next-intl/server';
 import {MockupFrame} from './MockupFrame';
 
 const TXS = [
-  {h: '0x7a2f…e1b4', who: 'OCP Group', tons: 1420, type: 'retire'},
-  {h: '0x3d8c…9f02', who: 'Stellantis', tons: 680, type: 'issue'},
-  {h: '0xc4a1…7bd9', who: 'Renault Tanger', tons: 912, type: 'retire'},
-  {h: '0xb9e7…3a1c', who: 'Citic Dicastal', tons: 2100, type: 'transfer'},
-  {h: '0x18f4…d0e5', who: 'Managem', tons: 340, type: 'issue'}
+  {h: '0x7a2f…e1b4', who: 'Managem Jerada', tons: 1420, type: 'retire'},
+  {h: '0x3d8c…9f02', who: 'Unimer Nador', tons: 680, type: 'issue'},
+  {h: '0xc4a1…7bd9', who: 'Copag Berkane', tons: 912, type: 'retire'},
+  {h: '0xb9e7…3a1c', who: 'Nador West Med', tons: 2100, type: 'transfer'},
+  {h: '0x18f4…d0e5', who: 'Ciments Oujda', tons: 340, type: 'issue'}
 ];
 
 export async function CarbonTokensMockup({tint}: {tint: string}) {

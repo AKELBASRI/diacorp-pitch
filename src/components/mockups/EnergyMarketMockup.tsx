@@ -2,16 +2,16 @@ import {getTranslations} from 'next-intl/server';
 import {MockupFrame} from './MockupFrame';
 
 const BIDS = [
-  {qty: 42, price: 0.071, who: 'OCP Khouribga'},
-  {qty: 18, price: 0.070, who: 'Renault Tanger'},
-  {qty: 25, price: 0.069, who: 'Managem'},
-  {qty: 60, price: 0.068, who: 'Stellantis Kénitra'},
-  {qty: 14, price: 0.067, who: 'Ynna'}
+  {qty: 42, price: 0.071, who: 'Managem Jerada'},
+  {qty: 18, price: 0.070, who: 'Unimer Nador'},
+  {qty: 25, price: 0.069, who: 'Copag Berkane'},
+  {qty: 60, price: 0.068, who: 'Nador West Med'},
+  {qty: 14, price: 0.067, who: 'Ciments Oujda'}
 ];
 const ASKS = [
   {qty: 50, price: 0.072, who: 'DIA1 · N-8'},
   {qty: 28, price: 0.074, who: 'DIA1 · S-3'},
-  {qty: 12, price: 0.075, who: 'VPP · Agadir'},
+  {qty: 12, price: 0.075, who: 'VPP · Berkane'},
   {qty: 40, price: 0.078, who: 'DIA1 · E-2'},
   {qty: 22, price: 0.082, who: 'VPP · Oujda'}
 ];

@@ -2,12 +2,12 @@ import {getTranslations} from 'next-intl/server';
 import {MockupFrame} from './MockupFrame';
 
 const TENANTS = [
-  {name: 'Managem Steel', mwh: 4200, scope: 'S1+S2', bill: '€312k', pct: 100},
-  {name: 'Delattre Levivier', mwh: 2850, scope: 'S1+S2', bill: '€210k', pct: 68},
-  {name: 'Renault Logistics', mwh: 1940, scope: 'S2', bill: '€143k', pct: 46},
-  {name: 'SATEC Chimie', mwh: 1610, scope: 'S1+S2+S3', bill: '€119k', pct: 38},
-  {name: 'Citic Dicastal', mwh: 1380, scope: 'S2', bill: '€102k', pct: 33},
-  {name: 'OCP Tanfit', mwh: 980, scope: 'S1', bill: '€72k', pct: 23}
+  {name: 'Managem Jerada', mwh: 4200, scope: 'S1+S2', bill: '€312k', pct: 100},
+  {name: 'Ciments Holcim Oujda', mwh: 2850, scope: 'S1+S2', bill: '€210k', pct: 68},
+  {name: 'Briqueteries BMO', mwh: 1940, scope: 'S2', bill: '€143k', pct: 46},
+  {name: 'SATEC Oujda', mwh: 1610, scope: 'S1+S2+S3', bill: '€119k', pct: 38},
+  {name: 'Copag Berkane', mwh: 1380, scope: 'S2', bill: '€102k', pct: 33},
+  {name: 'Unimer Nador', mwh: 980, scope: 'S1', bill: '€72k', pct: 23}
 ];
 
 export async function IndustrialZoneMockup({tint}: {tint: string}) {

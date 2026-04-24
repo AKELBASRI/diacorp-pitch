@@ -165,7 +165,7 @@
       "title": "Votre secteur d'activité",
       "sub": "Le modèle de LOI que nous générerons en dépend.",
       "options": {
-        "industry": {"label": "Industrie lourde", "note": "Mines, sidérurgie, cimenterie, céramique, automobile, textile"},
+        "industry": {"label": "Industrie lourde", "note": "Mines, sidérurgie, cimenteries, briqueteries, céramique, textile"},
         "agro": {"label": "Agriculture & agro-industrie", "note": "Irrigation, cold storage, transformation agrumes / maraîchage / huile"},
         "zone": {"label": "Zone industrielle", "note": "Plusieurs locataires, besoins mutualisés"},
         "other": {"label": "Autre", "note": "Services, tertiaire, public — à préciser"}
@@ -578,7 +578,7 @@
       "carbon-tokens": {
         "name": "Crédits Carbone Tokenisés",
         "pitch": "RECs on-chain pour exportateurs marocains soumis au CBAM dès 2026.",
-        "description": "OCP, Renault-Tanger, Citic-Dicastal paient déjà la taxe carbone aux frontières de l'UE. Nous émettons des certificats d'énergie renouvelable vérifiables Verra/Gold Standard sur Polygon. Le token représente 1 MWh + 0,6 tCO₂ évitée.",
+        "description": "Les exportateurs agrumes de Berkane, Unimer Nador, Sonasid Nador, Ciments Holcim Oujda sont déjà exposés à la taxe carbone CBAM dès 2026. Nous émettons des certificats d'énergie renouvelable vérifiables Verra/Gold Standard sur Polygon. Le token représente 1 MWh + 0,6 tCO₂ évitée.",
         "mockup": {
           "title": "DiaCorp Carbon",
           "subtitle": "REC Ledger · Polygon",
@@ -593,7 +593,7 @@
       "predictive-om": {
         "name": "Jumeau Numérique O&M",
         "pitch": "Vision par ordinateur + LSTM pour réduire le LCOE de 20% et licencier en Afrique.",
-        "description": "Ingestion capteurs onduleurs, imagerie drone, météo. Détection automatique de panneaux souillés, micro-fissures, points chauds. Réduit l'indisponibilité de 15% à 3%. Vendu en SaaS (~500 k$/GW/an) à NOOR, ONEE, et opérateurs Afrique de l'Ouest.",
+        "description": "Ingestion capteurs onduleurs, imagerie drone, météo. Détection automatique de panneaux souillés, micro-fissures, points chauds. Réduit l'indisponibilité de 15% à 3%. Vendu en SaaS (~500 k$/GW/an) à ONEE et autres exploitants solaires de la région Oriental.",
         "mockup": {
           "title": "DiaCorp O&M",
           "subtitle": "DIA1 · Digital Twin",
@@ -652,7 +652,7 @@
       },
       "corporate-ppa": {
         "name": "Marketplace PPA Corporate",
-        "pitch": "Mettre en relation OCP, Stellantis, Citic avec notre capacité — 2% commission.",
+        "pitch": "Mettre en relation Managem, Unimer, Sonasid, Nador West Med avec notre capacité — 2% commission.",
         "description": "Plateforme où l'acheteur corporate saisit ses besoins (MW, durée, géo). L'algorithme matche avec notre capacité disponible, génère automatiquement le PPA, intègre le contrat de transport ONEE. Commission 1-3% × 100 M$ par contrat × 20 ans.",
         "mockup": {
           "title": "DiaCorp PPA",
@@ -748,7 +748,7 @@
         "items": [
           "Colocation IA (signature Microsoft / Equinix)",
           "ERP Zone Industrielle (lancement multi-tenants)",
-          "Marketplace PPA Corporate (OCP, Stellantis)",
+          "Marketplace PPA Corporate (Managem, Nador West Med, Sonasid)",
           "DIA2 + DIA3 opérationnels (450 MW)"
         ],
         "investment": "Invest. logiciel + infra : 480 M$",

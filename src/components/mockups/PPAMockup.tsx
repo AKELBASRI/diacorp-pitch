@@ -2,10 +2,10 @@ import {getTranslations} from 'next-intl/server';
 import {MockupFrame} from './MockupFrame';
 
 const DEALS = [
-  {name: 'OCP Group', logo: 'OCP', mw: 250, term: 20, lcoe: 0.068, stage: 'signed', probability: 100},
-  {name: 'Stellantis Kénitra', logo: 'STL', mw: 85, term: 15, lcoe: 0.074, stage: 'term-sheet', probability: 75},
-  {name: 'Citic Dicastal', logo: 'CTC', mw: 500, term: 25, lcoe: 0.065, stage: 'negotiation', probability: 55},
-  {name: 'Managem Hahone', logo: 'MNG', mw: 42, term: 10, lcoe: 0.082, stage: 'LOI', probability: 30}
+  {name: 'Managem Jerada', logo: 'MNG', mw: 42, term: 20, lcoe: 0.068, stage: 'signed', probability: 100},
+  {name: 'Nador West Med', logo: 'NWM', mw: 85, term: 15, lcoe: 0.074, stage: 'term-sheet', probability: 75},
+  {name: 'Unimer Nador', logo: 'UNI', mw: 18, term: 25, lcoe: 0.065, stage: 'negotiation', probability: 55},
+  {name: 'Copag Berkane', logo: 'CPG', mw: 12, term: 10, lcoe: 0.082, stage: 'LOI', probability: 30}
 ];
 
 export async function PPAMockup({tint}: {tint: string}) {
@@ -60,8 +60,8 @@ export async function PPAMockup({tint}: {tint: string}) {
       </div>
 
       <div className="mt-4 pt-3 border-t border-[var(--color-line)] flex items-center justify-between font-mono text-[10px]">
-        <span className="text-[var(--color-ink-faint)]">PIPELINE · 877 MW · $4.2B TCV</span>
-        <span className="text-[var(--tint)]">FEE ACCRUED: $84.4M</span>
+        <span className="text-[var(--color-ink-faint)]">PIPELINE · 157 MW · $760M TCV</span>
+        <span className="text-[var(--tint)]">FEE ACCRUED: $15.2M</span>
       </div>
     </MockupFrame>
   );
