@@ -17,6 +17,120 @@
     "pitch": "Investor thesis",
     "loi": "LOI"
   },
+  "register": {
+    "meta": {
+      "title": "Off-taker Portal · DiaCorp Energy",
+      "description": "Express your interest in long-term green energy supply from DiaCorp Energy in Morocco's Oriental region."
+    },
+    "back": "Back to the site",
+    "brand": "Off-taker Portal",
+    "intro": {
+      "kicker": "5 MINUTES · NON-BINDING",
+      "title": "Declare your interest.",
+      "body": "Five short steps so we can prepare a first proposal matched to your profile. We generate your pre-filled Letter of Intent at the end — for you to sign at ease."
+    },
+    "steps": {
+      "0": "Activity",
+      "1": "Company",
+      "2": "Needs",
+      "3": "Signatory",
+      "4": "Confirm"
+    },
+    "nav": {
+      "prev": "Back",
+      "next": "Next",
+      "finish": "Generate LOI",
+      "stepOf": "Step {current} of {total}"
+    },
+    "step1": {
+      "title": "Your sector",
+      "sub": "The LOI template we generate depends on it.",
+      "options": {
+        "industry": {"label": "Heavy industry", "note": "Mining, steel, cement, ceramics, automotive, textiles"},
+        "agro": {"label": "Agriculture & agri-industry", "note": "Irrigation, cold storage, citrus / vegetables / oil processing"},
+        "zone": {"label": "Industrial zone", "note": "Multiple tenants, pooled demand"},
+        "other": {"label": "Other", "note": "Services, tertiary, public sector — to specify"}
+      }
+    },
+    "step2": {
+      "title": "Your company",
+      "sub": "Basic information for pre-qualification.",
+      "fields": {
+        "company": "Legal name",
+        "companyPlaceholder": "e.g. Managem Jerada SA",
+        "ice": "Moroccan ICE number",
+        "icePlaceholder": "15 digits",
+        "city": "City / main site",
+        "cityPlaceholder": "e.g. Oujda, Jerada, Berkane…",
+        "industry": "Sub-sector",
+        "industryPlaceholder": "e.g. Lead-zinc mining"
+      }
+    },
+    "step3": {
+      "title": "Your energy needs",
+      "sub": "Estimates are fine at this stage — everything will be refined with our team.",
+      "fields": {
+        "mw": "Estimated capacity",
+        "mwSuffix": "MW",
+        "hours": "Hours of use per day",
+        "hoursSuffix": "h/d",
+        "coldStorage": "You operate 24/7 cold storage",
+        "cbam": "You export to the European Union (CBAM exposure)",
+        "duration": "Desired contract duration",
+        "years": "yrs"
+      }
+    },
+    "step4": {
+      "title": "LOI signatory",
+      "sub": "The person authorized to express this intent on behalf of the company.",
+      "fields": {
+        "name": "Full name",
+        "role": "Role",
+        "rolePlaceholder": "e.g. CEO, CFO, Industrial Director",
+        "email": "Business email",
+        "phone": "Phone"
+      }
+    },
+    "step5": {
+      "title": "Summary & signature",
+      "sub": "Please review before generating the Letter of Intent.",
+      "labels": {
+        "activity": "Activity",
+        "company": "Company",
+        "location": "Main site",
+        "needs": "Needs",
+        "duration": "Duration",
+        "signatory": "Signatory",
+        "attributes": "Attributes"
+      },
+      "attributes": {
+        "cold": "24/7 cold storage",
+        "cbam": "EU exporter (CBAM)"
+      },
+      "legal": "By clicking \"Generate LOI\" I confirm I am authorized to express this intent on behalf of the company. This letter is not a firm contractual commitment.",
+      "generate": "Generate LOI & send"
+    },
+    "success": {
+      "kicker": "LOI GENERATED",
+      "title": "Your intent is recorded.",
+      "body": "Your pre-filled Letter of Intent has been downloaded. A recap email has also been prepared for our commercial team. We'll get back to you within 48 hours.",
+      "download": "Download again",
+      "mail": "Send the email",
+      "close": "Back to the site",
+      "next": "Next steps",
+      "nextItems": {
+        "0": "30-min qualification call with our commercial team.",
+        "1": "Site visit and energy audit (within 15 days).",
+        "2": "Formal commercial proposal and PPA term sheet (within 30 days)."
+      }
+    },
+    "errors": {
+      "required": "Required field",
+      "invalidEmail": "Invalid email",
+      "invalidIce": "ICE must be 15 digits",
+      "invalidPhone": "Invalid phone number"
+    }
+  },
   "home": {
     "hero": {
       "kicker": "SOLAR IPP · ORIENTAL REGION",
@@ -121,7 +235,11 @@
       "agroTitle": "LOI — Agriculture & agri-industry",
       "agroBody": "Tailored template for irrigation, cold storage, processing, and seasonal needs.",
       "agroCta": "Download (PDF)",
-      "help": "Unsure which one fits? Email us — we'll guide you."
+      "help": "Unsure which one fits? Email us — we'll guide you.",
+      "onlineKicker": "OR GO DIRECT",
+      "onlineTitle": "Fill and sign online.",
+      "onlineBody": "5 steps, 5 minutes. We generate your pre-filled LOI based on your activity profile.",
+      "onlineCta": "Open the Off-taker Portal"
     },
     "team": {
       "kicker": "TEAM",

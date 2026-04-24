@@ -17,6 +17,120 @@
     "pitch": "Thèse investisseurs",
     "loi": "LOI"
   },
+  "register": {
+    "meta": {
+      "title": "Espace Off-taker · DiaCorp Energy",
+      "description": "Manifester votre intérêt pour un approvisionnement énergétique avec DiaCorp Energy dans la région Oriental."
+    },
+    "back": "Retour au site",
+    "brand": "Espace Off-taker",
+    "intro": {
+      "kicker": "5 MINUTES · SANS ENGAGEMENT",
+      "title": "Déclarez votre intérêt.",
+      "body": "Cinq étapes courtes pour nous permettre de préparer une première proposition adaptée à votre profil. Nous générons votre lettre d'intention pré-remplie à la fin — à signer à tête reposée."
+    },
+    "steps": {
+      "0": "Activité",
+      "1": "Entreprise",
+      "2": "Besoins",
+      "3": "Signataire",
+      "4": "Confirmation"
+    },
+    "nav": {
+      "prev": "Précédent",
+      "next": "Suivant",
+      "finish": "Générer la LOI",
+      "stepOf": "Étape {current} sur {total}"
+    },
+    "step1": {
+      "title": "Votre secteur d'activité",
+      "sub": "Le modèle de LOI que nous générerons en dépend.",
+      "options": {
+        "industry": {"label": "Industrie lourde", "note": "Mines, sidérurgie, cimenterie, céramique, automobile, textile"},
+        "agro": {"label": "Agriculture & agro-industrie", "note": "Irrigation, cold storage, transformation agrumes / maraîchage / huile"},
+        "zone": {"label": "Zone industrielle", "note": "Plusieurs locataires, besoins mutualisés"},
+        "other": {"label": "Autre", "note": "Services, tertiaire, public — à préciser"}
+      }
+    },
+    "step2": {
+      "title": "Votre entreprise",
+      "sub": "Informations de base pour la pré-qualification.",
+      "fields": {
+        "company": "Raison sociale",
+        "companyPlaceholder": "ex : Managem Jerada SA",
+        "ice": "Identifiant commun de l'entreprise (ICE)",
+        "icePlaceholder": "15 chiffres",
+        "city": "Ville / site principal",
+        "cityPlaceholder": "ex : Oujda, Jerada, Berkane…",
+        "industry": "Sous-secteur",
+        "industryPlaceholder": "ex : Extraction zinc-plomb"
+      }
+    },
+    "step3": {
+      "title": "Vos besoins énergétiques",
+      "sub": "Des estimations suffisent à ce stade — tout sera précisé ensuite avec notre équipe.",
+      "fields": {
+        "mw": "Besoin estimé",
+        "mwSuffix": "MW",
+        "hours": "Heures d'utilisation par jour",
+        "hoursSuffix": "h/j",
+        "coldStorage": "Vous exploitez des entrepôts frigorifiques 24/7",
+        "cbam": "Vous exportez vers l'Union Européenne (exposition CBAM)",
+        "duration": "Durée de contrat envisagée",
+        "years": "ans"
+      }
+    },
+    "step4": {
+      "title": "Signataire pour la LOI",
+      "sub": "Personne habilitée à exprimer cette intention au nom de l'entreprise.",
+      "fields": {
+        "name": "Nom et prénom",
+        "role": "Fonction",
+        "rolePlaceholder": "ex : Directeur Général, DAF, Dir. industriel",
+        "email": "Email professionnel",
+        "phone": "Téléphone"
+      }
+    },
+    "step5": {
+      "title": "Récapitulatif & signature",
+      "sub": "Vérifiez les informations avant génération de la lettre d'intention.",
+      "labels": {
+        "activity": "Activité",
+        "company": "Entreprise",
+        "location": "Site principal",
+        "needs": "Besoins",
+        "duration": "Durée",
+        "signatory": "Signataire",
+        "attributes": "Attributs"
+      },
+      "attributes": {
+        "cold": "Cold storage 24/7",
+        "cbam": "Exportateur UE (CBAM)"
+      },
+      "legal": "En cliquant sur « Générer la LOI », j'atteste être habilité(e) à exprimer cette intention au nom de l'entreprise. Cette lettre n'est pas un engagement contractuel ferme.",
+      "generate": "Générer la LOI & envoyer"
+    },
+    "success": {
+      "kicker": "LOI GÉNÉRÉE",
+      "title": "Votre intention est enregistrée.",
+      "body": "Votre lettre d'intention pré-remplie a été téléchargée. Un email récapitulatif a également été préparé vers notre équipe commerciale. Nous revenons vers vous sous 48 heures.",
+      "download": "Télécharger à nouveau",
+      "mail": "Envoyer l'email",
+      "close": "Retour au site",
+      "next": "Prochaines étapes",
+      "nextItems": {
+        "0": "Appel de qualification (30 min) avec notre équipe commerciale.",
+        "1": "Visite technique du site client et audit énergétique (J+15).",
+        "2": "Proposition commerciale formelle et term-sheet PPA (J+30)."
+      }
+    },
+    "errors": {
+      "required": "Champ requis",
+      "invalidEmail": "Email invalide",
+      "invalidIce": "L'ICE doit contenir 15 chiffres",
+      "invalidPhone": "Numéro de téléphone invalide"
+    }
+  },
   "home": {
     "hero": {
       "kicker": "IPP SOLAIRE · RÉGION ORIENTAL",
@@ -121,7 +235,11 @@
       "agroTitle": "LOI — Agriculture & agro-industrie",
       "agroBody": "Modèle adapté irrigation, cold storage, transformation, modèle saisonnier.",
       "agroCta": "Télécharger (PDF)",
-      "help": "Vous hésitez entre les deux ? Envoyez-nous un email — nous vous guidons."
+      "help": "Vous hésitez entre les deux ? Envoyez-nous un email — nous vous guidons.",
+      "onlineKicker": "OU DIRECTEMENT",
+      "onlineTitle": "Remplissez et signez en ligne.",
+      "onlineBody": "5 étapes, 5 minutes. Nous générons votre LOI pré-remplie avec les bons modèles en fonction de votre activité.",
+      "onlineCta": "Ouvrir l'espace off-taker"
     },
     "team": {
       "kicker": "ÉQUIPE",

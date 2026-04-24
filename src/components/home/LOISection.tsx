@@ -1,4 +1,5 @@
 import {getTranslations} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
 
 export async function LOISection() {
   const t = await getTranslations('home.loi');
@@ -48,7 +49,43 @@ export async function LOISection() {
           />
         </div>
 
-        <p className="mt-10 text-center font-mono text-[11px] tracking-[0.16em] uppercase text-[var(--color-ink-muted)]">
+        {/* Online form CTA */}
+        <div className="mt-10 relative">
+          <div className="relative border border-[var(--color-sun)] bg-[var(--color-sun)]/5 p-8 lg:p-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 overflow-hidden">
+            <div
+              aria-hidden
+              className="absolute top-0 ltr:left-0 rtl:right-0 h-full w-[3px] bg-[var(--color-sun)]"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 opacity-30 pointer-events-none"
+              style={{
+                background:
+                  'radial-gradient(ellipse 40% 80% at 90% 50%, rgba(232,169,72,0.15), transparent 60%)'
+              }}
+            />
+            <div className="relative ltr:pl-4 rtl:pr-4">
+              <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--color-sun)] mb-3">
+                {t('onlineKicker')}
+              </div>
+              <h3 className="font-display text-[24px] lg:text-[30px] leading-tight tracking-tight mb-2">
+                {t('onlineTitle')}
+              </h3>
+              <p className="text-[14px] text-[var(--color-ink-muted)] max-w-[54ch]">
+                {t('onlineBody')}
+              </p>
+            </div>
+            <Link
+              href="/register"
+              className="relative shrink-0 inline-flex items-center gap-2 px-7 py-3.5 bg-[var(--color-sun)] text-[var(--color-bg)] font-mono text-[11px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
+            >
+              {t('onlineCta')}
+              <span className="ltr:rotate-0 rtl:rotate-180">→</span>
+            </Link>
+          </div>
+        </div>
+
+        <p className="mt-8 text-center font-mono text-[11px] tracking-[0.16em] uppercase text-[var(--color-ink-muted)]">
           {t('help')}{' '}
           <a
             href="mailto:contact@diacorp.energy"

@@ -1,4 +1,5 @@
 import {getTranslations} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
 
 export async function HomeContact() {
   const t = await getTranslations('home.contact');
@@ -44,13 +45,13 @@ export async function HomeContact() {
                 </div>
               </div>
 
-              <a
-                href="#loi"
+              <Link
+                href="/register"
                 className="mt-4 inline-flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-[var(--color-sun)] text-[var(--color-bg)] font-mono text-[12px] tracking-[0.16em] uppercase hover:bg-[var(--color-ink)] transition-colors"
               >
                 {t('send')}
                 <span className="ltr:rotate-0 rtl:rotate-180">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
