@@ -6,6 +6,7 @@ import {ImpactStrip} from '@/components/home/ImpactStrip';
 import {Activities} from '@/components/home/Activities';
 import {Services} from '@/components/home/Services';
 import {Projects} from '@/components/home/Projects';
+import {TrackRecord} from '@/components/home/TrackRecord';
 import {Partners} from '@/components/home/Partners';
 import {LOISection} from '@/components/home/LOISection';
 import {Team} from '@/components/Team';
@@ -26,8 +27,9 @@ export default async function HomePage({
         <HomeHero />
         <ImpactStrip />
         <Activities />
-        <Projects />
         <Services />
+        <Projects />
+        <TrackRecord />
         <Partners />
         <LOISection />
         <Team />

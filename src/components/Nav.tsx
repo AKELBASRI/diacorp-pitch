@@ -8,7 +8,7 @@ export async function Nav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--color-line)] bg-[var(--color-bg)]/90 backdrop-blur-xl">
-      <div className="mx-auto max-w-[1400px] px-6 lg:px-12 flex items-center justify-between h-14 gap-4">
+      <div className="mx-auto max-w-[1500px] px-5 lg:px-10 flex items-center justify-between h-14 gap-3 lg:gap-6">
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
           <svg
             viewBox="0 0 24 24"
@@ -24,15 +24,21 @@ export async function Nav() {
             DiaCorp<span className="text-[var(--color-ink-muted)]">.</span>Energy
           </span>
         </Link>
-        <nav className="hidden lg:flex items-center gap-7 font-mono text-[11px] tracking-[0.16em] uppercase text-[var(--color-ink-muted)]">
+        <nav className="hidden xl:flex items-center gap-5 font-mono text-[10.5px] tracking-[0.14em] uppercase text-[var(--color-ink-muted)]">
           <Link href="/#activites" className="hover:text-[var(--color-ink)] transition-colors">
             {t('activites')}
+          </Link>
+          <Link href="/services" className="hover:text-[var(--color-ink)] transition-colors">
+            {t('services')}
           </Link>
           <Link href="/#projets" className="hover:text-[var(--color-ink)] transition-colors">
             {t('realisations')}
           </Link>
+          <Link href="/#references" className="hover:text-[var(--color-ink)] transition-colors">
+            {t('references')}
+          </Link>
           <Link
-            href="/#loi"
+            href="/register"
             className="text-[var(--color-sun)] hover:text-[var(--color-ink)] transition-colors"
           >
             {t('loi')}
@@ -49,7 +55,7 @@ export async function Nav() {
             {t('projects')}
             <span className="text-[9px] opacity-60">↗</span>
           </a>
-          <Link href="/#contact" className="hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/contact" className="hover:text-[var(--color-ink)] transition-colors">
             {t('contact')}
           </Link>
         </nav>

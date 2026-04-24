@@ -15,7 +15,126 @@
     "activites": "Activités",
     "realisations": "Projets",
     "pitch": "Thèse investisseurs",
-    "loi": "LOI"
+    "loi": "LOI",
+    "services": "Services",
+    "references": "Références"
+  },
+  "servicesPage": {
+    "meta": {
+      "title": "Services — DiaCorp Energy",
+      "description": "Étude de faisabilité, centrales PPA, PV on-site, maintenance, audit énergétique, solaire thermique. Tout l'écosystème solaire par DiaCorp / KermaSys."
+    },
+    "hero": {
+      "kicker": "NOS SERVICES",
+      "title": "De l'étude de faisabilité à l'exploitation 24/7.",
+      "sub": "DiaCorp et son bras EPC KermaSys déploient, opèrent et maintiennent des solutions solaires à chaque échelle — du toit industriel aux gigawatts."
+    },
+    "cta": {
+      "title": "Un projet en tête ?",
+      "sub": "Décrivez-nous votre site, vos besoins, vos contraintes. Nous revenons avec une première lecture sous 48 heures.",
+      "primary": "Ouvrir l'espace Off-taker",
+      "secondary": "Nous contacter"
+    },
+    "items": {
+      "feasibility": {
+        "name": "Étude de faisabilité",
+        "tagline": "Transformer une intuition en dossier défendable devant un board.",
+        "body": "Notre équipe ingénierie combine données d'irradiance satellitaires (MétéoNorm), simulation de production (PVsyst, SAM, PVSOL), modélisation financière (IRR, NPV, LCOE) et screening foncier pour produire un dossier d'investissement bancable.",
+        "deliverables": ["Rapport d'irradiance + productible", "Plan de masse indicatif", "CAPEX et OPEX estimés", "Modèle financier à 25 ans", "Cartographie des risques"],
+        "typical": "4 à 8 semaines · à partir de 15 k$"
+      },
+      "utility": {
+        "name": "Centrale utility-scale PPA",
+        "tagline": "Un plant de 10 à 500 MW, conçu pour livrer un PPA de 20 ans.",
+        "body": "Conception-réalisation clef en main. DiaCorp porte la SPV, mobilise le financement, pilote l'EPC (via KermaSys ou un consortium), gère le wheeling ONEE, et opère le plant sur toute la durée du PPA.",
+        "deliverables": ["Développement complet du projet", "Financement & clôture bancable", "EPC avec performance guarantees", "O&M 20+ ans", "Facturation & gestion commerciale"],
+        "typical": "Construction 8 à 18 mois selon capacité"
+      },
+      "onsite": {
+        "name": "PV on-site & toitures industrielles",
+        "tagline": "Vous avez du toit, nous avons les panneaux.",
+        "body": "Installation photovoltaïque sur vos propres actifs : toitures d'usine, ombrières de parking, terrains non-exploités. Modèle d'auto-consommation partielle, avec option de rachat du surplus par DiaCorp ou vente directe.",
+        "deliverables": ["Audit structurel du toit", "Dimensionnement", "Installation certifiée", "Connexion réseau", "Monitoring temps réel 5 ans"],
+        "typical": "2 à 6 mois selon taille"
+      },
+      "om": {
+        "name": "Opérations & Maintenance",
+        "tagline": "Disponibilité 98%+, à la minute près.",
+        "body": "Plateforme d'exploitation 24/7, détection prédictive d'anomalies par vision par ordinateur, équipes d'intervention sur site, reporting mensuel à vos actionnaires. Applicable à vos actifs existants comme aux nôtres.",
+        "deliverables": ["Monitoring temps réel", "Interventions correctives", "Nettoyage programmé", "Rapports mensuels", "Garantie de performance"],
+        "typical": "Contrats de 5 à 25 ans"
+      },
+      "audit": {
+        "name": "Audit énergétique",
+        "tagline": "Comprendre chaque kWh, avant d'en acheter un de plus.",
+        "body": "Diagnostic détaillé de votre consommation énergétique : répartition par poste, identification des gisements d'économie, recommandations chiffrées avec ROI. Conforme au référentiel AMEE / ISO 50001.",
+        "deliverables": ["Relevés 15 min sur 2 semaines", "Cartographie consommation", "Rapport AMEE conforme", "Plan d'action priorisé", "Accompagnement mise en œuvre"],
+        "typical": "3 à 6 semaines · à partir de 8 k$"
+      },
+      "thermal": {
+        "name": "Solaire thermique",
+        "tagline": "Pour la chaleur, pas seulement pour l'électricité.",
+        "body": "Production d'eau chaude sanitaire et de chaleur de process par capteurs thermiques. Utilisations : agro-transformation (pasteurisation, séchage), hôtellerie (piscines, sanitaire), cold storage (cycle frigorifique à absorption).",
+        "deliverables": ["Étude thermique", "Installation capteurs", "Réservoir & échangeurs", "Régulation auto", "Maintenance annuelle"],
+        "typical": "2 à 4 mois"
+      }
+    },
+    "labels": {
+      "deliverables": "Livrables",
+      "typical": "Durée & budget"
+    }
+  },
+  "contactPage": {
+    "meta": {
+      "title": "Contact — DiaCorp Energy",
+      "description": "Parlons de votre projet énergétique. Nous répondons sous 48 heures ouvrables."
+    },
+    "hero": {
+      "kicker": "NOUS CONTACTER",
+      "title": "Parlons.",
+      "sub": "Que ce soit pour explorer un PPA, commander une étude de faisabilité, poser une question réglementaire ou discuter partenariat — écrivez-nous. Réponse sous 48 heures ouvrables."
+    },
+    "form": {
+      "nameLabel": "Nom et prénom",
+      "companyLabel": "Entreprise",
+      "emailLabel": "Email",
+      "phoneLabel": "Téléphone",
+      "subjectLabel": "Sujet",
+      "messageLabel": "Votre message",
+      "messagePlaceholder": "Décrivez-nous brièvement votre besoin — site, secteur, capacité estimée, timing…",
+      "subjects": {
+        "ppa": "Approvisionnement PPA long terme",
+        "feasibility": "Étude de faisabilité",
+        "audit": "Audit énergétique",
+        "onsite": "Installation on-site / toitures",
+        "partnership": "Partenariat industriel / technique",
+        "investor": "Opportunité d'investissement",
+        "other": "Autre"
+      },
+      "consent": "J'accepte que DiaCorp Energy traite mes données pour me recontacter dans le cadre de cette demande.",
+      "submit": "Envoyer le message",
+      "orDirect": "Ou écrivez-nous directement à"
+    },
+    "aside": {
+      "kicker": "COORDONNÉES",
+      "hqTitle": "Siège social",
+      "hq": "DiaCorp Energy SARL\nCasablanca, Maroc",
+      "opsTitle": "Opérations",
+      "ops": "Site DIA1 — Ain Beni Mathar\nRégion Oriental",
+      "regionalTitle": "Bureau régional",
+      "regional": "Oujda — bureau commercial Oriental",
+      "emailTitle": "Email",
+      "email": "contact@diacorp.energy",
+      "phoneTitle": "Téléphone",
+      "phone": "+212 5 22 xx xx xx",
+      "hoursTitle": "Horaires",
+      "hours": "Lundi — Vendredi · 9:00 — 18:00 (GMT+1)"
+    },
+    "success": {
+      "title": "Message envoyé.",
+      "body": "Votre message a été préparé dans votre client mail. Nous vous répondons sous 48 heures ouvrables.",
+      "back": "Retour au site"
+    }
   },
   "register": {
     "meta": {
@@ -240,6 +359,53 @@
       "onlineTitle": "Remplissez et signez en ligne.",
       "onlineBody": "5 étapes, 5 minutes. Nous générons votre LOI pré-remplie avec les bons modèles en fonction de votre activité.",
       "onlineCta": "Ouvrir l'espace off-taker"
+    },
+    "track": {
+      "kicker": "TRACK RECORD · DEPUIS 2005",
+      "title": "Des plants réels, déjà mis en service.",
+      "sub": "Avant de porter DIA, l'équipe KermaSys a conçu, construit et exploité des plants énergétiques majeurs au Maroc, en Libye et en Espagne pour des clients comme ONEE, ABENGOA et METRAGAZ.",
+      "items": [
+        {
+          "code": "ISCC",
+          "name": "Thermosolar plant Ain Beni Mathar",
+          "client": "ONEE / ABENGOA Group",
+          "location": "Oujda, Maroc",
+          "capacity": "470 MW combiné · 25 MW CSP",
+          "role": "EPC partiel · O&M",
+          "year": "2010-2013",
+          "scope": "Cycle combiné gaz (2×150 MW turbines + 170 MW vapeur) couplé à un champ solaire CSP de 224 CCP. KermaSys : ingénierie I&C, électrique MT/BT, fire-fighting, réseau & data center."
+        },
+        {
+          "code": "GSP",
+          "name": "Maghreb-Europe Gas Pipeline — Distribution Plant",
+          "client": "METRAGAZ (Maroc / Espagne)",
+          "location": "Ain Ben Mathar, Maroc",
+          "capacity": "105 MW gaz · 5 MW solar turbines",
+          "role": "Ingénierie partielle · EPC partiel",
+          "year": "2008-2010",
+          "scope": "Station de compression et distribution gazière. 2 turbines solar 2,5 MW + 3 turbines RB211 G24 35 MW. Installation, commissioning en partenariat avec les OEMs."
+        },
+        {
+          "code": "NOOR",
+          "name": "Complexe solaire NOOR (référence régionale)",
+          "client": "MASEN / consortium ACWA-ENGIE",
+          "location": "Ouarzazate, Maroc",
+          "capacity": "580 MW CSP + PV",
+          "role": "Références écosystème",
+          "year": "2015-2018",
+          "scope": "Le plus grand complexe solaire concentré d'Afrique. L'expertise acquise dans l'écosystème solaire marocain bénéficie directement au déploiement DIA."
+        },
+        {
+          "code": "JBK",
+          "name": "Jbel Khalladi Wind Farm",
+          "client": "ACWA Power / ONEE",
+          "location": "Tanger-Tétouan, Maroc",
+          "capacity": "120 MW éolien",
+          "role": "Référence écosystème",
+          "year": "2018",
+          "scope": "Parc éolien IPP connecté à la grille ONEE, structure PPA 20 ans — modèle commercial qui inspire directement le modèle DIA."
+        }
+      ]
     },
     "services": {
       "kicker": "SERVICES",
