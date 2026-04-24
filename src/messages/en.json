@@ -10,7 +10,134 @@
     "timeline": "Timeline",
     "contact": "Contact",
     "gallery": "Prototypes",
-    "projects": "IT Projects"
+    "projects": "IT Projects",
+    "home": "Home",
+    "activites": "Activities",
+    "realisations": "Projects",
+    "pitch": "Investor thesis",
+    "loi": "LOI"
+  },
+  "home": {
+    "hero": {
+      "kicker": "SOLAR IPP · ORIENTAL REGION",
+      "title": "Industrial-scale solar power\nfor Morocco's Oriental region.",
+      "sub": "DiaCorp Energy is developing 1 GW of photovoltaic capacity in the Oriental. We deliver green electricity starting at 0.70 MAD/kWh — up to 40% cheaper than ONEE's industrial tariff — through long-term Power Purchase Agreements.",
+      "ctaLoi": "Send a Letter of Intent",
+      "ctaScroll": "Explore our activities",
+      "stat1": "Target capacity",
+      "stat1v": "1 GW",
+      "stat2": "First plant",
+      "stat2v": "150 MW",
+      "stat3": "Commissioning",
+      "stat3v": "Q3 2027",
+      "stat4": "PPA tariff",
+      "stat4v": "$0.07/kWh"
+    },
+    "activities": {
+      "kicker": "ACTIVITIES",
+      "title": "Four segments, one electron.",
+      "sub": "We serve the Oriental's most energy-intensive industries — the ones most exposed to rising energy costs.",
+      "items": {
+        "industry": {
+          "tag": "01 · INDUSTRY",
+          "name": "Heavy industry & manufacturing",
+          "body": "Mining (Managem Jerada), steel, cement, bricks, ceramics, textiles, automotive. 15-25 year PPAs, fixed indexed tariff, private line or ONEE wheeling."
+        },
+        "agro": {
+          "tag": "02 · AGRI-INDUSTRY",
+          "name": "Agriculture & agri-business",
+          "body": "Irrigation in Berkane / Moulouya / Saïdia. Pumping stations. Citrus, horticulture, olive oil processing. Seasonal offerings tuned to consumption curves."
+        },
+        "cold": {
+          "tag": "03 · COLD STORAGE",
+          "name": "Cold chain & warehousing",
+          "body": "EU-export refrigerated warehouses (berries, citrus, vegetables). 24/7 continuous PPA, battery-coupled reliability, carbon certificate for CBAM compliance."
+        },
+        "zone": {
+          "tag": "04 · GREEN INDUSTRIAL ZONE",
+          "name": "100% solar industrial park",
+          "body": "Greenfield industrial parks around our plants. One plot, one energy contract, shared services. 8-month grid connection vs 24-36 months via ONEE."
+        }
+      }
+    },
+    "projects": {
+      "kicker": "DELIVERY & PIPELINE",
+      "title": "Three plants, one gigawatt.",
+      "sub": "The DIA project unfolds in three phases, all in the Oriental region. DIA1 is in final financial close; DIA2 and DIA3 are in the study phase.",
+      "columns": {
+        "capacity": "Capacity",
+        "location": "Location",
+        "status": "Status",
+        "commissioning": "Commissioning",
+        "offtakers": "Prospective off-takers"
+      },
+      "items": [
+        {
+          "code": "DIA1",
+          "capacity": "150 MW",
+          "location": "Ain Beni Mathar",
+          "status": "Financial close in progress",
+          "commissioning": "Q3 2027",
+          "offtakers": "Managem · Stellantis · 1 large EU industrial"
+        },
+        {
+          "code": "DIA2",
+          "capacity": "150 MW",
+          "location": "Jerada / Guenfouda",
+          "status": "Site studies underway",
+          "commissioning": "Q4 2028",
+          "offtakers": "OCP · citrus exporter · industrial zone"
+        },
+        {
+          "code": "DIA3",
+          "capacity": "150 MW",
+          "location": "Figuig / Bouarfa",
+          "status": "Identified · regional MoU",
+          "commissioning": "Q2 2029",
+          "offtakers": "Citic-Dicastal · agri-industrial consortium"
+        }
+      ],
+      "extensions": "Identified extensions: Driouch · Taourirt · Midelt — toward 1 GW."
+    },
+    "partners": {
+      "kicker": "PARTNERS",
+      "title": "An ecosystem of established players.",
+      "sub": "Development, construction, financing — we partner with reference players in Morocco and internationally.",
+      "groups": {
+        "epc": "EPC & O&M",
+        "finance": "Financing",
+        "panels": "Tier-1 panels",
+        "inverters": "Inverters",
+        "institutional": "Institutional"
+      }
+    },
+    "loi": {
+      "kicker": "LETTERS OF INTENT",
+      "title": "A clear template to start the conversation.",
+      "sub": "If your company wants to explore green energy procurement, download the appropriate template, complete it, and send it to us. Nothing binding at this stage — just a structured intent.",
+      "industryTitle": "LOI — Industry & manufacturing",
+      "industryBody": "Standard template for any industrial client exploring a long-term PPA.",
+      "industryCta": "Download (PDF)",
+      "agroTitle": "LOI — Agriculture & agri-industry",
+      "agroBody": "Tailored template for irrigation, cold storage, processing, and seasonal needs.",
+      "agroCta": "Download (PDF)",
+      "help": "Unsure which one fits? Email us — we'll guide you."
+    },
+    "team": {
+      "kicker": "TEAM",
+      "title": "Twenty-five years inside Moroccan energy.",
+      "sub": "The DiaCorp / KermaSys team has built, commissioned, and operated power plants across Morocco and Africa since 2005."
+    },
+    "contact": {
+      "kicker": "CONTACT",
+      "title": "Let's talk.",
+      "sub": "HQ: Casablanca · Operations: Ain Beni Mathar · Regional office: Oujda",
+      "emailLabel": "Email",
+      "emailValue": "contact@diacorp.energy",
+      "phoneLabel": "Phone",
+      "phoneValue": "+212 5 22 xx xx xx",
+      "send": "Send a LOI"
+    }
   },
   "gallery": {
     "kicker": "Gallery · All prototypes",
