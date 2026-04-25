@@ -71,6 +71,9 @@ export default async function SettingsPage({
             <Link href="/admin/layout" className="nav-link">
               Layout
             </Link>
+            <Link href="/admin/prospects" className="nav-link">
+              Prospects
+            </Link>
             <Link href="/admin/settings" className="nav-link" style={{color: 'var(--admin-accent)', borderBottomColor: 'var(--admin-accent)'}}>
               Site settings
             </Link>

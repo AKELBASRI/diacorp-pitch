@@ -1,6 +1,7 @@
 import {
   pgTable,
   serial,
+  integer,
   text,
   varchar,
   jsonb,
@@ -127,6 +128,52 @@ export const DEFAULT_SITE_SETTINGS: SiteSettings = {
   contactEmail: 'contact@diacorp.energy',
   theme: 'dark'
 };
+
+/**
+ * Prospects table — internal sales pipeline of potential offtakers in the
+ * Oriental region. Never exposed publicly. Used to plan field visits and
+ * track outreach status.
+ */
+export const PROSPECT_STATUSES = [
+  'cold',
+  'contacted',
+  'meeting_scheduled',
+  'visited',
+  'negotiating',
+  'signed',
+  'declined'
+] as const;
+
+export type ProspectStatus = (typeof PROSPECT_STATUSES)[number];
+
+export const prospects = pgTable('prospects', {
+  id: serial('id').primaryKey(),
+  name: varchar('name', {length: 200}).notNull(),
+  sector: varchar('sector', {length: 80}).notNull(),
+  city: varchar('city', {length: 80}).notNull(),
+  address: text('address'),
+  estimatedMw: varchar('estimated_mw', {length: 40}), // e.g. "1-3 MW"
+  energyProfile: text('energy_profile'),
+  contactName: varchar('contact_name', {length: 120}),
+  contactPhone: varchar('contact_phone', {length: 60}),
+  contactEmail: varchar('contact_email', {length: 200}),
+  website: text('website'),
+  status: varchar('status', {length: 30}).notNull().default('cold'),
+  // 1 = high, 2 = medium, 3 = low
+  priority: integer('priority').notNull().default(2),
+  notes: text('notes'),
+  visitedAt: timestamp('visited_at', {withTimezone: true}),
+  lastContactedAt: timestamp('last_contacted_at', {withTimezone: true}),
+  createdAt: timestamp('created_at', {withTimezone: true})
+    .notNull()
+    .defaultNow(),
+  updatedAt: timestamp('updated_at', {withTimezone: true})
+    .notNull()
+    .defaultNow()
+});
+
+export type Prospect = typeof prospects.$inferSelect;
+export type NewProspect = typeof prospects.$inferInsert;
 
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;

@@ -193,6 +193,9 @@ export default async function AdminHome() {
             <Link href="/admin/layout" className="nav-link">
               Layout
             </Link>
+            <Link href="/admin/prospects" className="nav-link">
+              Prospects
+            </Link>
             <Link href="/admin/settings" className="nav-link">
               Site settings
             </Link>

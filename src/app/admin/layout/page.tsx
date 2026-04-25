@@ -111,6 +111,9 @@ export default async function LayoutPage({
             <Link href="/admin/layout" className="nav-link" style={{color: 'var(--admin-accent)', borderBottomColor: 'var(--admin-accent)'}}>
               Layout
             </Link>
+            <Link href="/admin/prospects" className="nav-link">
+              Prospects
+            </Link>
             <Link href="/admin/settings" className="nav-link">
               Site settings
             </Link>
