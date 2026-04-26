@@ -362,6 +362,403 @@ const SEED: NewProspect[] = [
     status: 'cold',
     priority: 2,
     notes: 'Approcher la régie RADEEO.'
+  },
+
+  // ========================================================================
+  //   N A T I O N A L   —   hors Oriental
+  //   Modèle exclusif : install on-site PV + BESS (pas de cable plant→site).
+  //   Toutes les sources sont publiques (sites corporates, presse, registres).
+  // ========================================================================
+
+  // ===================  Nord — Tanger / Tétouan / Al Hoceïma  ===================
+  {
+    name: 'Renault Tanger Mediterranée',
+    sector: 'Automotive assembly',
+    city: 'Mellousa',
+    address: 'Tanger Free Zone, Mellousa',
+    estimatedMw: '30–50 MW',
+    energyProfile:
+      "Usine d'assemblage Renault (Dacia Sandero/Logan). Lignes peinture + soudure très énergivores. CBAM exposure forte.",
+    website: 'https://www.renault.ma',
+    status: 'cold',
+    priority: 1,
+    notes: 'Le plus gros offtaker industriel privé du Maroc. Cible stratégique.'
+  },
+  {
+    name: 'Tanger Med Port Authority (TMPA)',
+    sector: 'Port / logistics',
+    city: 'Tanger Med',
+    address: 'Port Tanger Med, Ksar es-Seghir',
+    estimatedMw: '8–20 MW',
+    energyProfile:
+      "Hub portuaire #1 d'Afrique. Grues, frigorifique, éclairage 24/7, datacenter de gestion.",
+    website: 'https://www.tangermed.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Yazaki Maroc — TFZ Tanger',
+    sector: 'Auto wiring harness',
+    city: 'Tanger TFZ',
+    address: 'Tanger Free Zone',
+    estimatedMw: '3–8 MW',
+    energyProfile:
+      "Faisceaux de câbles auto. Activité 3×8, clim importante, salles propres.",
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Cimat — Cimenterie Tétouan',
+    sector: 'Cement',
+    city: 'Tétouan',
+    address: 'Cimenterie Cimat, Tétouan',
+    estimatedMw: '8–18 MW',
+    energyProfile: 'Cimenterie — broyeur cru/clinker, four. CBAM exposure.',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Coca-Cola Atlas Bottling — Tanger',
+    sector: 'Beverages',
+    city: 'Tanger',
+    address: 'Zone industrielle Gzenaya, Tanger',
+    estimatedMw: '1–3 MW',
+    energyProfile: 'Embouteillage + cold storage. Toiture vaste — fit on-site PV.',
+    status: 'cold',
+    priority: 2
+  },
+
+  // ===================  Atlantique nord — Rabat / Salé / Kénitra  ===================
+  {
+    name: 'Stellantis Maroc — Kénitra (PSA)',
+    sector: 'Automotive assembly',
+    city: 'Kenitra',
+    address: 'Atlantic Free Zone, Kénitra',
+    estimatedMw: '25–50 MW',
+    energyProfile:
+      "Usine Stellantis (ex-PSA) — Peugeot 208 + Citroën Ami + futurs EV. Lignes peinture, soudure, montage.",
+    website: 'https://www.stellantis.com',
+    status: 'cold',
+    priority: 1,
+    notes: 'Cible n°1 atlantique nord. CBAM + ESG du groupe = argument fort.'
+  },
+  {
+    name: 'Lesaffre Maroc',
+    sector: 'Food processing — yeast',
+    city: 'Kenitra',
+    address: 'Kénitra industrielle',
+    estimatedMw: '3–8 MW',
+    energyProfile: 'Levure + extraits. Fermentation + séchage. 24/7.',
+    website: 'https://www.lesaffre.com',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Centrale Danone — Salé',
+    sector: 'Agri — dairy',
+    city: 'Salé',
+    address: 'Sidi Allal El Bahraoui, Salé',
+    estimatedMw: '4–10 MW',
+    energyProfile:
+      'Plus grosse laiterie du Maroc. Pasteurisation, UHT, conditionnement, cold chain. 24/7.',
+    website: 'https://www.centralelaitiere.com',
+    status: 'cold',
+    priority: 1
+  },
+
+  // ===================  Centre nord — Fès / Meknès  ===================
+  {
+    name: 'Cimenterie Holcim — Fès',
+    sector: 'Cement',
+    city: 'Fès',
+    address: 'Aïn Cheggag, Fès',
+    estimatedMw: '10–25 MW',
+    energyProfile: 'Cimenterie. CBAM exposure forte.',
+    website: 'https://www.holcim.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Cosumar — Sucrerie SUTA Sidi Slimane',
+    sector: 'Sugar refining',
+    city: 'Sidi Slimane',
+    address: 'Sucrerie SUTA, Sidi Slimane',
+    estimatedMw: '5–12 MW',
+    energyProfile:
+      'Sucrerie de canne. Pic saisonnier campagne sucrière. Vapeur + élec.',
+    website: 'https://www.cosumar.co.ma',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Aéroport Fès-Saiss',
+    sector: 'Infrastructure — airport',
+    city: 'Fès',
+    address: 'Aéroport International Fès-Saiss',
+    estimatedMw: '0.8–2 MW',
+    energyProfile: 'Terminal + tour + balisage + clim. 24/7.',
+    status: 'cold',
+    priority: 3
+  },
+
+  // ===================  Casablanca métropole  ===================
+  {
+    name: 'Renault SOMACA — Casablanca',
+    sector: 'Automotive assembly',
+    city: 'Aïn Sebaâ',
+    address: 'Aïn Sebaâ, Casablanca',
+    estimatedMw: '8–20 MW',
+    energyProfile:
+      "Plus ancien site auto Maroc. Assemble Dacia Logan + utilitaires. Lignes peinture + montage.",
+    website: 'https://www.renault.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Cosumar HQ + Raffinerie — Casablanca',
+    sector: 'Sugar refining',
+    city: 'Casablanca',
+    address: 'Roches Noires, Casablanca',
+    estimatedMw: '12–25 MW',
+    energyProfile:
+      'Raffinerie sucre principale. Vapeur + électrique. Continu.',
+    website: 'https://www.cosumar.co.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'LafargeHolcim — Cimenterie Bouskoura',
+    sector: 'Cement',
+    city: 'Bouskoura',
+    address: 'Cimenterie Bouskoura, Casa',
+    estimatedMw: '15–30 MW',
+    energyProfile: 'Cimenterie majeure. CBAM exposure.',
+    website: 'https://www.lafargeholcim.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Aéroport Mohammed V',
+    sector: 'Infrastructure — airport',
+    city: 'Nouaceur',
+    address: 'Aéroport Mohammed V, Nouaceur',
+    estimatedMw: '4–10 MW',
+    energyProfile: 'Plus gros aéroport Maroc. Terminal 1+2 + cargo. 24/7.',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Marsa Maroc — Port Casablanca',
+    sector: 'Port / logistics',
+    city: 'Casablanca',
+    address: 'Port de Casablanca',
+    estimatedMw: '3–8 MW',
+    energyProfile: 'Grues, terminaux, frigo. Public via TGR.',
+    website: 'https://www.marsamaroc.co.ma',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Maghreb Steel — Mohammedia',
+    sector: 'Steel',
+    city: 'Mohammedia',
+    address: 'Zone industrielle, Mohammedia',
+    estimatedMw: '20–45 MW',
+    energyProfile: "Tôles laminées à froid. Four électrique. CBAM exposure.",
+    website: 'https://www.maghrebsteel.ma',
+    status: 'cold',
+    priority: 1
+  },
+
+  // ===================  Casa Sud — Settat / Berrechid / Khouribga / Jorf Lasfar  ===================
+  {
+    name: 'OCP Khouribga — mines de phosphate',
+    sector: 'Mining — phosphate',
+    city: 'Khouribga',
+    address: 'Site OCP Khouribga',
+    estimatedMw: '40–80 MW',
+    energyProfile:
+      "Plus gros bassin phosphate au monde. Excavation, lavage, slurry pipeline 200km vers Jorf. Continu.",
+    website: 'https://www.ocpgroup.ma',
+    status: 'cold',
+    priority: 1,
+    notes: 'OCP a déjà commencé sa transition solaire — cible top-priority.'
+  },
+  {
+    name: 'OCP Jorf Lasfar — Phosphate Hub',
+    sector: 'Phosphate / chemicals',
+    city: 'Jorf Lasfar',
+    address: 'Plateforme industrielle Jorf Lasfar, El Jadida',
+    estimatedMw: '150–250 MW agrégé',
+    energyProfile:
+      "Plus gros hub de transformation phosphate au monde. Maroc Phosphore + EMAPHOS + IMACID + JFC. Acide phosphorique + DAP/NPK.",
+    website: 'https://www.ocpgroup.ma',
+    status: 'cold',
+    priority: 1,
+    notes:
+      'Cluster industriel monstrueux. Multi-tenant PPA + arbitrage BESS très pertinent. Viser un contrat-cadre groupe.'
+  },
+  {
+    name: 'Cosumar — Sucrerie SURAC Sidi Bennour',
+    sector: 'Sugar refining',
+    city: 'Sidi Bennour',
+    address: 'SURAC, Sidi Bennour, Doukkala',
+    estimatedMw: '6–15 MW',
+    energyProfile:
+      'Sucrerie betterave + canne. Bagasse cogen + élec. Saisonnier.',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Holcim — Cimenterie Settat',
+    sector: 'Cement',
+    city: 'Settat',
+    address: 'Cimenterie Settat',
+    estimatedMw: '8–18 MW',
+    energyProfile: 'Cimenterie. CBAM exposure.',
+    status: 'cold',
+    priority: 2
+  },
+
+  // ===================  Béni Mellal-Khénifra  ===================
+  {
+    name: 'Cosumar — Sucrerie SUNABEL Béni Mellal',
+    sector: 'Sugar refining',
+    city: 'Béni Mellal',
+    address: 'SUNABEL, Béni Mellal',
+    estimatedMw: '4–10 MW',
+    energyProfile: 'Sucrerie betterave Tadla. Saisonnier campagne.',
+    status: 'cold',
+    priority: 2
+  },
+
+  // ===================  Marrakech / Safi  ===================
+  {
+    name: 'OCP Maroc Phosphore — Safi',
+    sector: 'Phosphate / chemicals',
+    city: 'Safi',
+    address: 'Maroc Phosphore Safi',
+    estimatedMw: '60–120 MW',
+    energyProfile:
+      "Site historique de transformation phosphate (avant Jorf). Acide phosphorique, soufrique, engrais.",
+    website: 'https://www.ocpgroup.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Cimenterie Ciments du Maroc — Safi',
+    sector: 'Cement',
+    city: 'Safi',
+    address: 'Cimenterie Safi',
+    estimatedMw: '10–22 MW',
+    energyProfile: 'Cimenterie. CBAM exposure.',
+    website: 'https://www.cimentsdumaroc.com',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Cluster hôtelier Marrakech (palais & resorts)',
+    sector: 'Hospitality / leisure',
+    city: 'Marrakech',
+    address: 'Palmeraie, Hivernage, Médina',
+    estimatedMw: '20–40 MW agrégé',
+    energyProfile:
+      "Centaines d'hôtels haut de gamme — Mamounia, Royal Mansour, RIU, Es Saadi, Palmeraie Resorts. Clim massive été. Toitures + terrains pour PV.",
+    status: 'cold',
+    priority: 1,
+    notes:
+      'Approcher fédération hôtelière + grands groupes (Accor, RIU, Iberostar) pour contrat-cadre multi-sites.'
+  },
+  {
+    name: 'Aéroport Marrakech-Menara',
+    sector: 'Infrastructure — airport',
+    city: 'Marrakech',
+    address: 'Aéroport Marrakech-Menara',
+    estimatedMw: '2–5 MW',
+    energyProfile: 'Trafic touristique majeur. 24/7.',
+    status: 'cold',
+    priority: 3
+  },
+
+  // ===================  Souss-Massa — Agadir  ===================
+  {
+    name: 'COPAG — Coopérative Agricole Tarougant',
+    sector: 'Agri — dairy + citrus',
+    city: 'Aït Iaaza',
+    address: 'Tarougant, Aït Iaaza',
+    estimatedMw: '5–12 MW',
+    energyProfile:
+      'Plus grosse coopérative agro Maroc. Lait Jaouda + agrumes + viandes. Cold chain massive.',
+    website: 'https://www.copag.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Marsa Maroc — Port Agadir',
+    sector: 'Port / logistics',
+    city: 'Agadir',
+    address: 'Port d\'Agadir',
+    estimatedMw: '1–3 MW',
+    energyProfile: 'Pêche industrielle + container. Cold storage poisson.',
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Cluster hôtelier Agadir (zone balnéaire)',
+    sector: 'Hospitality / leisure',
+    city: 'Agadir',
+    address: 'Front de mer + Founty',
+    estimatedMw: '8–18 MW agrégé',
+    energyProfile:
+      "Stations balnéaires (RIU, Iberostar, Robinson Club, Sofitel). Clim été + chauffage piscines.",
+    status: 'cold',
+    priority: 2
+  },
+  {
+    name: 'Aéroport Al-Massira Agadir',
+    sector: 'Infrastructure — airport',
+    city: 'Agadir',
+    address: 'Aéroport Al-Massira',
+    estimatedMw: '1.5–4 MW',
+    energyProfile: 'Trafic touristique. 24/7.',
+    status: 'cold',
+    priority: 3
+  },
+
+  // ===================  Sahara — Laâyoune / Dakhla  ===================
+  {
+    name: 'OCP Phosboucraâ — Laâyoune',
+    sector: 'Mining — phosphate',
+    city: 'Boucraâ',
+    address: 'Mines de Boucraâ → port Laâyoune (conveyor 100km)',
+    estimatedMw: '25–60 MW',
+    energyProfile:
+      "Mine + plus long convoyeur du monde (100km vers Laâyoune Plage). Continu. Solar fit excellent (irradiation Sahara).",
+    website: 'https://www.ocpgroup.ma',
+    status: 'cold',
+    priority: 1
+  },
+  {
+    name: 'Conserveries pélagiques Dakhla',
+    sector: 'Food processing — fish',
+    city: 'Dakhla',
+    address: 'Zone industrielle Dakhla',
+    estimatedMw: '3–8 MW agrégé',
+    energyProfile:
+      "Cluster conserveries sardine + farine de poisson. Cold chain + cuisson + séchage. Saisonnier mais récurrent.",
+    status: 'cold',
+    priority: 2,
+    notes: 'Approcher la fédération de la pêche pélagique.'
+  },
+  {
+    name: 'Aéroport Hassan I — Laâyoune',
+    sector: 'Infrastructure — airport',
+    city: 'Laâyoune',
+    address: 'Aéroport Hassan I',
+    estimatedMw: '0.5–1.5 MW',
+    energyProfile: 'Aéroport régional. Solar fit excellent (irradiation).',
+    status: 'cold',
+    priority: 3
   }
 ];
 
