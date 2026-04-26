@@ -3,7 +3,7 @@
 import {useEffect, useState} from 'react';
 
 const STATUSES: Array<{key: string; label: string}> = [
-  {key: '', label: 'All'},
+  {key: '', label: 'All statuses'},
   {key: 'cold', label: 'À contacter'},
   {key: 'contacted', label: 'Contacté'},
   {key: 'meeting_scheduled', label: 'Visite prévue'},
@@ -15,12 +15,19 @@ const STATUSES: Array<{key: string; label: string}> = [
 
 /**
  * Client-side filter — toggles `display` on prospect cards based on selected
- * status / sector / search query. No round-trip needed because the server
- * gives us the full list anyway.
+ * status / sector / zone / search query. Also hides whole zone blocks when
+ * none of their cards match.
  */
-export function ProspectsToolbar({sectors}: {sectors: string[]}) {
+export function ProspectsToolbar({
+  sectors,
+  zones
+}: {
+  sectors: string[];
+  zones: Array<{key: string; label: string}>;
+}) {
   const [status, setStatus] = useState<string>('');
   const [sector, setSector] = useState<string>('');
+  const [zone, setZone] = useState<string>('');
   const [q, setQ] = useState('');
 
   useEffect(() => {
@@ -30,15 +37,24 @@ export function ProspectsToolbar({sectors}: {sectors: string[]}) {
     for (const c of cards) {
       const matchStatus = !status || c.dataset.status === status;
       const matchSector = !sector || c.dataset.sector === sector;
+      const matchZone = !zone || c.dataset.zone === zone;
       const matchSearch =
         !needle || (c.dataset.search ?? '').includes(needle);
-      const ok = matchStatus && matchSector && matchSearch;
+      const ok = matchStatus && matchSector && matchZone && matchSearch;
       c.style.display = ok ? '' : 'none';
       if (ok) visible += 1;
     }
+    // Hide entire zone blocks whose cards are all filtered out.
+    const blocks = document.querySelectorAll<HTMLElement>('.zone-block');
+    for (const b of blocks) {
+      const anyVisible = b.querySelector<HTMLElement>(
+        '.prospect-card:not([style*="display: none"])'
+      );
+      b.style.display = anyVisible ? '' : 'none';
+    }
     const counter = document.getElementById('prospects-visible-count');
     if (counter) counter.textContent = String(visible);
-  }, [status, sector, q]);
+  }, [status, sector, zone, q]);
 
   return (
     <div className="filters">
@@ -49,6 +65,19 @@ export function ProspectsToolbar({sectors}: {sectors: string[]}) {
           placeholder="Search name, city, sector…"
           className="search"
         />
+        <select
+          value={zone}
+          onChange={(e) => setZone(e.target.value)}
+          className="select"
+          aria-label="Filter by zone"
+        >
+          <option value="">All zones</option>
+          {zones.map((z) => (
+            <option key={z.key} value={z.key}>
+              {z.label}
+            </option>
+          ))}
+        </select>
         <select
           value={status}
           onChange={(e) => setStatus(e.target.value)}

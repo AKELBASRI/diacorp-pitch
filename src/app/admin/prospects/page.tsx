@@ -2,10 +2,11 @@ import Link from 'next/link';
 import {redirect} from 'next/navigation';
 import {asc, desc, sql} from 'drizzle-orm';
 import {db} from '@/db/client';
-import {prospects, type ProspectStatus} from '@/db/schema';
+import {prospects, type Prospect, type ProspectStatus} from '@/db/schema';
 import {getSession} from '@/lib/auth';
 import {ProspectsToolbar} from './toolbar';
 import {STATUS_META, sectorColor, mapsUrl} from './ui';
+import {cityZone, ZONES, ZONE_ORDER, zoneMapsUrl, type ZoneKey} from './zones';
 
 export const dynamic = 'force-dynamic';
 
@@ -34,8 +35,6 @@ export default async function ProspectsList({
 
   const rows = await db.select().from(prospects).orderBy(sortCol);
 
-  // Client-side filter is done by a tiny script in ProspectsToolbar; the DB
-  // gives us all of them and we just toggle CSS visibility.
   const counts = await db
     .select({
       status: prospects.status,
@@ -46,6 +45,15 @@ export default async function ProspectsList({
   const countByStatus = new Map(counts.map((c) => [c.status, c.n]));
 
   const sectors = Array.from(new Set(rows.map((r) => r.sector))).sort();
+
+  // Group prospects by zone, preserving the user-selected sort within each zone.
+  const byZone = new Map<ZoneKey, Prospect[]>();
+  for (const r of rows) {
+    const z = cityZone(r.city);
+    const list = byZone.get(z) ?? [];
+    list.push(r);
+    byZone.set(z, list);
+  }
 
   return (
     <>
@@ -87,14 +95,19 @@ export default async function ProspectsList({
           <div>
             <h1 className="admin-h1">Prospects</h1>
             <p className="admin-h1-sub">
-              Pipeline interne de prospects industriels Oriental — jamais affichée
-              publiquement. Les adresses listées sont issues d'informations publiques
-              et doivent être vérifiées sur Google Maps avant toute visite terrain.
+              Pipeline interne — groupé par zone géographique pour planifier les
+              tournées terrain. Adresses publiques, à vérifier sur Google Maps
+              avant tout déplacement.
             </p>
           </div>
-          <Link href="/admin/prospects/new" className="btn btn-primary">
-            + Add prospect
-          </Link>
+          <div style={{display: 'flex', gap: 10, flexWrap: 'wrap'}}>
+            <Link href="/admin/prospects/map" className="btn">
+              🗺  Map view
+            </Link>
+            <Link href="/admin/prospects/new" className="btn btn-primary">
+              + Add prospect
+            </Link>
+          </div>
         </div>
 
         {/* Status pipeline summary */}
@@ -107,100 +120,133 @@ export default async function ProspectsList({
           ))}
         </div>
 
-        <ProspectsToolbar sectors={sectors} />
+        <ProspectsToolbar sectors={sectors} zones={ZONE_ORDER.map((k) => ({key: k, label: ZONES[k].label}))} />
 
-        <div className="prospect-grid">
-          {rows.map((r) => {
-            const meta = STATUS_META[r.status as ProspectStatus] ?? STATUS_META.cold;
-            const pri = r.priority === 1 ? 'high' : r.priority === 3 ? 'low' : 'med';
-            return (
-              <article
-                key={r.id}
-                className={`prospect-card pri-${pri}`}
-                data-status={r.status}
-                data-sector={r.sector}
-                data-search={`${r.name} ${r.city} ${r.sector}`.toLowerCase()}
-              >
-                <div className="prospect-head">
-                  <span className="prospect-status" style={{['--s-color' as string]: meta.color}}>
-                    <span className="prospect-dot" />
-                    {meta.label}
-                  </span>
-                  <span
-                    className="prospect-pri"
-                    title={
-                      r.priority === 1
-                        ? 'High priority'
-                        : r.priority === 3
-                          ? 'Low priority'
-                          : 'Medium priority'
-                    }
-                  >
-                    {r.priority === 1 ? '★★★' : r.priority === 3 ? '★' : '★★'}
-                  </span>
-                </div>
-
-                <h3 className="prospect-name">{r.name}</h3>
-                <div className="prospect-sector" style={{color: sectorColor(r.sector)}}>
-                  {r.sector}
-                </div>
-
-                <div className="prospect-loc">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                    <circle cx="12" cy="10" r="3" />
-                  </svg>
-                  <span>
-                    {r.city}
-                    {r.address ? ' · ' + r.address : ''}
-                  </span>
-                </div>
-
-                {r.estimatedMw && (
-                  <div className="prospect-mw">
-                    <span className="kicker">Estimated demand</span>
-                    <span className="mw">{r.estimatedMw}</span>
+        {ZONE_ORDER.map((zoneKey) => {
+          const zoneRows = byZone.get(zoneKey);
+          if (!zoneRows || zoneRows.length === 0) return null;
+          const z = ZONES[zoneKey];
+          // Highest-priority prospects first for the zone Maps deep-link.
+          const topNames = [...zoneRows]
+            .sort((a, b) => a.priority - b.priority)
+            .map((r) => r.name);
+          return (
+            <section key={zoneKey} className="zone-block" data-zone={zoneKey}>
+              <header className="zone-head" style={{['--z-color' as string]: z.color}}>
+                <div className="zone-meta">
+                  <div className="zone-kicker">
+                    <span className="zone-dot" />
+                    Zone · {zoneRows.length} prospect{zoneRows.length > 1 ? 's' : ''} · {z.driveFromOujda} d'Oujda
                   </div>
-                )}
-
-                {r.energyProfile && (
-                  <p className="prospect-profile">{r.energyProfile}</p>
-                )}
-
-                {r.notes && (
-                  <p className="prospect-notes">📝 {r.notes}</p>
-                )}
-
-                <div className="prospect-actions">
-                  <Link
-                    href={`/admin/prospects/${r.id}`}
-                    className="card-btn primary"
-                  >
-                    Open
-                  </Link>
-                  <a
-                    href={mapsUrl(r.name, r.address ?? r.city)}
-                    target="_blank"
-                    rel="noopener"
-                    className="card-btn"
-                  >
-                    Google Maps ↗
-                  </a>
-                  {r.website && (
-                    <a
-                      href={r.website}
-                      target="_blank"
-                      rel="noopener"
-                      className="card-btn"
-                    >
-                      Site ↗
-                    </a>
-                  )}
+                  <h2 className="zone-title">{z.label}</h2>
+                  <p className="zone-blurb">{z.blurb}</p>
                 </div>
-              </article>
-            );
-          })}
-        </div>
+                <a
+                  href={zoneMapsUrl(topNames, z.anchor)}
+                  target="_blank"
+                  rel="noopener"
+                  className="zone-maps-btn"
+                >
+                  Open zone in Google Maps ↗
+                </a>
+              </header>
+
+              <div className="prospect-grid">
+                {zoneRows.map((r) => {
+                  const meta = STATUS_META[r.status as ProspectStatus] ?? STATUS_META.cold;
+                  const pri = r.priority === 1 ? 'high' : r.priority === 3 ? 'low' : 'med';
+                  return (
+                    <article
+                      key={r.id}
+                      className={`prospect-card pri-${pri}`}
+                      data-status={r.status}
+                      data-sector={r.sector}
+                      data-zone={zoneKey}
+                      data-search={`${r.name} ${r.city} ${r.sector}`.toLowerCase()}
+                    >
+                      <div className="prospect-head">
+                        <span className="prospect-status" style={{['--s-color' as string]: meta.color}}>
+                          <span className="prospect-dot" />
+                          {meta.label}
+                        </span>
+                        <span
+                          className="prospect-pri"
+                          title={
+                            r.priority === 1
+                              ? 'High priority'
+                              : r.priority === 3
+                                ? 'Low priority'
+                                : 'Medium priority'
+                          }
+                        >
+                          {r.priority === 1 ? '★★★' : r.priority === 3 ? '★' : '★★'}
+                        </span>
+                      </div>
+
+                      <h3 className="prospect-name">{r.name}</h3>
+                      <div className="prospect-sector" style={{color: sectorColor(r.sector)}}>
+                        {r.sector}
+                      </div>
+
+                      <div className="prospect-loc">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+                          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        <span>
+                          {r.city}
+                          {r.address ? ' · ' + r.address : ''}
+                        </span>
+                      </div>
+
+                      {r.estimatedMw && (
+                        <div className="prospect-mw">
+                          <span className="kicker">Estimated demand</span>
+                          <span className="mw">{r.estimatedMw}</span>
+                        </div>
+                      )}
+
+                      {r.energyProfile && (
+                        <p className="prospect-profile">{r.energyProfile}</p>
+                      )}
+
+                      {r.notes && (
+                        <p className="prospect-notes">📝 {r.notes}</p>
+                      )}
+
+                      <div className="prospect-actions">
+                        <Link
+                          href={`/admin/prospects/${r.id}`}
+                          className="card-btn primary"
+                        >
+                          Open
+                        </Link>
+                        <a
+                          href={mapsUrl(r.name, r.address ?? r.city)}
+                          target="_blank"
+                          rel="noopener"
+                          className="card-btn"
+                        >
+                          Google Maps ↗
+                        </a>
+                        {r.website && (
+                          <a
+                            href={r.website}
+                            target="_blank"
+                            rel="noopener"
+                            className="card-btn"
+                          >
+                            Site ↗
+                          </a>
+                        )}
+                      </div>
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          );
+        })}
 
         <style>{`
           .pipeline {
@@ -240,11 +286,84 @@ export default async function ProspectsList({
             color: var(--admin-ink-3);
           }
 
+          .zone-block {
+            margin-top: 36px;
+            padding-top: 4px;
+          }
+          .zone-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 18px 22px;
+            margin-bottom: 14px;
+            border: 1px solid var(--admin-line);
+            border-left: 3px solid var(--z-color);
+            background:
+              linear-gradient(180deg, rgba(20,22,26,0.85), rgba(14,17,20,0.85)),
+              radial-gradient(120% 200% at 0% 0%, color-mix(in oklch, var(--z-color) 14%, transparent) 0%, transparent 60%);
+            background-blend-mode: normal, screen;
+            flex-wrap: wrap;
+          }
+          html[dir="rtl"] .zone-head {
+            border-left: 1px solid var(--admin-line);
+            border-right: 3px solid var(--z-color);
+          }
+          .zone-meta { flex: 1 1 360px; min-width: 280px; }
+          .zone-kicker {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: var(--font-mono);
+            font-size: 9.5px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--z-color);
+            margin-bottom: 6px;
+          }
+          .zone-dot {
+            width: 8px; height: 8px;
+            background: var(--z-color);
+            transform: rotate(45deg);
+            box-shadow: 0 0 10px var(--z-color);
+          }
+          .zone-title {
+            font-family: var(--font-display);
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            margin: 0 0 6px;
+            color: var(--admin-ink);
+          }
+          .zone-blurb {
+            font-size: 13px;
+            color: var(--admin-ink-2);
+            line-height: 1.55;
+            margin: 0;
+            max-width: 60ch;
+          }
+          .zone-maps-btn {
+            align-self: flex-end;
+            display: inline-flex;
+            padding: 10px 16px;
+            border: 1px solid var(--z-color);
+            color: var(--z-color);
+            font-family: var(--font-mono);
+            font-size: 10.5px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            text-decoration: none;
+            background: color-mix(in oklch, var(--z-color) 6%, transparent);
+            transition: all .2s ease;
+            white-space: nowrap;
+          }
+          .zone-maps-btn:hover {
+            background: var(--z-color);
+            color: var(--admin-bg);
+          }
+
           .prospect-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
             gap: 14px;
-            margin-top: 24px;
           }
           .prospect-card {
             position: relative;
