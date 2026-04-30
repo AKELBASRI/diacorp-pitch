@@ -38,6 +38,7 @@ const CATEGORIES: Array<{
       'home.hero',
       'home.impact',
       'home.capabilities',
+      'home.howItWorks',
       'home.activities',
       'home.models',
       'home.services',
@@ -88,6 +89,7 @@ const ICON: Record<string, string> = {
   'home.hero': '◉',
   'home.impact': '▤',
   'home.capabilities': '◊',
+  'home.howItWorks': '↳',
   'home.activities': '❖',
   'home.models': '⇆',
   'home.services': '✦',
@@ -146,13 +148,22 @@ export default async function AdminHome() {
   const byKey = new Map(rows.map((r) => [r.key, r]));
   const usedKeys = new Set<string>();
 
+  // Show every category key, whether or not it has a DB row yet. Keys with
+  // no row render with locales=0 so the user sees a "not seeded" hint and
+  // can still click in to bootstrap content via the editor (the upsert in
+  // saveAction handles first-time publish).
   const grouped = CATEGORIES.map((cat) => {
-    const items = cat.keys
-      .filter((k) => byKey.has(k))
-      .map((k) => {
-        usedKeys.add(k);
-        return byKey.get(k)!;
-      });
+    const items: Row[] = cat.keys.map((k) => {
+      usedKeys.add(k);
+      return (
+        byKey.get(k) ?? {
+          key: k,
+          locales: 0,
+          updatedAt: null,
+          updatedBy: null
+        }
+      );
+    });
     return {...cat, items};
   });
 

@@ -19,6 +19,42 @@ export const dynamic = 'force-dynamic';
 const LOCALES = ['fr', 'en', 'ar'] as const;
 type Locale = (typeof LOCALES)[number];
 
+// Section keys we know about — mirrors the CATEGORIES list in /admin so the
+// editor can bootstrap a row that hasn't been seeded yet (the saveAction
+// upserts on first publish).
+const KNOWN_KEYS = new Set<string>([
+  'home.hero',
+  'home.impact',
+  'home.capabilities',
+  'home.howItWorks',
+  'home.activities',
+  'home.models',
+  'home.services',
+  'home.products',
+  'home.projects',
+  'home.track',
+  'home.partners',
+  'home.anchor',
+  'home.loi',
+  'home.team',
+  'home.contact',
+  'servicesPage',
+  'contactPage',
+  'register',
+  'hero',
+  'thesis',
+  'positioning',
+  'strategies',
+  'financials',
+  'timeline',
+  'team',
+  'cta',
+  'gallery',
+  'meta',
+  'nav',
+  'footer'
+]);
+
 async function saveAction(formData: FormData) {
   'use server';
   const sess = await getSession();
@@ -54,14 +90,25 @@ async function saveAction(formData: FormData) {
       });
     }
 
+    // Upsert: insert if missing, update if present. The unique index on
+    // (key, locale) lets us collapse this into a single statement that works
+    // whether or not a row was previously seeded.
     await db
-      .update(sections)
-      .set({
+      .insert(sections)
+      .values({
+        key,
+        locale,
         data: parsed as object,
-        updatedAt: new Date(),
         updatedBy: editor
       })
-      .where(and(eq(sections.key, key), eq(sections.locale, locale)));
+      .onConflictDoUpdate({
+        target: [sections.key, sections.locale],
+        set: {
+          data: parsed as object,
+          updatedAt: new Date(),
+          updatedBy: editor
+        }
+      });
   }
 
   // Per-section settings (visibility, accent, anchor, notes).
@@ -90,6 +137,7 @@ async function saveAction(formData: FormData) {
     });
 
   revalidatePath('/', 'layout');
+  for (const l of LOCALES) revalidatePath(`/${l}`, 'layout');
   redirect(`/admin/sections/${encodeURIComponent(key)}?saved=1`);
 }
 
@@ -133,6 +181,7 @@ async function revertAction(formData: FormData) {
     .where(and(eq(sections.key, rev.key), eq(sections.locale, rev.locale)));
 
   revalidatePath('/', 'layout');
+  for (const l of LOCALES) revalidatePath(`/${l}`, 'layout');
   redirect(`/admin/sections/${encodeURIComponent(key)}?reverted=1`);
 }
 
@@ -183,10 +232,35 @@ export default async function SectionEditPage({
       .limit(15)
   ]);
 
-  if (rows.length === 0) notFound();
-
+  // We intentionally do NOT 404 when rows are missing. The editor is allowed
+  // to bootstrap a section that has no DB row yet — the upsert in saveAction
+  // will create it on first publish. Only unknown section keys (not in any
+  // category) fall through to notFound below.
   const byLocale = new Map<string, (typeof rows)[number]>();
   for (const r of rows) byLocale.set(r.locale, r);
+
+  if (rows.length === 0 && !KNOWN_KEYS.has(key)) notFound();
+
+  // For locales with no DB row, fall back to the static i18n JSON at the
+  // matching dotted-path. This gives the form a shape to edit, and the
+  // upsert on save will create the row. Without this, an editor opened on a
+  // never-seeded section would show nothing.
+  async function fallbackForLocale(locale: Locale): Promise<unknown> {
+    if (byLocale.has(locale)) return byLocale.get(locale)!.data;
+    try {
+      const mod = (await import(`@/messages/${locale}.json`)) as {
+        default: Record<string, unknown>;
+      };
+      return getDottedPath(mod.default, key) ?? null;
+    } catch {
+      return null;
+    }
+  }
+  const [frData, enData, arData] = await Promise.all([
+    fallbackForLocale('fr'),
+    fallbackForLocale('en'),
+    fallbackForLocale('ar')
+  ]);
 
   const settings: SectionSettingsData = {
     ...DEFAULT_SECTION_SETTINGS,
@@ -235,11 +309,7 @@ export default async function SectionEditPage({
 
             <SectionEditor
               sectionKey={key}
-              data={{
-                fr: (byLocale.get('fr')?.data ?? null) as unknown,
-                en: (byLocale.get('en')?.data ?? null) as unknown,
-                ar: (byLocale.get('ar')?.data ?? null) as unknown
-              }}
+              data={{fr: frData, en: enData, ar: arData}}
             />
 
             <div className="sticky-save">
@@ -271,11 +341,7 @@ export default async function SectionEditPage({
                 createdAt: r.createdAt,
                 createdBy: r.createdBy
               }))}
-              contentByLocale={{
-                fr: (byLocale.get('fr')?.data ?? null) as unknown,
-                en: (byLocale.get('en')?.data ?? null) as unknown,
-                ar: (byLocale.get('ar')?.data ?? null) as unknown
-              }}
+              contentByLocale={{fr: frData, en: enData, ar: arData}}
               lastEdited={{
                 updatedAt: byLocale.get('fr')?.updatedAt ?? null,
                 updatedBy: byLocale.get('fr')?.updatedBy ?? null
@@ -317,6 +383,19 @@ export default async function SectionEditPage({
       `}</style>
     </>
   );
+}
+
+function getDottedPath(obj: unknown, path: string): unknown {
+  const parts = path.split('.');
+  let cur: unknown = obj;
+  for (const p of parts) {
+    if (cur && typeof cur === 'object' && p in (cur as Record<string, unknown>)) {
+      cur = (cur as Record<string, unknown>)[p];
+    } else {
+      return undefined;
+    }
+  }
+  return cur;
 }
 
 function prettify(key: string): string {

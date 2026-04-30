@@ -11,6 +11,7 @@ import {
 } from 'next/font/google';
 import {routing, type Locale} from '@/i18n/routing';
 import {Providers} from '@/components/Providers';
+import {ScrollToTop} from '@/components/ScrollToTop';
 import {getSiteSettings} from '@/lib/settings';
 import '../globals.css';
 
@@ -43,6 +44,8 @@ const kufi = Noto_Kufi_Arabic({
   display: 'swap',
   weight: ['300', '500', '700', '800']
 });
+
+export const dynamic = 'force-dynamic';
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
@@ -109,6 +112,7 @@ export default async function LocaleLayout({
         <Providers>
           <NextIntlClientProvider messages={messages} locale={locale}>
             {children}
+            <ScrollToTop />
           </NextIntlClientProvider>
         </Providers>
       </body>
