@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DiaCorp Energy — Thèse Logicielle 1 GW",
-    "description": "Dix plateformes logicielles pour désintermédier ONEE et livrer l'énergie verte la moins chère du Maroc."
+    "description": "Dix plateformes logicielles pour accélérer la transition énergétique du Maroc et livrer une énergie verte traçable à l'industrie."
   },
   "nav": {
     "thesis": "Thèse",
@@ -24,7 +24,7 @@
   "servicesPage": {
     "meta": {
       "title": "Services — DiaCorp Energy",
-      "description": "Étude de faisabilité, centrales PPA, PV on-site, maintenance, audit énergétique, solaire thermique. Tout l'écosystème solaire par DiaCorp / KermaSys."
+      "description": "Étude de faisabilité, accords structurés de fourniture d'énergie, PV on-site, maintenance, audit énergétique, solaire thermique. Tout l'écosystème solaire par DiaCorp / KermaSys."
     },
     "hero": {
       "kicker": "NOS SERVICES",
@@ -52,9 +52,9 @@
         "typical": "4 à 8 semaines · à partir de 15 k$"
       },
       "utility": {
-        "name": "Centrale utility-scale PPA",
-        "tagline": "Un plant de 10 à 500 MW, conçu pour livrer un PPA de 20 ans.",
-        "body": "Conception-réalisation clef en main. DiaCorp porte la SPV, mobilise le financement, pilote l'EPC (via KermaSys ou un consortium), gère le wheeling ONEE, et opère le plant sur toute la durée du PPA.",
+        "name": "Centrale utility-scale (fourniture structurée)",
+        "tagline": "Un plant de 10 à 500 MW, conçu pour un accord structuré de fourniture d'énergie sur 20 ans.",
+        "body": "Conception-réalisation clef en main. DiaCorp porte la SPV, mobilise le financement, pilote l'EPC (via KermaSys ou un consortium), gère le wheeling ONEE, et opère le plant sur toute la durée de l'accord.",
         "deliverables": [
           "Développement complet du projet",
           "Financement & clôture bancable",
@@ -67,7 +67,7 @@
       "onsite": {
         "name": "PV on-site & toitures industrielles",
         "tagline": "Vous avez du toit, nous avons les panneaux.",
-        "body": "Installation photovoltaïque sur vos propres actifs : toitures d'usine, ombrières de parking, terrains non-exploités. Modèle d'auto-consommation partielle, avec option de rachat du surplus par DiaCorp ou vente directe.",
+        "body": "Installation photovoltaïque sur vos propres actifs : toitures d'usine, ombrières de parking, terrains non-exploités. Modèle d'auto-consommation partielle, avec option de rachat du surplus par DiaCorp ou intégration dans une solution énergétique structurée.",
         "deliverables": [
           "Audit structurel du toit",
           "Dimensionnement",
@@ -130,7 +130,7 @@
     "hero": {
       "kicker": "NOUS CONTACTER",
       "title": "Parlons.",
-      "sub": "Que ce soit pour explorer un PPA, commander une étude de faisabilité, poser une question réglementaire ou discuter partenariat — écrivez-nous. Réponse sous 48 heures ouvrables."
+      "sub": "Que ce soit pour explorer un accord structuré de fourniture d'énergie, commander une étude de faisabilité, poser une question réglementaire ou discuter partenariat — écrivez-nous. Réponse sous 48 heures ouvrables."
     },
     "form": {
       "nameLabel": "Nom et prénom",
@@ -141,7 +141,7 @@
       "messageLabel": "Votre message",
       "messagePlaceholder": "Décrivez-nous brièvement votre besoin — site, secteur, capacité estimée, timing…",
       "subjects": {
-        "ppa": "Approvisionnement PPA long terme",
+        "ppa": "Fourniture d'énergie long terme (accord structuré)",
         "feasibility": "Étude de faisabilité",
         "audit": "Audit énergétique",
         "onsite": "Installation on-site / toitures",
@@ -290,7 +290,7 @@
       "nextItems": {
         "0": "Appel de qualification (30 min) avec notre équipe commerciale.",
         "1": "Visite technique du site client et audit énergétique (J+15).",
-        "2": "Proposition commerciale formelle et term-sheet PPA (J+30)."
+        "2": "Proposition commerciale formelle et term-sheet d'accord structuré (J+30)."
       }
     },
     "errors": {
@@ -302,9 +302,9 @@
   },
   "home": {
     "hero": {
-      "kicker": "IPP SOLAIRE · RÉGION ORIENTAL",
-      "title": "L'énergie solaire à l'échelle industrielle,\npour l'Oriental marocain.",
-      "sub": "DiaCorp Energy développe 1 GW photovoltaïque dans l'Oriental. Nous livrons une électricité verte à partir de 0,70 MAD/kWh — jusqu'à 40 % moins chère que le tarif industriel ONEE — via des Power Purchase Agreements long terme.",
+      "kicker": "SOLUTIONS ÉNERGÉTIQUES · MAROC",
+      "title": "Solutions énergétiques durables\npour partenaires industriels au Maroc.",
+      "sub": "DiaCorp Energy développe des solutions énergétiques renouvelables structurées pour des partenaires industriels au Maroc, axées sur l'autoconsommation, la stabilité des coûts et l'efficacité opérationnelle sur le long terme.",
       "ctaLoi": "Envoyer une lettre d'intention",
       "ctaScroll": "Découvrir nos activités",
       "stat1": "Capacité cible",
@@ -313,8 +313,8 @@
       "stat2v": "150 MW",
       "stat3": "Mise en service",
       "stat3v": "Q3 2027",
-      "stat4": "Tarif PPA",
-      "stat4v": "0,07 $/kWh"
+      "stat4": "Durée de l'accord",
+      "stat4v": "15-25 ans"
     },
     "activities": {
       "kicker": "ACTIVITÉS",
@@ -324,7 +324,7 @@
         "industry": {
           "tag": "01 · INDUSTRIE",
           "name": "Industrie lourde & transformation",
-          "body": "Mines, plomb-zinc, briqueteries, céramique, textile, cimenteries de l'Oriental. PPA 15-25 ans, tarif fixe indexé, livraison par ligne privée ou wheeling ONEE."
+          "body": "Mines, plomb-zinc, briqueteries, céramique, textile, cimenteries de l'Oriental. Accords structurés 15-25 ans, tarification compétitive et adaptée au profil de consommation, livraison par ligne privée ou wheeling ONEE."
         },
         "agro": {
           "tag": "02 · AGRO-INDUSTRIE",
@@ -334,12 +334,12 @@
         "cold": {
           "tag": "03 · COLD STORAGE",
           "name": "Chaîne du froid & entrepôts",
-          "body": "Entrepôts frigorifiques export UE (fruits rouges, agrumes, maraîchage). PPA continu 24/7, couplage batterie pour fiabilité absolue, certificat carbone pour conformité CBAM."
+          "body": "Entrepôts frigorifiques export UE (fruits rouges, agrumes, maraîchage). Fourniture continue 24/7 (accord structuré), couplage batterie pour fiabilité absolue, certificat carbone pour conformité CBAM."
         },
         "zone": {
           "tag": "04 · ZONE INDUSTRIELLE VERTE",
           "name": "Zone industrielle 100 % solaire",
-          "body": "Parcs industriels greenfield autour des plants. Un lot, un contrat énergie, les services communs. Installation 8 mois, au lieu de 24-36 mois via ONEE."
+          "body": "Parcs industriels greenfield autour des plants. Un lot, un contrat énergie, les services communs. Foncier, raccordement et énergie pensés en bloc pour une mise en service rapide."
         }
       }
     },
@@ -356,7 +356,7 @@
           "features": [
             "Aucun équipement chez vous",
             "Aucun CAPEX client",
-            "PPA 15 – 25 ans, tarif fixe indexé",
+            "Accord structuré 15 – 25 ans, tarification adaptée",
             "Wheeling ONEE ou câble direct selon la géographie"
           ],
           "bestFor": "Vous consommez de l'électricité industrielle et vous voulez simplement une facture verte, indexée, sans investissement."
@@ -445,7 +445,7 @@
       "title": "Un modèle clair pour démarrer la conversation.",
       "sub": "Si votre entreprise souhaite explorer un approvisionnement énergétique vert, téléchargez le modèle adapté, complétez-le, et envoyez-le nous. Rien d'engageant à ce stade — juste une intention structurée.",
       "industryTitle": "LOI — Industrie & transformation",
-      "industryBody": "Modèle standard pour tout client industriel cherchant un PPA long terme.",
+      "industryBody": "Modèle standard pour tout client industriel cherchant un accord structuré de fourniture d'énergie long terme.",
       "industryCta": "Télécharger (PDF)",
       "agroTitle": "LOI — Agriculture & agro-industrie",
       "agroBody": "Modèle adapté irrigation, cold storage, transformation, modèle saisonnier.",
@@ -513,12 +513,12 @@
           "body": "Analyse d'irradiance, potentiel kWc, scoring foncier, simulation production (PVsyst, SAM, MétéoNorm) et modélisation financière."
         },
         "utility": {
-          "name": "Central utility-scale PPA",
-          "body": "Conception, financement, construction et exploitation de centrales 10-500 MW. Livraison via PPA long terme avec garantie de performance."
+          "name": "Centrale utility-scale (fourniture structurée)",
+          "body": "Conception, financement, construction et exploitation de centrales 10-500 MW. Livraison via accord structuré long terme avec garantie de performance."
         },
         "onsite": {
           "name": "PV on-site & toitures",
-          "body": "Installation photovoltaïque sur vos propres toitures, parkings, ou terrains. Auto-consommation partielle, revente du surplus."
+          "body": "Installation photovoltaïque sur vos propres toitures, parkings, ou terrains. Auto-consommation partielle, valorisation du surplus dans une solution énergétique structurée."
         },
         "om": {
           "name": "Maintenance & O&M",
@@ -615,7 +615,7 @@
     "capabilities": {
       "kicker": "POURQUOI DIACORP",
       "title": "Quatre raisons de bâtir avec nous.",
-      "sub": "L'équipe technique a signé, construit et maintenu des plants à travers le Maroc depuis 2005. On ne vend pas de l'énergie — on l'opère.",
+      "sub": "L'équipe technique a signé, construit et maintenu des plants à travers le Maroc depuis 2005. Nous ne livrons pas seulement de l'énergie — nous structurons des solutions intégrées pour partenaires industriels.",
       "items": [
         {
           "n": "01",
@@ -634,7 +634,7 @@
         },
         {
           "n": "04",
-          "title": "Rapport qualité-prix imbattable",
+          "title": "Tarif transparent, performance mesurée",
           "body": "Accès direct aux fabricants (Jinko, JA, Trina, Sungrow, Huawei). LCOE mesuré, pas promis. Tarifs indexés à long terme, transparents."
         }
       ]
@@ -666,8 +666,8 @@
     "kicker": "Mémorandum d'Information — Avril 2026",
     "titleLine1": "Un gigawatt.",
     "titleLine2": "Livré direct.",
-    "titleLine3": "Sans ONEE.",
-    "lede": "DiaCorp Energy construit 1 GW de solaire photovoltaïque dans l'Oriental marocain. Le plant vend des électrons à 0,07 $/kWh. Les dix plateformes logicielles que voici vendent des bits — et transforment 120 M$ de CAPEX en 2,7 Mds$ de revenus récurrents à l'horizon 2031.",
+    "titleLine3": "Pour l'industrie marocaine.",
+    "lede": "DiaCorp Energy construit 1 GW de solaire photovoltaïque dans l'Oriental marocain. Le plant produit de l'énergie verte à grande échelle. Les dix plateformes logicielles que voici transforment 120 M$ de CAPEX en 2,7 Mds$ de revenus récurrents à l'horizon 2031.",
     "ctaPrimary": "Explorer la thèse",
     "ctaSecondary": "Télécharger le mémorandum",
     "stats": {
@@ -683,32 +683,32 @@
   },
   "thesis": {
     "eyebrow": "La thèse en une phrase",
-    "heading": "ONEE vend des électrons à 1,20 MAD/kWh. Nous vendons la même énergie — verte — à 0,70 MAD/kWh, plus la couche logicielle qui la distribue.",
+    "heading": "Une énergie 100 % verte livrée aux industriels, et une couche logicielle qui la trace, l'optimise et la distribue.",
     "subPoints": {
       "0": {
         "title": "Le goulot d'étranglement n'est pas la production",
-        "body": "Le Maroc a 3 000 kWh/m²/an d'irradiation. Le vrai goulot est la distribution monopolistique et la tarification industrielle non-compétitive d'ONEE."
+        "body": "Le Maroc a 3 000 kWh/m²/an d'irradiation — l'une des meilleures ressources solaires au monde. L'enjeu est désormais d'accélérer la mise à disposition de cette énergie verte au tissu industriel."
       },
       "1": {
-        "title": "Le contournement légal existe",
-        "body": "Loi 13-09 et le décret 47-09 autorisent l'autoproduction et la vente directe via PPA. ONEE ne transporte que — moyennant un péage de 0,007 $/kWh."
+        "title": "Un cadre réglementaire ouvert",
+        "body": "La loi 13-09 et le décret 47-09 ouvrent le cadre à l'autoproduction et à la fourniture directe via accords structurés, avec un transport assuré par l'ONEE selon le tarif réglementé d'accès au réseau."
       },
       "2": {
         "title": "La couche logicielle capture 10× la valeur",
-        "body": "Vendre 1 MWh = 70 $. Vendre l'API, le marché, la donnée carbone, le jumeau numérique qui l'entoure = 700 $. C'est là que sont les milliards."
+        "body": "Vendre l'électron pur capture une fraction de la valeur. Vendre l'API, le marché, la donnée carbone et le jumeau numérique qui l'entoure capture un ordre de grandeur supérieur. C'est là que sont les milliards."
       }
     }
   },
   "positioning": {
     "eyebrow": "Positionnement",
-    "heading": "Face à ONEE — comparaison",
-    "onee": "ONEE (monopole historique)",
-    "diacorp": "DiaCorp (nouvelle plateforme)",
+    "heading": "Ce que nous apportons en plus",
+    "onee": "Référence marché",
+    "diacorp": "DiaCorp (offre dédiée)",
     "rows": {
       "price": {
-        "label": "Tarif industriel moyen",
-        "onee": "1,20 MAD/kWh",
-        "diacorp": "0,70 MAD/kWh"
+        "label": "Modèle tarifaire",
+        "onee": "Tarif réglementé",
+        "diacorp": "Accord structuré · tarification adaptée"
       },
       "green": {
         "label": "Part renouvelable garantie",
@@ -754,7 +754,7 @@
       },
       "energy-market": {
         "name": "Marché Énergie-Spot",
-        "pitch": "Le premier carnet d'ordres électrique du Maroc. PPA programmables, règlement H+15.",
+        "pitch": "Le premier carnet d'ordres électrique du Maroc. Accords programmables, règlement H+15.",
         "description": "Les off-takers achètent des blocs MWh en temps réel, prix dynamique selon la production PV. Smart contracts on-chain (Base L2) automatisent exécution et règlement. VPP agrégateur qui mutualise petits producteurs solaires et batteries distribuées.",
         "mockup": {
           "title": "DiaCorp Market",
@@ -814,7 +814,7 @@
       "green-hydrogen": {
         "name": "Optimiseur H₂ Vert",
         "pitch": "Arbitrage logiciel électron → hydrogène → ammoniac pour export Rotterdam.",
-        "description": "Algorithme de décision temps réel : vendre l'électron, le stocker (BESS), ou l'électrolyser en H₂/NH₃ selon les prix marché. Export via les ports marocains. Marché H₂ vert estimé à 1 000 Mds$ en 2035.",
+        "description": "Algorithme de décision temps réel : fournir l'électron, le stocker (BESS), ou l'électrolyser en H₂/NH₃ selon les conditions marché. Export via les ports marocains. Marché H₂ vert estimé à 1 000 Mds$ en 2035.",
         "mockup": {
           "title": "DiaCorp H₂",
           "subtitle": "Decision Engine · Live",
@@ -842,11 +842,11 @@
         }
       },
       "corporate-ppa": {
-        "name": "Marketplace PPA Corporate",
+        "name": "Marketplace énergie Corporate",
         "pitch": "Mettre en relation les industriels, agro-industriels et opérateurs portuaires de l'Oriental avec notre capacité — 2% commission.",
-        "description": "Plateforme où l'acheteur corporate saisit ses besoins (MW, durée, géo). L'algorithme matche avec notre capacité disponible, génère automatiquement le PPA, intègre le contrat de transport ONEE. Commission 1-3% × 100 M$ par contrat × 20 ans.",
+        "description": "Plateforme où l'acheteur corporate saisit ses besoins (MW, durée, géo). L'algorithme matche avec notre capacité disponible, génère automatiquement l'accord structuré, intègre le contrat de transport ONEE. Commission 1-3% × 100 M$ par contrat × 20 ans.",
         "mockup": {
-          "title": "DiaCorp PPA",
+          "title": "DiaCorp Energy Marketplace",
           "subtitle": "Deal Desk · Pipeline",
           "labels": {
             "counterparty": "Contrepartie",
@@ -859,7 +859,7 @@
       "retail-solar": {
         "name": "Solar-as-a-Service B2C",
         "pitch": "Installation gratuite, 50 $/mois. 1 million de toits marocains visés.",
-        "description": "App mobile grand public. Le client signe, nous installons les panneaux + micro-onduleur, financement intégré via BMCE (le CFO Imchichi vient de BMCE). L'abonnement mensuel remplace sa facture ONEE. Scale B2C massif, revenu récurrent SaaS-like.",
+        "description": "App mobile grand public. Le client signe, nous installons les panneaux + micro-onduleur, financement intégré via BMCE (le CFO Imchichi vient de BMCE). L'abonnement mensuel se substitue à une partie de la facture d'électricité. Scale B2C massif, revenu récurrent SaaS-like.",
         "mockup": {
           "title": "DiaCorp Chems",
           "subtitle": "Abonnement Solaire",
@@ -939,7 +939,7 @@
         "items": [
           "Colocation IA (signature Microsoft / Equinix)",
           "ERP Zone Industrielle (lancement multi-tenants)",
-          "Marketplace PPA Corporate (industriels Oriental)",
+          "Marketplace énergie Corporate (industriels Oriental)",
           "DIA2 + DIA3 opérationnels (450 MW)"
         ],
         "investment": "Invest. logiciel + infra : 480 M$",
@@ -996,6 +996,7 @@
       "hours": "Lundi — Vendredi · 9h00 — 18h00 (GMT+1)"
     },
     "tagline": "Développeur-opérateur solaire — 1 GW dans l'Oriental marocain. Études, construction, exploitation, tout sous un seul toit.",
-    "nav": "Navigation"
+    "nav": "Navigation",
+    "disclaimer": "DiaCorp Energy développe des solutions énergétiques renouvelables structurées pour des partenaires industriels au Maroc. Tout engagement est soumis à un alignement réglementaire et à une structuration spécifique au projet. Ce site web est fourni à titre indicatif uniquement et ne constitue pas une offre commerciale contraignante."
   }
 }

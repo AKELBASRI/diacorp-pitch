@@ -39,7 +39,7 @@ export const STRATEGIES: Strategy[] = [
     marginPct: 70,
     capexMusd: 6,
     phase: 1,
-    tags: ['Order Book', 'Smart Contracts', 'VPP Aggregation', 'ONEE Bypass'],
+    tags: ['Order Book', 'Smart Contracts', 'VPP Aggregation', 'PPA Direct'],
     tintHsl: '168 72% 55%'
   },
   {

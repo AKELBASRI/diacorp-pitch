@@ -31,7 +31,7 @@ export async function RetailSolarMockup({tint}: {tint: string}) {
                 </span>
               </div>
               <div className="font-mono text-[9px] text-[var(--color-ink-muted)] mt-0.5">
-                vs. ONEE
+                vs. tarif standard
               </div>
             </div>
 

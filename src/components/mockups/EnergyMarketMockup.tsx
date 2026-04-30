@@ -42,9 +42,9 @@ export async function EnergyMarketMockup({tint}: {tint: string}) {
             {t('columns.last')}
           </div>
           <div className="font-mono num text-[var(--tint)] text-xl mt-0.5">
-            $0.0715
+            71.5
             <span className="text-[11px] text-[var(--color-ink-muted)] ltr:ml-2 rtl:mr-2">
-              /kWh
+              idx
             </span>
           </div>
         </div>
@@ -101,7 +101,7 @@ function OrderColumn({
                   side === 'bid' ? 'text-[var(--tint)]' : 'text-[var(--color-copper)]'
                 }
               >
-                ${row.price.toFixed(4)}
+                {(row.price * 1000).toFixed(1)}
               </span>
             </div>
           </div>

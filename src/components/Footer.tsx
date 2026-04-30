@@ -87,7 +87,13 @@ export async function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div className="pt-8 pb-6 border-b border-[var(--color-line)]">
+          <p className="text-[11px] lg:text-[12px] leading-[1.7] text-[var(--color-ink-faint)] max-w-[90ch]">
+            {t('disclaimer')}
+          </p>
+        </div>
+
+        <div className="pt-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <svg
               viewBox="0 0 24 24"

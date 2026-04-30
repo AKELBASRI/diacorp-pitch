@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "DiaCorp Energy — The 1 GW Software Thesis",
-    "description": "Ten software platforms to disintermediate ONEE and deliver Morocco's cheapest green energy."
+    "description": "Ten software platforms to accelerate Morocco's energy transition and deliver traceable green energy to industry."
   },
   "nav": {
     "thesis": "Thesis",
@@ -24,7 +24,7 @@
   "servicesPage": {
     "meta": {
       "title": "Services — DiaCorp Energy",
-      "description": "Feasibility studies, utility-scale PPA plants, on-site PV, O&M, energy audits, solar thermal. The full solar ecosystem, by DiaCorp / KermaSys."
+      "description": "Feasibility studies, structured energy supply agreements, on-site PV, O&M, energy audits, solar thermal. The full solar ecosystem, by DiaCorp / KermaSys."
     },
     "hero": {
       "kicker": "OUR SERVICES",
@@ -52,9 +52,9 @@
         "typical": "4 to 8 weeks · from $15k"
       },
       "utility": {
-        "name": "Utility-scale PPA plant",
-        "tagline": "A 10 to 500 MW plant, built to deliver a 20-year PPA.",
-        "body": "Turnkey design and build. DiaCorp holds the SPV, arranges financing, leads the EPC (via KermaSys or a consortium), manages ONEE wheeling, and operates the plant across the full PPA term.",
+        "name": "Utility-scale plant (structured supply)",
+        "tagline": "A 10 to 500 MW plant, built to support a 20-year structured energy supply agreement.",
+        "body": "Turnkey design and build. DiaCorp holds the SPV, arranges financing, leads the EPC (via KermaSys or a consortium), manages ONEE wheeling, and operates the plant across the full term of the agreement.",
         "deliverables": [
           "Full project development",
           "Bankable financing & close",
@@ -67,7 +67,7 @@
       "onsite": {
         "name": "On-site PV & industrial rooftops",
         "tagline": "You bring the roof, we bring the panels.",
-        "body": "Photovoltaic installation on your own assets: factory roofs, parking shades, unused land. Partial self-consumption model, with optional surplus buy-back by DiaCorp or direct sale.",
+        "body": "Photovoltaic installation on your own assets: factory roofs, parking shades, unused land. Partial self-consumption model, with optional surplus buy-back by DiaCorp or integration into a structured energy solution.",
         "deliverables": [
           "Structural roof audit",
           "Sizing",
@@ -130,7 +130,7 @@
     "hero": {
       "kicker": "CONTACT US",
       "title": "Let's talk.",
-      "sub": "Whether you're exploring a PPA, commissioning a feasibility study, asking a regulatory question or discussing a partnership — write to us. Reply within 48 business hours."
+      "sub": "Whether you're exploring a structured energy supply agreement, commissioning a feasibility study, asking a regulatory question or discussing a partnership — write to us. Reply within 48 business hours."
     },
     "form": {
       "nameLabel": "Full name",
@@ -141,7 +141,7 @@
       "messageLabel": "Your message",
       "messagePlaceholder": "Tell us briefly about your need — site, sector, estimated capacity, timing…",
       "subjects": {
-        "ppa": "Long-term PPA supply",
+        "ppa": "Long-term energy supply (structured agreement)",
         "feasibility": "Feasibility study",
         "audit": "Energy audit",
         "onsite": "On-site install / rooftops",
@@ -290,7 +290,7 @@
       "nextItems": {
         "0": "30-min qualification call with our commercial team.",
         "1": "Site visit and energy audit (within 15 days).",
-        "2": "Formal commercial proposal and PPA term sheet (within 30 days)."
+        "2": "Formal commercial proposal and structured-agreement term sheet (within 30 days)."
       }
     },
     "errors": {
@@ -302,9 +302,9 @@
   },
   "home": {
     "hero": {
-      "kicker": "SOLAR IPP · ORIENTAL REGION",
-      "title": "Industrial-scale solar power\nfor Morocco's Oriental region.",
-      "sub": "DiaCorp Energy is developing 1 GW of photovoltaic capacity in the Oriental. We deliver green electricity starting at 0.70 MAD/kWh — up to 40% cheaper than ONEE's industrial tariff — through long-term Power Purchase Agreements.",
+      "kicker": "ENERGY SOLUTIONS · MOROCCO",
+      "title": "Sustainable Energy Solutions\nfor Industrial Partners in Morocco.",
+      "sub": "DiaCorp Energy develops structured renewable energy solutions for industrial partners in Morocco, with a focus on self-consumption, cost stability, and long-term operational efficiency.",
       "ctaLoi": "Send a Letter of Intent",
       "ctaScroll": "Explore our activities",
       "stat1": "Target capacity",
@@ -313,8 +313,8 @@
       "stat2v": "150 MW",
       "stat3": "Commissioning",
       "stat3v": "Q3 2027",
-      "stat4": "PPA tariff",
-      "stat4v": "$0.07/kWh"
+      "stat4": "Agreement term",
+      "stat4v": "15-25 yrs"
     },
     "activities": {
       "kicker": "ACTIVITIES",
@@ -324,7 +324,7 @@
         "industry": {
           "tag": "01 · INDUSTRY",
           "name": "Heavy industry & manufacturing",
-          "body": "Mines, lead-zinc, brickworks, ceramics, textiles and cement of the Oriental region. 15-25 year PPAs, fixed indexed tariff, private line or ONEE wheeling."
+          "body": "Mines, lead-zinc, brickworks, ceramics, textiles and cement of the Oriental region. 15-25 year structured agreements, competitive and tailored pricing based on consumption profile, private line or ONEE wheeling."
         },
         "agro": {
           "tag": "02 · AGRI-INDUSTRY",
@@ -334,12 +334,12 @@
         "cold": {
           "tag": "03 · COLD STORAGE",
           "name": "Cold chain & warehousing",
-          "body": "EU-export refrigerated warehouses (berries, citrus, vegetables). 24/7 continuous PPA, battery-coupled reliability, carbon certificate for CBAM compliance."
+          "body": "EU-export refrigerated warehouses (berries, citrus, vegetables). 24/7 continuous supply (structured agreement), battery-coupled reliability, carbon certificate for CBAM compliance."
         },
         "zone": {
           "tag": "04 · GREEN INDUSTRIAL ZONE",
           "name": "100% solar industrial park",
-          "body": "Greenfield industrial parks around our plants. One plot, one energy contract, shared services. 8-month grid connection vs 24-36 months via ONEE."
+          "body": "Greenfield industrial parks around our plants. One plot, one energy contract, shared services. Land, grid and energy planned together for rapid commissioning."
         }
       }
     },
@@ -356,7 +356,7 @@
           "features": [
             "No equipment on your premises",
             "Zero client CAPEX",
-            "15 – 25 year PPA, fixed indexed tariff",
+            "15 – 25 year structured agreement, tailored pricing",
             "ONEE wheeling or direct cable, depending on geography"
           ],
           "bestFor": "You consume industrial electricity and you just want a green, indexed bill — no investment required."
@@ -445,7 +445,7 @@
       "title": "A clear template to start the conversation.",
       "sub": "If your company wants to explore green energy procurement, download the appropriate template, complete it, and send it to us. Nothing binding at this stage — just a structured intent.",
       "industryTitle": "LOI — Industry & manufacturing",
-      "industryBody": "Standard template for any industrial client exploring a long-term PPA.",
+      "industryBody": "Standard template for any industrial client exploring a long-term structured energy supply agreement.",
       "industryCta": "Download (PDF)",
       "agroTitle": "LOI — Agriculture & agri-industry",
       "agroBody": "Tailored template for irrigation, cold storage, processing, and seasonal needs.",
@@ -513,12 +513,12 @@
           "body": "Irradiance analysis, kWc potential, land scoring, production simulation (PVsyst, SAM, MeteoNorm) and financial modeling."
         },
         "utility": {
-          "name": "Utility-scale PPA plants",
-          "body": "Design, financing, construction and operation of 10-500 MW plants. Long-term PPA delivery with performance guarantees."
+          "name": "Utility-scale plants (structured supply)",
+          "body": "Design, financing, construction and operation of 10-500 MW plants. Long-term structured-agreement delivery with performance guarantees."
         },
         "onsite": {
           "name": "On-site PV & rooftops",
-          "body": "Solar installation on your own rooftops, parking lots, or land. Partial self-consumption, surplus resale."
+          "body": "Solar installation on your own rooftops, parking lots, or land. Partial self-consumption, surplus integrated into a structured energy solution."
         },
         "om": {
           "name": "O&M / Maintenance",
@@ -615,7 +615,7 @@
     "capabilities": {
       "kicker": "WHY DIACORP",
       "title": "Four reasons to build with us.",
-      "sub": "The technical team has designed, built and maintained plants across Morocco since 2005. We don't just sell energy — we operate it.",
+      "sub": "The technical team has designed, built and maintained plants across Morocco since 2005. We don't just deliver energy — we structure integrated solutions for industrial partners.",
       "items": [
         {
           "n": "01",
@@ -634,7 +634,7 @@
         },
         {
           "n": "04",
-          "title": "Unbeatable value",
+          "title": "Transparent pricing, measured performance",
           "body": "Direct access to Tier-1 manufacturers (Jinko, JA, Trina, Sungrow, Huawei). LCOE measured, not promised. Transparent long-term indexed pricing."
         }
       ]
@@ -666,8 +666,8 @@
     "kicker": "Information Memorandum — April 2026",
     "titleLine1": "One gigawatt.",
     "titleLine2": "Delivered direct.",
-    "titleLine3": "ONEE-free.",
-    "lede": "DiaCorp Energy is building 1 GW of solar PV in Morocco's Oriental region. The plant sells electrons at $0.07/kWh. The ten software platforms in this deck sell bits — and turn $120M of CAPEX into $2.67B of recurring revenue by 2031.",
+    "titleLine3": "For Moroccan industry.",
+    "lede": "DiaCorp Energy is building 1 GW of solar PV in Morocco's Oriental region. The plant produces green energy at industrial scale. The ten software platforms in this deck turn $120M of CAPEX into $2.67B of recurring revenue by 2031.",
     "ctaPrimary": "Explore the thesis",
     "ctaSecondary": "Download memorandum",
     "stats": {
@@ -683,32 +683,32 @@
   },
   "thesis": {
     "eyebrow": "The thesis in one sentence",
-    "heading": "ONEE sells electrons at 1.20 MAD/kWh. We sell the same — green — at 0.70 MAD/kWh, plus the software layer that distributes it.",
+    "heading": "100% green energy delivered to industry, plus the software layer that traces, optimizes and distributes it.",
     "subPoints": {
       "0": {
         "title": "The bottleneck isn't generation",
-        "body": "Morocco has 3,000 kWh/m²/yr of irradiance. The real bottleneck is ONEE's monopoly distribution and non-competitive industrial tariffs."
+        "body": "Morocco has 3,000 kWh/m²/yr of irradiance — one of the world's best solar resources. The challenge now is to accelerate delivery of this green energy to industry."
       },
       "1": {
-        "title": "The legal bypass exists",
-        "body": "Law 13-09 and decree 47-09 authorize self-generation and direct PPA sales. ONEE only transports — for a $0.007/kWh wheeling fee."
+        "title": "An open regulatory framework",
+        "body": "Law 13-09 and decree 47-09 open the framework to self-generation and direct supply via structured agreements, with transport handled by ONEE under the regulated grid-access tariff."
       },
       "2": {
         "title": "Software captures 10× the value",
-        "body": "Selling 1 MWh = $70. Selling the API, the market, the carbon ledger, the digital twin around it = $700. That's where the billions live."
+        "body": "Selling raw electrons captures a fraction of the value. Selling the API, the market, the carbon ledger and the digital twin around it captures an order of magnitude more. That's where the billions live."
       }
     }
   },
   "positioning": {
     "eyebrow": "Positioning",
-    "heading": "Head-to-head with ONEE",
-    "onee": "ONEE (legacy monopoly)",
-    "diacorp": "DiaCorp (new platform)",
+    "heading": "What we add on top",
+    "onee": "Market reference",
+    "diacorp": "DiaCorp (dedicated offering)",
     "rows": {
       "price": {
-        "label": "Avg industrial tariff",
-        "onee": "1.20 MAD/kWh",
-        "diacorp": "0.70 MAD/kWh"
+        "label": "Pricing model",
+        "onee": "Regulated tariff",
+        "diacorp": "Structured agreement · tailored pricing"
       },
       "green": {
         "label": "Guaranteed renewable share",
@@ -754,7 +754,7 @@
       },
       "energy-market": {
         "name": "Spot Energy Market",
-        "pitch": "Morocco's first power order book. Programmable PPAs, T+15min settlement.",
+        "pitch": "Morocco's first power order book. Programmable agreements, T+15min settlement.",
         "description": "Off-takers buy MWh blocks in real time, prices set by live PV generation. On-chain smart contracts (Base L2) automate execution and settlement. A VPP aggregator layer pools small solar producers and distributed batteries.",
         "mockup": {
           "title": "DiaCorp Market",
@@ -814,7 +814,7 @@
       "green-hydrogen": {
         "name": "Green H₂ Optimizer",
         "pitch": "Software arbitrage: electron → hydrogen → ammonia → Rotterdam.",
-        "description": "Real-time decision engine: sell the electron, store it (BESS), or electrolyze into H₂/NH₃ depending on market prices. Export via Morocco's ports. Green H₂ market expected at $1T by 2035.",
+        "description": "Real-time decision engine: deliver the electron, store it (BESS), or electrolyze into H₂/NH₃ depending on market conditions. Export via Morocco's ports. Green H₂ market expected at $1T by 2035.",
         "mockup": {
           "title": "DiaCorp H₂",
           "subtitle": "Decision Engine · Live",
@@ -842,11 +842,11 @@
         }
       },
       "corporate-ppa": {
-        "name": "Corporate PPA Marketplace",
+        "name": "Corporate Energy Marketplace",
         "pitch": "Match industrials, agri-industrials and port operators of the Oriental region with our capacity — 2% platform fee.",
-        "description": "Corporate buyers input their needs (MW, term, geo). The algorithm matches available capacity, auto-generates the PPA, wires in the ONEE wheeling contract. 1-3% commission × $100M contracts × 20 years.",
+        "description": "Corporate buyers input their needs (MW, term, geo). The algorithm matches available capacity, auto-generates the structured agreement, wires in the ONEE wheeling contract. 1-3% commission × $100M contracts × 20 years.",
         "mockup": {
-          "title": "DiaCorp PPA",
+          "title": "DiaCorp Energy Marketplace",
           "subtitle": "Deal Desk · Pipeline",
           "labels": {
             "counterparty": "Counterparty",
@@ -859,7 +859,7 @@
       "retail-solar": {
         "name": "B2C Solar-as-a-Service",
         "pitch": "Zero-install, $50/month. Targeting 1 million Moroccan rooftops.",
-        "description": "Consumer mobile app. The customer signs, we install panels + microinverter, embedded financing via BMCE (CFO Imchichi comes from BMCE). The monthly subscription replaces the ONEE bill. Massive B2C scale, SaaS-like recurring revenue.",
+        "description": "Consumer mobile app. The customer signs, we install panels + microinverter, embedded financing via BMCE (CFO Imchichi comes from BMCE). The monthly subscription substitutes part of the household electricity bill. Massive B2C scale, SaaS-like recurring revenue.",
         "mockup": {
           "title": "DiaCorp Chems",
           "subtitle": "Solar Subscription",
@@ -939,7 +939,7 @@
         "items": [
           "AI Colocation (Microsoft / Equinix signing)",
           "Industrial Zone ERP (multi-tenant launch)",
-          "Corporate PPA Marketplace (Oriental industrials)",
+          "Corporate Energy Marketplace (Oriental industrials)",
           "DIA2 + DIA3 online (450 MW)"
         ],
         "investment": "Software + infra: $480M",
@@ -996,6 +996,7 @@
       "hours": "Monday — Friday · 9:00 — 18:00 (GMT+1)"
     },
     "tagline": "Solar developer-operator — 1 GW in Morocco's Oriental region. Studies, construction, operations, everything under one roof.",
-    "nav": "Navigation"
+    "nav": "Navigation",
+    "disclaimer": "DiaCorp Energy develops structured renewable energy solutions for industrial partners in Morocco. All engagements are subject to regulatory alignment and project-specific structuring. This website is for indicative purposes only and does not constitute a binding commercial offer."
   }
 }

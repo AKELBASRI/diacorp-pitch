@@ -36,7 +36,7 @@ export async function PPAMockup({tint}: {tint: string}) {
                 </span>
                 <span>
                   {t('labels.lcoe')}:{' '}
-                  <span className="text-[var(--tint)]">${deal.lcoe.toFixed(3)}</span>
+                  <span className="text-[var(--tint)]">{(deal.lcoe * 1000).toFixed(1)}</span>
                 </span>
               </div>
               <div className="mt-2 h-1 bg-[var(--color-bg-panel)] border border-[var(--color-line)] overflow-hidden">

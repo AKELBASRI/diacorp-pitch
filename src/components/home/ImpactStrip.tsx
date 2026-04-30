@@ -6,7 +6,7 @@ export async function ImpactStrip() {
   const items = [
     {label: t('capacity'), value: t('capacityValue'), hint: 'DIA1 + DIA2 + DIA3 + ext.'},
     {label: t('energy'), value: t('energyValue'), hint: '@ 28% capacity factor'},
-    {label: t('co2'), value: t('co2Value'), hint: 'vs mix électrique ONEE'},
+    {label: t('co2'), value: t('co2Value'), hint: 'vs mix électrique national'},
     {label: t('offtakers'), value: t('offtakersValue'), hint: 'Pipeline commercial 2026-2029'}
   ];
 
