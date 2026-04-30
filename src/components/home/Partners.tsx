@@ -2,7 +2,7 @@ import {getTranslations} from 'next-intl/server';
 
 const GROUPS = [
   {key: 'epc', names: ['KermaSys']},
-  {key: 'finance', names: ['BMCE Bank', 'AttijariWafa']},
+  {key: 'finance', names: ['Partenaires bancaires marocains', 'Bailleurs internationaux']},
   {key: 'panels', names: ['Jinko Solar', 'JA Solar', 'Trina', 'LONGi', 'Canadian Solar']},
   {key: 'inverters', names: ['Sungrow', 'Huawei', 'Fronius']},
   {key: 'institutional', names: ['ONEE', 'AMDIE', 'CRI Oriental', 'Min. Énergie']}

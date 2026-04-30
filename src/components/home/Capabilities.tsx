@@ -36,19 +36,20 @@ export async function Capabilities() {
           </div>
         </div>
 
-        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[1px] bg-[var(--color-line)] border border-[var(--color-line)]">
+        <div className="reveal-stagger grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-[1px] bg-[var(--color-line)] border border-[var(--color-line)]">
           {items.map((it, i) => {
             const accents = [
               'var(--color-sun)',
               'var(--color-copper)',
               'var(--color-spark-deep)',
-              'var(--color-violet)'
+              'var(--color-violet)',
+              'var(--color-sun)'
             ];
             const accent = accents[i % accents.length];
             return (
               <article
                 key={it.n}
-                className="relative bg-[var(--color-bg)] p-7 lg:p-9 min-h-[280px] flex flex-col group overflow-hidden"
+                className="relative bg-[var(--color-bg)] p-6 lg:p-7 min-h-[260px] flex flex-col group overflow-hidden"
               >
                 <div
                   aria-hidden
@@ -64,15 +65,15 @@ export async function Capabilities() {
                 />
 
                 <div
-                  className="font-display num text-[54px] lg:text-[68px] leading-none tracking-[-0.02em] mb-8 transition-transform duration-500 group-hover:-translate-y-0.5"
+                  className="font-display num text-[48px] lg:text-[56px] leading-none tracking-[-0.02em] mb-6 transition-transform duration-500 group-hover:-translate-y-0.5"
                   style={{color: accent, opacity: 0.85}}
                 >
                   {it.n}
                 </div>
-                <h3 className="font-display text-[22px] lg:text-[26px] leading-tight tracking-tight mb-4">
+                <h3 className="font-display text-[18px] lg:text-[20px] leading-tight tracking-tight mb-3">
                   {it.title}
                 </h3>
-                <p className="text-[13px] lg:text-[14.5px] leading-[1.6] text-[var(--color-ink-muted)] mt-auto">
+                <p className="text-[12.5px] lg:text-[13.5px] leading-[1.55] text-[var(--color-ink-muted)] mt-auto">
                   {it.body}
                 </p>
               </article>

@@ -109,7 +109,7 @@ export const STRATEGIES: Strategy[] = [
     marginPct: 35,
     capexMusd: 90,
     phase: 3,
-    tags: ['Solar-as-a-Service', 'BMCE Embedded Finance', 'Mobile App', 'B2C Scale'],
+    tags: ['Solar-as-a-Service', 'Embedded Finance', 'Mobile App', 'B2C Scale'],
     tintHsl: '188 72% 56%'
   },
   {

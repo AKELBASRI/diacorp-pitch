@@ -7,6 +7,7 @@ export const DEFAULT_HOME_ORDER = [
   'home.hero',
   'home.impact',
   'home.capabilities',
+  'home.howItWorks',
   'home.activities',
   'home.models',
   'home.services',
@@ -25,7 +26,8 @@ export type HomeSectionKey = (typeof DEFAULT_HOME_ORDER)[number];
 export const SECTION_LABEL: Record<HomeSectionKey, string> = {
   'home.hero': 'Hero banner',
   'home.impact': 'Impact strip',
-  'home.capabilities': 'Why DiaCorp (4 cards)',
+  'home.capabilities': 'Why DiaCorp (5 cards)',
+  'home.howItWorks': 'How it works (3 steps)',
   'home.activities': 'Activities (segments)',
   'home.models': 'Commercial models (2 methods)',
   'home.services': 'Services summary',

@@ -305,8 +305,8 @@
       "kicker": "ENERGY SOLUTIONS · MOROCCO",
       "title": "Sustainable Energy Solutions\nfor Industrial Partners in Morocco.",
       "sub": "DiaCorp Energy develops structured renewable energy solutions for industrial partners in Morocco, with a focus on self-consumption, cost stability, and long-term operational efficiency.",
-      "ctaLoi": "Send a Letter of Intent",
-      "ctaScroll": "Explore our activities",
+      "ctaLoi": "Request an Energy Assessment",
+      "ctaScroll": "Become an Energy Partner",
       "stat1": "Target capacity",
       "stat1v": "1 GW",
       "stat2": "First plant",
@@ -612,30 +612,57 @@
       "offtakers": "Targeted off-takers",
       "offtakersValue": "42+"
     },
-    "capabilities": {
-      "kicker": "WHY DIACORP",
-      "title": "Four reasons to build with us.",
-      "sub": "The technical team has designed, built and maintained plants across Morocco since 2005. We don't just deliver energy — we structure integrated solutions for industrial partners.",
-      "items": [
+    "howItWorks": {
+      "kicker": "HOW IT WORKS",
+      "title": "A simple and structured approach.",
+      "sub": "Three clear steps, from the first conversation to a progressive commissioning.",
+      "steps": [
         {
           "n": "01",
-          "title": "Multi-technology expertise",
-          "body": "PV, thermal, storage, hybrid gas-solar. Integrated engineering + EPC + O&M team. 20 years of on-ground Moroccan experience."
+          "title": "Assessment of your energy needs",
+          "body": "We analyze your consumption profile, your peaks, your operational constraints, and your ESG requirements."
         },
         {
           "n": "02",
-          "title": "Quality & ongoing support",
-          "body": "Tier-1 equipment only. 24/7 supervision from Casablanca. Field intervention within 48 hours anywhere in the Oriental region."
+          "title": "Structuring a tailored solution",
+          "body": "We design an energy solution shaped around your context — capacity, term, conditions, schedule — aligned with your industrial horizon."
         },
         {
           "n": "03",
-          "title": "One answer per project",
-          "body": "No two projects are alike. We size to your production, your peaks, your land and grid constraints — not to a catalogue."
+          "title": "Progressive deployment",
+          "body": "Implementation in steps, paced to your operations, with disciplined ramp-up and the option to extend over time."
+        }
+      ]
+    },
+    "capabilities": {
+      "kicker": "WHY DIACORP",
+      "title": "Why industrial partners choose DiaCorp.",
+      "sub": "Five concrete reasons to structure your energy with us — beyond just delivering electrons.",
+      "items": [
+        {
+          "n": "01",
+          "title": "Long-term energy cost stability",
+          "body": "Long-horizon visibility on your energy line item, structured for the duration and aligned with your industrial horizon."
+        },
+        {
+          "n": "02",
+          "title": "Reduced exposure to market volatility",
+          "body": "A share of your supply secured through a structured agreement, insulated from short-term fluctuations."
+        },
+        {
+          "n": "03",
+          "title": "Dedicated energy allocation",
+          "body": "Capacity reserved and calibrated to your consumption profile, your peaks, and your operational constraints."
         },
         {
           "n": "04",
-          "title": "Transparent pricing, measured performance",
-          "body": "Direct access to Tier-1 manufacturers (Jinko, JA, Trina, Sungrow, Huawei). LCOE measured, not promised. Transparent long-term indexed pricing."
+          "title": "ESG compliance · CBAM ready",
+          "body": "100% renewable, traceable energy for your ESG reporting and your exports to the European Union (CBAM)."
+        },
+        {
+          "n": "05",
+          "title": "Scalable solutions",
+          "body": "Architecture built to grow with your operations — disciplined Phase 1, extensions aligned with your growth."
         }
       ]
     },
@@ -859,7 +886,7 @@
       "retail-solar": {
         "name": "B2C Solar-as-a-Service",
         "pitch": "Zero-install, $50/month. Targeting 1 million Moroccan rooftops.",
-        "description": "Consumer mobile app. The customer signs, we install panels + microinverter, embedded financing via BMCE (CFO Imchichi comes from BMCE). The monthly subscription substitutes part of the household electricity bill. Massive B2C scale, SaaS-like recurring revenue.",
+        "description": "Consumer mobile app. The customer signs, we install panels + microinverter, embedded external financing. The monthly subscription substitutes part of the household electricity bill. Massive B2C scale, SaaS-like recurring revenue.",
         "mockup": {
           "title": "DiaCorp Chems",
           "subtitle": "Solar Subscription",
@@ -962,7 +989,7 @@
   "team": {
     "eyebrow": "The DiaCorp / KermaSys team",
     "heading": "25 years inside Moroccan energy",
-    "body": "Wahb Kermadi (CEO) has led gas and solar EPC projects in Morocco, Libya, and the Maghreb since 2005. Imchichi (CFO) comes from BMCE Bank and AttijariWafa — the two banks that will fund Phase 1. Mohammed (BD) has 38 years of African market experience. This software thesis fills the one gap in that industrial credibility: building, deploying, and selling code."
+    "body": "Wahb Kermadi (CEO) has led gas and solar EPC projects in Morocco, Libya, and the Maghreb since 2005. Imchichi (CFO) brings deep financial-structuring expertise, with external financing partnerships secured for Phase 1. Mohammed (BD) has 38 years of African market experience. This software thesis fills the one gap in that industrial credibility: building and deploying code."
   },
   "cta": {
     "eyebrow": "Next step",

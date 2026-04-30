@@ -93,7 +93,7 @@ export async function RetailSolarMockup({tint}: {tint: string}) {
           </div>
           <div className="border border-[var(--color-line)] bg-[var(--color-bg)] p-3">
             <div className="font-mono text-[9px] tracking-[0.15em] uppercase text-[var(--color-ink-faint)] mb-1">
-              FINANCING · BMCE
+              FINANCING · EXTERNAL
             </div>
             <div className="font-display num text-2xl text-[var(--color-ink)]">
               $180M

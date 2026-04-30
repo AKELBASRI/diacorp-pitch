@@ -5,6 +5,7 @@ import {Footer} from '@/components/Footer';
 import {HomeHero} from '@/components/home/HomeHero';
 import {ImpactStrip} from '@/components/home/ImpactStrip';
 import {Capabilities} from '@/components/home/Capabilities';
+import {HowItWorks} from '@/components/home/HowItWorks';
 import {Activities} from '@/components/home/Activities';
 import {Models} from '@/components/home/Models';
 import {Services} from '@/components/home/Services';
@@ -34,6 +35,7 @@ const COMPONENTS: Record<HomeSectionKey, () => Promise<React.ReactElement>> = {
   'home.hero': HomeHero,
   'home.impact': ImpactStrip,
   'home.capabilities': Capabilities,
+  'home.howItWorks': HowItWorks,
   'home.activities': Activities,
   'home.models': Models,
   'home.services': Services,

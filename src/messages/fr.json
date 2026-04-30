@@ -305,8 +305,8 @@
       "kicker": "SOLUTIONS ÉNERGÉTIQUES · MAROC",
       "title": "Solutions énergétiques durables\npour partenaires industriels au Maroc.",
       "sub": "DiaCorp Energy développe des solutions énergétiques renouvelables structurées pour des partenaires industriels au Maroc, axées sur l'autoconsommation, la stabilité des coûts et l'efficacité opérationnelle sur le long terme.",
-      "ctaLoi": "Envoyer une lettre d'intention",
-      "ctaScroll": "Découvrir nos activités",
+      "ctaLoi": "Demander une étude énergétique",
+      "ctaScroll": "Devenir partenaire énergie",
       "stat1": "Capacité cible",
       "stat1v": "1 GW",
       "stat2": "Premier plant",
@@ -612,30 +612,57 @@
       "offtakers": "Off-takers ciblés",
       "offtakersValue": "42+"
     },
-    "capabilities": {
-      "kicker": "POURQUOI DIACORP",
-      "title": "Quatre raisons de bâtir avec nous.",
-      "sub": "L'équipe technique a signé, construit et maintenu des plants à travers le Maroc depuis 2005. Nous ne livrons pas seulement de l'énergie — nous structurons des solutions intégrées pour partenaires industriels.",
-      "items": [
+    "howItWorks": {
+      "kicker": "COMMENT ÇA MARCHE",
+      "title": "Une approche simple et structurée.",
+      "sub": "Trois étapes claires, du premier échange à la mise en service progressive.",
+      "steps": [
         {
           "n": "01",
-          "title": "Expertise multi-technologie",
-          "body": "PV, thermique, stockage, hybride gaz-solaire. Équipe intégrée ingénierie + EPC + O&M. 20 ans de retours d'expérience sur le terrain marocain."
+          "title": "Évaluation de vos besoins énergétiques",
+          "body": "Analyse de votre profil de consommation, de vos pointes, de vos contraintes opérationnelles et de vos exigences ESG."
         },
         {
           "n": "02",
-          "title": "Qualité & support continu",
-          "body": "Équipements Tier-1 exclusivement. Supervision 24/7 depuis Casablanca. Interventions terrain sous 48 h partout dans l'Oriental."
+          "title": "Structuration d'une solution sur mesure",
+          "body": "Conception d'une solution énergétique adaptée — capacité, durée, conditions, calendrier — alignée sur votre horizon industriel."
         },
         {
           "n": "03",
-          "title": "Une réponse par projet",
-          "body": "Aucun projet n'est identique. Nous dimensionnons à votre production, vos pointes, vos contraintes foncières et réseau — pas à un catalogue."
+          "title": "Déploiement progressif",
+          "body": "Mise en œuvre par étapes, alignée sur votre rythme opérationnel, avec montée en charge maîtrisée et extensions possibles."
+        }
+      ]
+    },
+    "capabilities": {
+      "kicker": "POURQUOI DIACORP",
+      "title": "Pourquoi les industriels choisissent DiaCorp.",
+      "sub": "Cinq raisons concrètes de structurer votre énergie avec nous — au-delà de la livraison de l'électron.",
+      "items": [
+        {
+          "n": "01",
+          "title": "Stabilité des coûts énergétiques",
+          "body": "Une visibilité long terme sur le poste énergie, structurée dans la durée et alignée avec votre horizon industriel."
+        },
+        {
+          "n": "02",
+          "title": "Volatilité de marché réduite",
+          "body": "Une partie de votre approvisionnement sécurisée par un accord structuré, à l'abri des fluctuations à court terme."
+        },
+        {
+          "n": "03",
+          "title": "Allocation énergétique dédiée",
+          "body": "Une capacité réservée et calibrée sur votre profil de consommation, vos pointes et vos contraintes opérationnelles."
         },
         {
           "n": "04",
-          "title": "Tarif transparent, performance mesurée",
-          "body": "Accès direct aux fabricants (Jinko, JA, Trina, Sungrow, Huawei). LCOE mesuré, pas promis. Tarifs indexés à long terme, transparents."
+          "title": "Conformité ESG · CBAM",
+          "body": "Énergie 100 % renouvelable et traçable pour vos exigences ESG et vos exportations vers l'Union Européenne (CBAM)."
+        },
+        {
+          "n": "05",
+          "title": "Solutions évolutives",
+          "body": "Architecture conçue pour grandir avec vos opérations — Phase 1 maîtrisée, extensions alignées sur votre croissance."
         }
       ]
     },
@@ -859,7 +886,7 @@
       "retail-solar": {
         "name": "Solar-as-a-Service B2C",
         "pitch": "Installation gratuite, 50 $/mois. 1 million de toits marocains visés.",
-        "description": "App mobile grand public. Le client signe, nous installons les panneaux + micro-onduleur, financement intégré via BMCE (le CFO Imchichi vient de BMCE). L'abonnement mensuel se substitue à une partie de la facture d'électricité. Scale B2C massif, revenu récurrent SaaS-like.",
+        "description": "App mobile grand public. Le client signe, nous installons les panneaux + micro-onduleur, financement externe intégré. L'abonnement mensuel se substitue à une partie de la facture d'électricité. Scale B2C massif, revenu récurrent SaaS-like.",
         "mockup": {
           "title": "DiaCorp Chems",
           "subtitle": "Abonnement Solaire",
@@ -962,7 +989,7 @@
   "team": {
     "eyebrow": "L'équipe DiaCorp / KermaSys",
     "heading": "25 ans dans l'énergie marocaine",
-    "body": "Wahb Kermadi (CEO) a dirigé des EPC gaz et solaire au Maroc, en Libye, au Maghreb depuis 2005. Imchichi (CFO) vient de BMCE Bank et d'AttijariWafa — les deux banques qui financeront la Phase 1. Mohammed (BD) a 38 ans d'expérience du marché africain. Ce dossier logiciel complète cette crédibilité industrielle par la seule capacité manquante : construire, déployer et vendre du code."
+    "body": "Wahb Kermadi (CEO) a dirigé des EPC gaz et solaire au Maroc, en Libye, au Maghreb depuis 2005. Imchichi (CFO) apporte une solide expertise de structuration financière, avec des partenariats de financement externe pour la Phase 1. Mohammed (BD) a 38 ans d'expérience du marché africain. Ce dossier logiciel complète cette crédibilité industrielle par la seule capacité manquante : construire et déployer du code."
   },
   "cta": {
     "eyebrow": "Prochaine étape",
