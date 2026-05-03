@@ -34,7 +34,7 @@ export async function Nav() {
           <Link href="/#produits" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('produits')}
           </Link>
-          <Link href="/#scenarios" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
+          <Link href="/scenarios" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">
             {t('scenarios')}
           </Link>
           <Link href="/#projets" className="underline-sweep hover:text-[var(--color-ink)] transition-colors">

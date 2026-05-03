@@ -123,6 +123,134 @@
       "typical": "Duration & budget"
     }
   },
+  "scenariosPage": {
+    "meta": {
+      "title": "Scenarios — DiaCorp Energy",
+      "description": "Every situation an industrial may run into — cloudy, night, winter, equipment failure, scale-up, exit — explained in technical depth."
+    },
+    "hero": {
+      "kicker": "TECHNICAL FAQ",
+      "title": "Every situation, explained in detail.",
+      "sub": "In-depth technical answers to the questions industrial partners ask before structuring an energy solution with us."
+    },
+    "items": [
+      {
+        "n": "01",
+        "icon": "cloud",
+        "q": "What if it's cloudy?",
+        "short": "Output drops but never stops. The ONEE grid automatically tops up via wheeling — your operations see no interruption.",
+        "detail": "Global ground-level irradiance retains 20-40% of its clear-sky value under average overcast conditions, and stays at 10-15% even on heavily overcast days thanks to the diffuse component (radiation reflected by the clouds themselves). Our system is sized to absorb this variability: the variable PV share is topped up in real time by the national transmission grid via wheeling. The transition is invisible from the factory side — no outage, no perceptible switching. Across an average year in the Oriental, pure PV coverage stays above 75% despite weather variability.",
+        "points": [
+          "Residual production under cloud cover: 20-40%",
+          "Diffuse component (heavily overcast): ~10-15%",
+          "ONEE wheeling automatically tops up the gap",
+          "Zero perceived interruption on the industrial process"
+        ]
+      },
+      {
+        "n": "02",
+        "icon": "moon",
+        "q": "And at night?",
+        "short": "Continuous 24/7 delivery via the national grid. Optional BESS to use your daytime solar energy during evening peaks.",
+        "detail": "The supply agreement covers continuous delivery, not simultaneous production. At night, the electron consumed at your site comes from the national grid — the photovoltaic energy injected during the day is balanced annually via the wheeling mechanism. For industrials with night peaks (cold storage, 24/7 process), an optional BESS sized to your load curve lets you use your daytime solar energy during evening peak hours, reducing exposure to peak grid tariffs.",
+        "points": [
+          "Continuous 24/7 delivery contractually guaranteed",
+          "Annual wheeling compensation for the PV balance",
+          "Optional BESS: 1-4 h of storage depending on profile",
+          "Evening-peak bill reduction: up to -40%"
+        ]
+      },
+      {
+        "n": "03",
+        "icon": "snow",
+        "q": "What about winter?",
+        "short": "Irradiance drops by ~30% from July to December. This seasonality is built into the feasibility study from day one.",
+        "detail": "The Oriental region enjoys one of Morocco's best solar resources with an annual average of ~5.5 kWh/m²/day, but with notable seasonal variation: ~7 kWh/m²/day in July versus ~4 kWh/m²/day in December. The contractual commitment is on an annual envelope, not a monthly one — so summer surplus offsets winter shortfall. For seasonal industrials (agri-export, irrigation), we tune the commitment curve to match your actual activity curve.",
+        "points": [
+          "Average annual Oriental irradiance: ~5.5 kWh/m²/day",
+          "July peak: ~7 kWh/m²/day",
+          "December low: ~4 kWh/m²/day",
+          "Annual commitment — no seasonal penalty",
+          "Seasonal profiles tunable (agri, irrigation)"
+        ]
+      },
+      {
+        "n": "04",
+        "icon": "wrench",
+        "q": "If equipment fails?",
+        "short": "24/7 supervision, predictive detection, on-site response within 48 h. Contractual performance guarantee.",
+        "detail": "Our O&M stack combines three layers: (1) IoT sensors and smart meters that surface anomalies in real time, (2) quarterly drone inspections with thermal imaging to catch soiled panels, micro-cracks and hot spots before they impact production, (3) intervention team based in Oujda with Tier-1 spare-parts inventory. Contractual performance is guaranteed: if production falls below the promised threshold, you are compensated according to a pre-defined formula — operational risk stays with us, not with you.",
+        "points": [
+          "24/7 SCADA supervision from Casablanca",
+          "Quarterly thermal-drone imaging",
+          "Tier-1 spare parts stocked at Oujda",
+          "Contractual availability ≥ 98%",
+          "Automatic compensation on under-performance"
+        ]
+      },
+      {
+        "n": "05",
+        "icon": "grow",
+        "q": "If I need to scale up later?",
+        "short": "Modular architecture. Extensions planned from Phase 1 — your solution grows without renegotiating the base agreement.",
+        "detail": "Land tenure, the substation and interconnection options are sized from Phase 1 to accommodate later extensions. Concretely: if you start at 3 MW and reach 5 MW within two years, the extension deploys on the same site, connected to the same delivery point, under an amendment to the initial agreement — not a new contract. Marginal extension costs are significantly lower than a new greenfield install.",
+        "points": [
+          "Land sized for 2× the Phase-1 capacity",
+          "HV delivery substation provisioned for extension",
+          "Contract amendment — no re-signing",
+          "Extension CAPEX: ~60-70% of initial CAPEX per MW"
+        ]
+      },
+      {
+        "n": "06",
+        "icon": "chart",
+        "q": "How do I verify what's delivered?",
+        "short": "Sealed meters, real-time dashboard, monthly ISO 50001 reports. Every kWh delivered, every ton CO₂ avoided — usable directly for your reporting.",
+        "detail": "Three layers of transparency: (1) M-Bus / Modbus meters installed at the delivery point, sealed and third-party auditable, (2) real-time web dashboard accessible to your team with 15-minute granularity, daily curves, monthly comparatives, (3) signed monthly PDF/CSV report compliant with ISO 50001 containing: delivered energy, expected energy, availability rate, CO₂ avoided (AMEE / IFC method). Each ton of certified renewable CO₂ is eligible for CBAM mechanisms from 2026.",
+        "points": [
+          "Meters sealed at the delivery point (third-party auditable)",
+          "Real-time dashboard — 15-min granularity",
+          "Monthly PDF/CSV ISO 50001 report",
+          "CBAM-eligible CO₂ certificates from 2026"
+        ]
+      },
+      {
+        "n": "07",
+        "icon": "shield",
+        "q": "What if the ONEE grid has an outage?",
+        "short": "For critical sites, BESS + automatic switchover under 20 ms — autonomy for the duration of the public outage.",
+        "detail": "The Moroccan ONEE grid is highly reliable (~99.9% average availability) but localized outages can occur. For industrials that cannot tolerate any interruption (EU-export cold chain, pharma process, data centers), we offer a BESS + grid-tie/island inverter configuration with automatic switchover under 20 ms. You stay powered by your stored solar energy for the duration of the outage, with no human intervention. Automatic resynchronization on grid return.",
+        "points": [
+          "ONEE grid availability: ~99.9%",
+          "Grid-tie → island switchover < 20 ms",
+          "BESS autonomy: 1-8 h depending on sizing",
+          "Automatic resynchronization on grid return"
+        ]
+      },
+      {
+        "n": "08",
+        "icon": "door",
+        "q": "What if I want to exit the agreement?",
+        "short": "Exit conditions defined from day one. Notice period, indemnity indexed on residual CAPEX, option to transfer to a new site acquirer.",
+        "detail": "The structured agreement includes an explicit exit clause from the start: notice period, exit indemnity tied to non-amortized residual CAPEX, and options to transfer to a new acquirer of the site. The logic: we carry the initial investment, so an early termination compensates a portion — but the conditions are calibrated not to be prohibitive. In practice, for established industrial sites (mines, agri, cement), early terminations during 15-25 year agreements are rare (<5% of industry cases).",
+        "points": [
+          "Explicit exit clause in the initial agreement",
+          "Indemnity indexed on non-amortized residual CAPEX",
+          "Option to transfer to a new site acquirer",
+          "Standard notice: 6-12 months depending on configuration"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Another question?",
+      "sub": "Our technical team is available to dig into your specific case — site, consumption profile, operational constraints.",
+      "primary": "Contact us",
+      "secondary": "Request a study"
+    },
+    "labels": {
+      "inPractice": "In practice"
+    }
+  },
   "contactPage": {
     "meta": {
       "title": "Contact — DiaCorp Energy",
@@ -414,7 +542,8 @@
           "q": "How do I verify what's delivered?",
           "a": "Smart meters, real-time dashboard, monthly reports compliant with ISO 50001. You see every delivered kWh and every ton of CO₂ avoided — directly usable for your ESG and CBAM reporting."
         }
-      ]
+      ],
+      "cta": "See all the technical details"
     },
     "projects": {
       "kicker": "DELIVERY & PIPELINE",

@@ -1,10 +1,18 @@
 import {getTranslations} from 'next-intl/server';
+import {Link} from '@/i18n/navigation';
 
 type Item = {icon: string; q: string; a: string};
 
 export async function Scenarios() {
   const t = await getTranslations('home.scenarios');
   const items = t.raw('items') as Item[];
+  // Optional CTA at the bottom — falls back to a default if not present in i18n.
+  let ctaLabel: string | null = null;
+  try {
+    ctaLabel = t('cta');
+  } catch {
+    ctaLabel = null;
+  }
 
   return (
     <section
@@ -61,6 +69,16 @@ export async function Scenarios() {
               </p>
             </article>
           ))}
+        </div>
+
+        <div className="mt-10 lg:mt-14 flex justify-center">
+          <Link
+            href="/scenarios"
+            className="inline-flex items-center gap-3 px-6 py-3 border border-[var(--color-line-strong)] text-[var(--color-ink)] font-mono text-[11.5px] tracking-[0.2em] uppercase hover:border-[var(--color-sun)] hover:text-[var(--color-sun)] transition-colors"
+          >
+            {ctaLabel ?? 'Voir tous les détails'}
+            <span className="ltr:rotate-0 rtl:rotate-180">→</span>
+          </Link>
         </div>
       </div>
     </section>

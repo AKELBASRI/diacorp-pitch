@@ -58,7 +58,7 @@ const CATEGORIES: Array<{
     label: 'Pages',
     hint: 'Dedicated pages accessed from the nav.',
     accent: '#56f0c8',
-    keys: ['servicesPage', 'contactPage', 'register']
+    keys: ['servicesPage', 'scenariosPage', 'contactPage', 'register']
   },
   {
     id: 'pitch',
@@ -104,6 +104,7 @@ const ICON: Record<string, string> = {
   'home.team': '◌',
   'home.contact': '✉',
   servicesPage: '✦',
+  scenariosPage: '?',
   contactPage: '✉',
   register: '⎙',
   hero: '◉',

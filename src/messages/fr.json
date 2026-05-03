@@ -123,6 +123,134 @@
       "typical": "Durée & budget"
     }
   },
+  "scenariosPage": {
+    "meta": {
+      "title": "Scénarios — DiaCorp Energy",
+      "description": "Toutes les situations qu'un industriel peut rencontrer — nuageux, nuit, hiver, panne, scale-up, sortie — expliquées en détail technique."
+    },
+    "hero": {
+      "kicker": "FAQ TECHNIQUE",
+      "title": "Toutes les situations, expliquées en détail.",
+      "sub": "Réponses techniques approfondies aux questions que se posent les industriels avant de structurer une solution énergétique avec nous."
+    },
+    "items": [
+      {
+        "n": "01",
+        "icon": "cloud",
+        "q": "Et si le ciel est nuageux ?",
+        "short": "La production baisse mais ne s'arrête pas. Le réseau ONEE complète automatiquement via le wheeling — vos opérations ne voient aucune coupure.",
+        "detail": "L'irradiance globale au sol garde 20-40 % de sa valeur claire sous couvert nuageux moyen, et reste à 10-15 % même par temps très couvert grâce à la composante diffuse (rayonnement réfléchi par les nuages eux-mêmes). Notre système est dimensionné pour absorber cette variabilité : la part PV variable est complétée en temps réel par le réseau de transport national via wheeling. La transition est invisible côté usine — pas de coupure, pas de basculement perceptible. Sur une année moyenne dans l'Oriental, le taux de couverture PV pur reste supérieur à 75 % malgré la météo.",
+        "points": [
+          "Production résiduelle par temps couvert : 20-40 %",
+          "Composante diffuse (jours très gris) : ~10-15 %",
+          "Wheeling ONEE complète automatiquement le manque",
+          "Aucune coupure perçue côté process industriel"
+        ]
+      },
+      {
+        "n": "02",
+        "icon": "moon",
+        "q": "Et la nuit ?",
+        "short": "Livraison continue 24/7 via le réseau national. Option BESS pour utiliser votre énergie solaire diurne en pointe du soir.",
+        "detail": "L'accord de fourniture porte sur une livraison continue, pas sur une production simultanée. La nuit, l'électron consommé par votre site provient du réseau national — l'énergie photovoltaïque injectée dans la journée est compensée dans le bilan annuel via le mécanisme de wheeling. Pour les industriels avec pointes nocturnes (cold storage, process 24/7), une option BESS dimensionnée à votre courbe de charge permet d'utiliser votre énergie solaire diurne pendant les heures de pointe du soir, réduisant le recours au tarif réseau pendant les heures les plus chères.",
+        "points": [
+          "Livraison continue 24/7 garantie contractuellement",
+          "Compensation annuelle wheeling pour le bilan PV",
+          "Option BESS : 1-4 h de stockage selon profil",
+          "Réduction de la facture pointe-soir : jusqu'à -40 %"
+        ]
+      },
+      {
+        "n": "03",
+        "icon": "snow",
+        "q": "Et en hiver ?",
+        "short": "L'irradiance baisse de ~30 % entre juillet et décembre. Cette saisonnalité est intégrée dès l'étude de faisabilité.",
+        "detail": "La région Oriental bénéficie de l'une des meilleures irradiances solaires du Maroc avec une moyenne annuelle de ~5,5 kWh/m²/jour, mais avec une variation saisonnière notable : ~7 kWh/m²/jour en juillet contre ~4 kWh/m²/jour en décembre. L'engagement contractuel porte sur une enveloppe annuelle, pas mensuelle — donc le surplus estival compense le manque hivernal. Pour les industriels saisonniers (agro-export, irrigation), nous adaptons la courbe d'engagement à votre courbe d'activité réelle.",
+        "points": [
+          "Irradiance annuelle moyenne Oriental : ~5,5 kWh/m²/jour",
+          "Pic juillet : ~7 kWh/m²/jour",
+          "Creux décembre : ~4 kWh/m²/jour",
+          "Engagement annuel — pas de pénalité saisonnière",
+          "Profils saisonniers ajustables (agro, irrigation)"
+        ]
+      },
+      {
+        "n": "04",
+        "icon": "wrench",
+        "q": "En cas de panne d'équipement ?",
+        "short": "Supervision 24/7, détection prédictive, intervention sous 48 h. Garantie de performance contractuelle.",
+        "detail": "Notre stack O&M combine trois couches : (1) capteurs IoT et compteurs intelligents qui remontent les anomalies en temps réel, (2) inspections drone trimestrielles avec imagerie thermique pour détecter panneaux souillés, micro-fissures et points chauds avant impact production, (3) équipe d'intervention basée à Oujda avec stock de pièces de rechange Tier-1. La performance contractuelle est garantie : si la production tombe sous le seuil promis, vous êtes compensé selon une formule définie en amont — c'est le risque opérationnel qui reste chez nous, pas chez vous.",
+        "points": [
+          "Supervision SCADA 24/7 depuis Casablanca",
+          "Imagerie drone thermique trimestrielle",
+          "Stock pièces de rechange Tier-1 sur site Oujda",
+          "Disponibilité contractuelle garantie ≥ 98 %",
+          "Compensation automatique en cas de sous-performance"
+        ]
+      },
+      {
+        "n": "05",
+        "icon": "grow",
+        "q": "Si je dois augmenter ma capacité plus tard ?",
+        "short": "Architecture modulaire. Extensions prévues dès la Phase 1 — votre solution grandit sans renégocier l'accord de base.",
+        "detail": "Le foncier sécurisé, le poste de transformation et les options d'interconnexion sont dimensionnés dès la Phase 1 pour accueillir des extensions ultérieures. Concrètement : si vous démarrez avec 3 MW et atteignez 5 MW dans deux ans, l'extension se déploie sur le même site, raccordée au même point de livraison, sous un avenant à l'accord initial — pas un nouveau contrat. Les coûts marginaux d'extension sont significativement plus bas qu'une nouvelle installation greenfield.",
+        "points": [
+          "Foncier dimensionné pour 2× la puissance Phase 1",
+          "Poste de livraison HT prévu pour extension",
+          "Avenant contractuel — pas de re-signature",
+          "CAPEX d'extension : ~60-70 % du CAPEX initial par MW"
+        ]
+      },
+      {
+        "n": "06",
+        "icon": "chart",
+        "q": "Comment je vérifie ce qui m'est livré ?",
+        "short": "Compteurs scellés, dashboard temps réel, rapports mensuels ISO 50001. Chaque kWh livré, chaque tonne CO₂ évitée — utilisable directement pour vos reportings.",
+        "detail": "Trois couches de transparence : (1) compteurs M-Bus / Modbus installés au point de livraison, scellés et auditables par tiers, (2) dashboard web temps réel accessible à votre équipe avec données 15-minute, courbes journalières, comparatifs mensuels, (3) rapport mensuel PDF/CSV signé conforme ISO 50001 contenant : énergie livrée, énergie attendue, taux de disponibilité, CO₂ évité (méthode AMEE / IFC). Chaque tonne CO₂ certifiée renouvelable est éligible aux mécanismes CBAM dès 2026.",
+        "points": [
+          "Compteurs scellés au point de livraison (auditables tiers)",
+          "Dashboard temps réel — granularité 15 min",
+          "Rapport mensuel PDF/CSV ISO 50001",
+          "Certificats CO₂ éligibles CBAM Europe dès 2026"
+        ]
+      },
+      {
+        "n": "07",
+        "icon": "shield",
+        "q": "Et si le réseau ONEE a une coupure ?",
+        "short": "Pour les sites critiques, configuration BESS + bascule automatique sous 20 ms — autonomie pendant la durée de la coupure publique.",
+        "detail": "Le réseau ONEE marocain est très fiable (~99,9 % de disponibilité moyenne) mais des coupures localisées peuvent survenir. Pour les industriels qui ne peuvent tolérer aucune interruption (cold chain export UE, process pharmaceutique, data centers), nous proposons une configuration BESS + onduleur grid-tie/island avec basculement automatique sous 20 ms. Vous restez alimenté par votre énergie solaire stockée pendant la durée de la coupure, sans intervention humaine. Resynchronisation automatique au retour du réseau.",
+        "points": [
+          "Disponibilité réseau ONEE : ~99,9 %",
+          "Bascule grid-tie → island en < 20 ms",
+          "Autonomie BESS : 1-8 h selon dimensionnement",
+          "Resynchronisation automatique au retour réseau"
+        ]
+      },
+      {
+        "n": "08",
+        "icon": "door",
+        "q": "Et si je veux sortir de l'accord ?",
+        "short": "Conditions d'exit définies dès la signature. Préavis, indemnité indexée sur le CAPEX résiduel, option de transfert vers nouvel acquéreur du site.",
+        "detail": "L'accord structuré inclut dès le départ une clause d'exit explicite : préavis, indemnité de sortie liée au CAPEX résiduel non amorti, et options de transfert vers un nouvel acquéreur du site. La logique : nous portons l'investissement initial, donc en cas d'arrêt anticipé une partie est compensée — mais les conditions sont calibrées pour ne pas être prohibitives. En pratique, pour des sites industriels établis (mines, agro, cimenteries), les arrêts en cours d'accord 15-25 ans sont rares (< 5 % des cas dans l'industrie).",
+        "points": [
+          "Clause d'exit explicite dans l'accord initial",
+          "Indemnité indexée sur le CAPEX résiduel non amorti",
+          "Option de transfert vers nouvel acquéreur du site",
+          "Préavis standard : 6-12 mois selon configuration"
+        ]
+      }
+    ],
+    "cta": {
+      "title": "Une autre question ?",
+      "sub": "Notre équipe technique est disponible pour creuser votre cas spécifique — site, profil de consommation, contraintes opérationnelles.",
+      "primary": "Nous contacter",
+      "secondary": "Demander une étude"
+    },
+    "labels": {
+      "inPractice": "En pratique"
+    }
+  },
   "contactPage": {
     "meta": {
       "title": "Contact — DiaCorp Energy",
@@ -414,7 +542,8 @@
           "q": "Comment je vérifie ce qui m'est livré ?",
           "a": "Compteurs intelligents, dashboard temps réel, rapports mensuels conformes ISO 50001. Vous voyez chaque kWh livré et chaque tonne de CO₂ évitée — directement utilisable pour vos reportings ESG et CBAM."
         }
-      ]
+      ],
+      "cta": "Voir tous les détails techniques"
     },
     "projects": {
       "kicker": "RÉALISATIONS & PIPELINE",
