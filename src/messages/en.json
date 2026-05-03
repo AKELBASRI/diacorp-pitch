@@ -19,7 +19,8 @@
     "services": "Services",
     "references": "References",
     "about": "About",
-    "produits": "Products"
+    "produits": "Products",
+    "scenarios": "Scenarios"
   },
   "servicesPage": {
     "meta": {
@@ -377,6 +378,43 @@
       ],
       "footnote": "Unsure which option fits your site? Our team gives you free guidance after a first conversation.",
       "cta": "Request guidance"
+    },
+    "scenarios": {
+      "kicker": "WHAT IF…?",
+      "title": "Every scenario covered.",
+      "sub": "Real-world situations you may run into — and how our solution handles them, without surprises.",
+      "items": [
+        {
+          "icon": "cloud",
+          "q": "What if it's cloudy?",
+          "a": "Output drops but never stops — a PV panel still produces 20–40% under overcast skies. The ONEE grid automatically tops up via wheeling, your operations see no interruption."
+        },
+        {
+          "icon": "moon",
+          "q": "And at night?",
+          "a": "Energy keeps flowing 24/7 through the national transmission grid. As an option, battery storage (BESS) can cover your evening peaks with daytime solar energy."
+        },
+        {
+          "icon": "snow",
+          "q": "What about winter?",
+          "a": "Irradiance drops by roughly 30% from July to December — this seasonality is built into the feasibility study from day one. Sizing and annual commitments hold across seasons."
+        },
+        {
+          "icon": "wrench",
+          "q": "If equipment fails?",
+          "a": "24/7 supervision from Casablanca, predictive anomaly detection via sensors and drone imagery, on-site intervention within 48 hours anywhere in the Oriental. Contractual performance guarantee."
+        },
+        {
+          "icon": "grow",
+          "q": "If I need to scale up later?",
+          "a": "The architecture is modular. Capacity extensions are planned from Phase 1 — your solution grows with your operations without renegotiating the base agreement."
+        },
+        {
+          "icon": "chart",
+          "q": "How do I verify what's delivered?",
+          "a": "Smart meters, real-time dashboard, monthly reports compliant with ISO 50001. You see every delivered kWh and every ton of CO₂ avoided — directly usable for your ESG and CBAM reporting."
+        }
+      ]
     },
     "projects": {
       "kicker": "DELIVERY & PIPELINE",

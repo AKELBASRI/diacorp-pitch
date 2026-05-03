@@ -19,7 +19,8 @@
     "services": "Services",
     "references": "Références",
     "about": "À propos",
-    "produits": "Produits"
+    "produits": "Produits",
+    "scenarios": "Scénarios"
   },
   "servicesPage": {
     "meta": {
@@ -377,6 +378,43 @@
       ],
       "footnote": "Vous ne savez pas quelle option correspond à votre site ? Notre équipe vous oriente gratuitement après un premier échange.",
       "cta": "Demander une orientation"
+    },
+    "scenarios": {
+      "kicker": "ET SI…?",
+      "title": "Toutes les situations couvertes.",
+      "sub": "Cas concrets que vous pourriez rencontrer — et comment notre solution y répond, sans surprise.",
+      "items": [
+        {
+          "icon": "cloud",
+          "q": "Et si le ciel est nuageux ?",
+          "a": "La production baisse mais ne s'arrête pas — un panneau PV produit encore 20 à 40 % par temps couvert. Le réseau ONEE complète automatiquement via le wheeling, vos opérations ne voient aucune coupure."
+        },
+        {
+          "icon": "moon",
+          "q": "Et la nuit ?",
+          "a": "L'énergie continue d'être livrée 24/7 via le réseau de transport national. En option, du stockage batterie (BESS) peut couvrir vos pointes du soir avec votre énergie solaire de la journée."
+        },
+        {
+          "icon": "snow",
+          "q": "Et en hiver ?",
+          "a": "L'irradiance baisse d'environ 30 % entre juillet et décembre — cette saisonnalité est intégrée dès l'étude de faisabilité. Le dimensionnement et l'engagement annuel restent tenus quelle que soit la saison."
+        },
+        {
+          "icon": "wrench",
+          "q": "En cas de panne d'équipement ?",
+          "a": "Supervision 24/7 depuis Casablanca, détection prédictive d'anomalies par capteurs et imagerie drone, intervention sur site sous 48 h partout dans l'Oriental. Garantie de performance contractuelle."
+        },
+        {
+          "icon": "grow",
+          "q": "Si je dois augmenter ma capacité plus tard ?",
+          "a": "L'architecture est modulaire. Les extensions de puissance sont prévues dès la Phase 1 — votre solution grandit avec vos opérations sans renégocier l'accord de base."
+        },
+        {
+          "icon": "chart",
+          "q": "Comment je vérifie ce qui m'est livré ?",
+          "a": "Compteurs intelligents, dashboard temps réel, rapports mensuels conformes ISO 50001. Vous voyez chaque kWh livré et chaque tonne de CO₂ évitée — directement utilisable pour vos reportings ESG et CBAM."
+        }
+      ]
     },
     "projects": {
       "kicker": "RÉALISATIONS & PIPELINE",

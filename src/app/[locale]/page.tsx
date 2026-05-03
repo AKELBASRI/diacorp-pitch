@@ -8,6 +8,7 @@ import {Capabilities} from '@/components/home/Capabilities';
 import {HowItWorks} from '@/components/home/HowItWorks';
 import {Activities} from '@/components/home/Activities';
 import {Models} from '@/components/home/Models';
+import {Scenarios} from '@/components/home/Scenarios';
 import {Services} from '@/components/home/Services';
 import {Products} from '@/components/home/Products';
 import {Projects} from '@/components/home/Projects';
@@ -38,6 +39,7 @@ const COMPONENTS: Record<HomeSectionKey, () => Promise<React.ReactElement>> = {
   'home.howItWorks': HowItWorks,
   'home.activities': Activities,
   'home.models': Models,
+  'home.scenarios': Scenarios,
   'home.services': Services,
   'home.products': Products,
   'home.projects': Projects,
