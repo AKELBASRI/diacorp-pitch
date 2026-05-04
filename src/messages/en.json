@@ -167,9 +167,9 @@
         "icon": "snow",
         "q": "What about winter?",
         "short": "Irradiance drops by ~30% from July to December, but cold improves panel efficiency. Seasonality built into the feasibility study from day one.",
-        "detail": "The Oriental region averages ~5.5 kWh/m²/day annually with a July peak of ~7 versus ~4 in December. Often overlooked: cold improves mono / poly PERC panel efficiency — typical temperature coefficient -0.35%/°C, so a panel at 10°C produces ~10% more than at 35°C at equivalent irradiance. Snow is rare in the Oriental and slides off tilted panels quickly. The contractual commitment is on an annual envelope, not monthly: summer surplus offsets winter shortfall. For seasonal industrials (agri-export, irrigation), we tune the commitment curve to match your actual activity curve.",
+        "detail": "Morocco enjoys one of the best solar resources in the Mediterranean basin, averaging 5.0–5.8 kWh/m²/day depending on the region, with a July peak of ~7 versus ~4 in December. Often overlooked: cold improves mono / poly PERC panel efficiency — typical temperature coefficient -0.35%/°C, so a panel at 10°C produces ~10% more than at 35°C at equivalent irradiance. Snow is rare across most of Morocco and slides off tilted panels quickly. The contractual commitment is on an annual envelope, not monthly: summer surplus offsets winter shortfall. For seasonal industrials (agri-export, irrigation), we tune the commitment curve to match your actual activity curve.",
         "points": [
-          "Average annual Oriental irradiance: ~5.5 kWh/m²/day",
+          "Average annual Morocco irradiance: 5.0–5.8 kWh/m²/day depending on region",
           "Mono temperature coefficient: -0.35%/°C → cold = better yield",
           "July peak: ~7 — December low: ~4 kWh/m²/day",
           "Annual commitment — no seasonal penalty",
@@ -181,11 +181,11 @@
         "icon": "wrench",
         "q": "If equipment fails?",
         "short": "24/7 supervision, predictive detection, on-site response within 48 h. Contractual performance guarantee.",
-        "detail": "Our O&M stack combines three layers: (1) IoT sensors and smart meters that surface anomalies in real time, (2) quarterly drone inspections with thermal imaging to catch soiled panels, micro-cracks and hot spots before they impact production, (3) intervention team based in Oujda with Tier-1 spare-parts inventory. Contractual performance is guaranteed: if production falls below the promised threshold, you are compensated according to a pre-defined formula — operational risk stays with us, not with you.",
+        "detail": "Our O&M stack combines three layers: (1) IoT sensors and smart meters that surface anomalies in real time, (2) quarterly drone inspections with thermal imaging to catch soiled panels, micro-cracks and hot spots before they impact production, (3) intervention teams in our regional hubs (Casablanca, Agadir, Oujda) with Tier-1 spare-parts inventory. Contractual performance is guaranteed: if production falls below the promised threshold, you are compensated according to a pre-defined formula — operational risk stays with us, not with you.",
         "points": [
           "24/7 SCADA supervision from Casablanca",
           "Quarterly thermal-drone imaging",
-          "Tier-1 spare parts stocked at Oujda",
+          "Tier-1 spare parts stocked at regional hubs",
           "Contractual availability ≥ 98%",
           "Automatic compensation on under-performance"
         ]
@@ -316,9 +316,9 @@
       "hqTitle": "Headquarters",
       "hq": "DiaCorp Energy SARL\nCasablanca, Morocco",
       "opsTitle": "Operations",
-      "ops": "DIA1 site — Ain Beni Mathar\nOriental region",
+      "ops": "DIA1 site — Ain Beni Mathar\nMorocco",
       "regionalTitle": "Regional office",
-      "regional": "Oujda — Oriental commercial office",
+      "regional": "Casablanca · Agadir · Oujda — commercial offices",
       "emailTitle": "Email",
       "email": "contact@diacorp.energy",
       "phoneTitle": "Phone",
@@ -335,7 +335,7 @@
   "register": {
     "meta": {
       "title": "Off-taker Portal · DiaCorp Energy",
-      "description": "Express your interest in long-term green energy supply from DiaCorp Energy in Morocco's Oriental region."
+      "description": "Express your interest in long-term green energy supply from DiaCorp Energy in Morocco."
     },
     "back": "Back to the site",
     "brand": "Off-taker Portal",
@@ -388,7 +388,7 @@
         "ice": "Moroccan ICE number",
         "icePlaceholder": "15 digits",
         "city": "City / main site",
-        "cityPlaceholder": "e.g. Oujda, Jerada, Berkane…",
+        "cityPlaceholder": "e.g. Casablanca, Agadir, Oujda…",
         "industry": "Sub-sector",
         "industryPlaceholder": "e.g. Lead-zinc mining"
       }
@@ -477,12 +477,12 @@
     "activities": {
       "kicker": "ACTIVITIES",
       "title": "Four segments, one electron.",
-      "sub": "We serve the Oriental's most energy-intensive industries — the ones most exposed to rising energy costs.",
+      "sub": "We serve Morocco's most energy-intensive industries — the ones most exposed to rising energy costs.",
       "items": {
         "industry": {
           "tag": "01 · INDUSTRY",
           "name": "Heavy industry & manufacturing",
-          "body": "Mines, lead-zinc, brickworks, ceramics, textiles and cement of the Oriental region. 15-25 year structured agreements, competitive and tailored pricing based on consumption profile, private line or ONEE wheeling."
+          "body": "Mines, metallurgy, brickworks, ceramics, textiles and cement — across Morocco. 15-25 year structured agreements, competitive and tailored pricing based on consumption profile, private line or ONEE wheeling."
         },
         "agro": {
           "tag": "02 · AGRI-INDUSTRY",
@@ -559,7 +559,7 @@
         {
           "icon": "wrench",
           "q": "If equipment fails?",
-          "a": "24/7 supervision from Casablanca, predictive anomaly detection via sensors and drone imagery, on-site intervention within 48 hours anywhere in the Oriental. Contractual performance guarantee."
+          "a": "24/7 supervision from Casablanca, predictive anomaly detection via sensors and drone imagery, on-site intervention within 48 hours anywhere in Morocco. Contractual performance guarantee."
         },
         {
           "icon": "grow",
@@ -577,7 +577,7 @@
     "projects": {
       "kicker": "DELIVERY & PIPELINE",
       "title": "Three plants, one gigawatt.",
-      "sub": "The DIA project unfolds in three phases, all in the Oriental region. DIA1 is in final financial close; DIA2 and DIA3 are in the study phase.",
+      "sub": "The DIA project unfolds in three phases, across Morocco. DIA1 is in final financial close; DIA2 and DIA3 are in the study phase.",
       "columns": {
         "capacity": "Capacity",
         "location": "Location",
@@ -608,7 +608,7 @@
           "location": "Figuig / Bouarfa",
           "status": "Identified · regional MoU",
           "commissioning": "Q2 2029",
-          "offtakers": "Oriental farming cooperatives · Bouarfa mining · Moulouya irrigation"
+          "offtakers": "Farming cooperatives · mining · large irrigation perimeters"
         }
       ],
       "extensions": "Identified extensions: Driouch · Taourirt · Midelt — toward 1 GW."
@@ -653,9 +653,9 @@
       "onlineCta": "Open the Off-taker Portal"
     },
     "track": {
-      "kicker": "TRACK RECORD · ORIENTAL · SINCE 2008",
-      "title": "Already at work in the Oriental.",
-      "sub": "Before taking DIA forward, the KermaSys team has designed, built and operated power plants in the Oriental region for clients such as ONEE, ABENGOA and METRAGAZ.",
+      "kicker": "TRACK RECORD · MOROCCO · SINCE 2008",
+      "title": "Already at work across Morocco.",
+      "sub": "Before taking DIA forward, the KermaSys team has designed, built and operated power plants in Morocco for clients such as ONEE, ABENGOA and METRAGAZ.",
       "items": [
         {
           "code": "ISCC",
@@ -870,7 +870,7 @@
     "contact": {
       "kicker": "CONTACT",
       "title": "Let's talk.",
-      "sub": "HQ: Casablanca · Operations: Ain Beni Mathar · Regional office: Oujda",
+      "sub": "HQ: Casablanca · Regional hubs: Casablanca · Agadir · Oujda · DIA1 site: Ain Beni Mathar",
       "emailLabel": "Email",
       "emailValue": "contact@diacorp.energy",
       "phoneLabel": "Phone",
@@ -890,7 +890,7 @@
     "titleLine1": "One gigawatt.",
     "titleLine2": "Delivered direct.",
     "titleLine3": "For Moroccan industry.",
-    "lede": "DiaCorp Energy is building 1 GW of solar PV in Morocco's Oriental region. The plant produces green energy at industrial scale. The ten software platforms in this deck turn $120M of CAPEX into $2.67B of recurring revenue by 2031.",
+    "lede": "DiaCorp Energy is building 1 GW of solar PV across Morocco. The plant produces green energy at industrial scale. The ten software platforms in this deck turn $120M of CAPEX into $2.67B of recurring revenue by 2031.",
     "ctaPrimary": "Explore the thesis",
     "ctaSecondary": "Download memorandum",
     "stats": {
@@ -992,7 +992,7 @@
       "carbon-tokens": {
         "name": "Tokenized Carbon Credits",
         "pitch": "On-chain RECs for Moroccan exporters hit by CBAM from 2026.",
-        "description": "Oriental agricultural exporters, agri-industrials, steelmakers and cement producers are already exposed to the EU CBAM carbon tax from 2026. We issue Verra/Gold Standard-verified renewable energy certificates on Polygon. One token = 1 MWh + 0.6 tCO₂ avoided.",
+        "description": "Moroccan agricultural exporters, agri-industrials, steelmakers and cement producers are already exposed to the EU CBAM carbon tax from 2026. We issue Verra/Gold Standard-verified renewable energy certificates on Polygon. One token = 1 MWh + 0.6 tCO₂ avoided.",
         "mockup": {
           "title": "DiaCorp Carbon",
           "subtitle": "REC Ledger · Polygon",
@@ -1007,7 +1007,7 @@
       "predictive-om": {
         "name": "Predictive O&M Digital Twin",
         "pitch": "Computer vision + LSTM to drop LCOE by 20% — then license it across Africa.",
-        "description": "Ingest inverter telemetry, drone imagery, weather. Auto-detect soiled panels, micro-cracks, hot spots. Cuts downtime from 15% to 3%. Sold as SaaS (~$500k/GW/yr) to ONEE and other Oriental-region solar operators.",
+        "description": "Ingest inverter telemetry, drone imagery, weather. Auto-detect soiled panels, micro-cracks, hot spots. Cuts downtime from 15% to 3%. Sold as SaaS (~$500k/GW/yr) to ONEE and other Morocco-wide solar operators.",
         "mockup": {
           "title": "DiaCorp O&M",
           "subtitle": "DIA1 · Digital Twin",
@@ -1066,7 +1066,7 @@
       },
       "corporate-ppa": {
         "name": "Corporate Energy Marketplace",
-        "pitch": "Match industrials, agri-industrials and port operators of the Oriental region with our capacity — 2% platform fee.",
+        "pitch": "Match industrials, agri-industrials and port operators across Morocco with our capacity — 2% platform fee.",
         "description": "Corporate buyers input their needs (MW, term, geo). The algorithm matches available capacity, auto-generates the structured agreement, wires in the ONEE wheeling contract. 1-3% commission × $100M contracts × 20 years.",
         "mockup": {
           "title": "DiaCorp Energy Marketplace",
@@ -1162,7 +1162,7 @@
         "items": [
           "AI Colocation (Microsoft / Equinix signing)",
           "Industrial Zone ERP (multi-tenant launch)",
-          "Corporate Energy Marketplace (Oriental industrials)",
+          "Corporate Energy Marketplace (Morocco industrials)",
           "DIA2 + DIA3 online (450 MW)"
         ],
         "investment": "Software + infra: $480M",
@@ -1212,13 +1212,13 @@
           "phone": "+212 5 36 xx xx xx"
         },
         {
-          "label": "Oriental sales · Oujda",
+          "label": "Morocco offices · Casablanca · Agadir · Oujda",
           "phone": "+212 5 36 xx xx xx"
         }
       ],
       "hours": "Monday — Friday · 9:00 — 18:00 (GMT+1)"
     },
-    "tagline": "Solar developer-operator — 1 GW in Morocco's Oriental region. Studies, construction, operations, everything under one roof.",
+    "tagline": "Solar developer-operator — 1 GW in Morocco. Studies, construction, operations, everything under one roof.",
     "nav": "Navigation",
     "disclaimer": "DiaCorp Energy develops structured renewable energy solutions for industrial partners in Morocco. All engagements are subject to regulatory alignment and project-specific structuring. This website is for indicative purposes only and does not constitute a binding commercial offer."
   },
