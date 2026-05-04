@@ -138,11 +138,12 @@
         "n": "01",
         "icon": "cloud",
         "q": "What if it's cloudy?",
-        "short": "Output drops but never stops. The ONEE grid automatically tops up via wheeling — your operations see no interruption.",
-        "detail": "Global ground-level irradiance retains 20-40% of its clear-sky value under average overcast conditions, and stays at 10-15% even on heavily overcast days thanks to the diffuse component (radiation reflected by the clouds themselves). Our system is sized to absorb this variability: the variable PV share is topped up in real time by the national transmission grid via wheeling. The transition is invisible from the factory side — no outage, no perceptible switching. Across an average year in the Oriental, pure PV coverage stays above 75% despite weather variability.",
+        "short": "Output drops but never stops. Our mono / poly PERC panels capture diffuse radiation, and the ONEE grid tops up automatically via wheeling — your operations see no interruption.",
+        "detail": "Global ground irradiance retains 20-40% of its clear-sky value under average overcast conditions, and stays at 10-15% even on heavily overcast days thanks to the diffuse component. Our monocrystalline and poly PERC panels are specifically optimized to capture this diffuse radiation — PERC adds a reflective layer at the back of the cell that recovers photons not absorbed on the first pass. Coupled with multi-tracker MPPT inverters at 97% efficiency (vs. 85% older generations), conversion losses become negligible. The variable balance is topped up in real time by the national transmission grid via wheeling. The transition is invisible from the factory side.",
         "points": [
+          "Mono / poly PERC panels — capture diffuse radiation",
+          "MPPT inverters — 97% efficiency (vs. 85% older generations)",
           "Residual production under cloud cover: 20-40%",
-          "Diffuse component (heavily overcast): ~10-15%",
           "ONEE wheeling automatically tops up the gap",
           "Zero perceived interruption on the industrial process"
         ]
@@ -151,12 +152,13 @@
         "n": "02",
         "icon": "moon",
         "q": "And at night?",
-        "short": "Continuous 24/7 delivery via the national grid. Optional BESS to use your daytime solar energy during evening peaks.",
-        "detail": "The supply agreement covers continuous delivery, not simultaneous production. At night, the electron consumed at your site comes from the national grid — the photovoltaic energy injected during the day is balanced annually via the wheeling mechanism. For industrials with night peaks (cold storage, 24/7 process), an optional BESS sized to your load curve lets you use your daytime solar energy during evening peak hours, reducing exposure to peak grid tariffs.",
+        "short": "Continuous 24/7 delivery via the national grid. For critical sites, BESS + backup inverter: your daytime solar energy stays available at night.",
+        "detail": "The supply agreement covers continuous delivery, not simultaneous production. At night, the electron consumed comes from the national grid, and the photovoltaic energy injected during the day is balanced annually via wheeling. For industrials with night peaks (cold storage, 24/7 process, pharma), we integrate a BESS (Battery Energy Storage System) sized to your load curve, coupled with a hybrid inverter. You use your daytime solar energy during evening peak hours, significantly reducing exposure to peak grid tariffs. Storage and backup inversion are not an option — they're what makes a PV solution credible for serious industrial activity.",
         "points": [
           "Continuous 24/7 delivery contractually guaranteed",
+          "BESS sized to the load curve — 1-4 h of storage",
+          "Hybrid inverter: grid → island switchover in < 20 ms",
           "Annual wheeling compensation for the PV balance",
-          "Optional BESS: 1-4 h of storage depending on profile",
           "Evening-peak bill reduction: up to -40%"
         ]
       },
@@ -164,12 +166,12 @@
         "n": "03",
         "icon": "snow",
         "q": "What about winter?",
-        "short": "Irradiance drops by ~30% from July to December. This seasonality is built into the feasibility study from day one.",
-        "detail": "The Oriental region enjoys one of Morocco's best solar resources with an annual average of ~5.5 kWh/m²/day, but with notable seasonal variation: ~7 kWh/m²/day in July versus ~4 kWh/m²/day in December. The contractual commitment is on an annual envelope, not a monthly one — so summer surplus offsets winter shortfall. For seasonal industrials (agri-export, irrigation), we tune the commitment curve to match your actual activity curve.",
+        "short": "Irradiance drops by ~30% from July to December, but cold improves panel efficiency. Seasonality built into the feasibility study from day one.",
+        "detail": "The Oriental region averages ~5.5 kWh/m²/day annually with a July peak of ~7 versus ~4 in December. Often overlooked: cold improves mono / poly PERC panel efficiency — typical temperature coefficient -0.35%/°C, so a panel at 10°C produces ~10% more than at 35°C at equivalent irradiance. Snow is rare in the Oriental and slides off tilted panels quickly. The contractual commitment is on an annual envelope, not monthly: summer surplus offsets winter shortfall. For seasonal industrials (agri-export, irrigation), we tune the commitment curve to match your actual activity curve.",
         "points": [
           "Average annual Oriental irradiance: ~5.5 kWh/m²/day",
-          "July peak: ~7 kWh/m²/day",
-          "December low: ~4 kWh/m²/day",
+          "Mono temperature coefficient: -0.35%/°C → cold = better yield",
+          "July peak: ~7 — December low: ~4 kWh/m²/day",
           "Annual commitment — no seasonal penalty",
           "Seasonal profiles tunable (agri, irrigation)"
         ]
@@ -249,6 +251,33 @@
     },
     "labels": {
       "inPractice": "In practice"
+    },
+    "tech": {
+      "kicker": "TECHNOLOGIES",
+      "title": "The hardware matters — not a detail.",
+      "sub": "The yield, reliability and continuity of an energy solution depend on the quality of panels, inverters and storage. Here's what we install.",
+      "items": [
+        {
+          "label": "PANELS",
+          "title": "Mono & Poly PERC",
+          "body": "Our plants use monocrystalline and poly PERC (Passivated Emitter Rear Cell) panels. PERC technology also captures diffuse radiation — meaning useful production under cloud cover, at dawn, and in the late afternoon."
+        },
+        {
+          "label": "INVERTERS",
+          "title": "97 % efficiency",
+          "body": "Latest-generation inverters with multi-tracker MPPT and 97 % DC→AC conversion efficiency (vs. 85 % older generations). System losses are no longer the weak link — every produced kilowatt arrives usable."
+        },
+        {
+          "label": "BESS STORAGE",
+          "title": "24/7 continuity",
+          "body": "For industrial sites that cannot tolerate intermittency (cold chain, pharma, 24/7 process), we integrate a BESS sized to your load curve — nights, cloud transitions, and evening peaks stay covered."
+        },
+        {
+          "label": "BACKUP INVERTER",
+          "title": "< 20 ms switchover",
+          "body": "On grid outage, the hybrid inverter switches automatically to islanded mode in under 20 ms. You stay powered by your stored energy — the continuity guarantee any serious industrial offtaker requires."
+        }
+      ]
     }
   },
   "contactPage": {
@@ -1192,5 +1221,114 @@
     "tagline": "Solar developer-operator — 1 GW in Morocco's Oriental region. Studies, construction, operations, everything under one roof.",
     "nav": "Navigation",
     "disclaimer": "DiaCorp Energy develops structured renewable energy solutions for industrial partners in Morocco. All engagements are subject to regulatory alignment and project-specific structuring. This website is for indicative purposes only and does not constitute a binding commercial offer."
+  },
+  "solarAdvisor": {
+    "meta": {
+      "title": "Estimate my solar needs — DiaCorp",
+      "description": "Answer a few questions and get an indicative sizing plus the most suitable commercial model in 60 seconds."
+    },
+    "hero": {
+      "kicker": "FREE ASSESSMENT · 60 SECONDS",
+      "title": "Estimate your solar needs.",
+      "sub": "A few sector-tailored questions. In return, you get a quantified recommendation — size, autonomy, payback and commercial model.",
+      "ctaPrimary": "Start the questionnaire",
+      "ctaSecondary": "See how it works"
+    },
+    "landing": {
+      "kicker": "ESTIMATION TOOL",
+      "title": "How much solar fits your site?",
+      "sub": "A guided 60-second flow. At the end, get an indicative recommendation — kWp size, payback period and commercial model (direct CAPEX or ONEE subscription).",
+      "cta": "Estimate now"
+    },
+    "steps": {
+      "industry": "Industry",
+      "site": "Site & consumption",
+      "goals": "Goals",
+      "contact": "Contact",
+      "of": "of"
+    },
+    "industry": {
+      "title": "What is your sector of activity?",
+      "sub": "Pick the closest match. We use it to tailor the next questions."
+    },
+    "site": {
+      "title": "Tell us about your site and your consumption.",
+      "sub": "The more accurate the numbers, the more accurate the recommendation. If unsure, give your best estimate.",
+      "monthlyKwhLabel": "Monthly consumption (kWh)",
+      "monthlyKwhHelp": "If unknown, give your average bill (in MAD). We will convert.",
+      "useBillToggle": "I prefer to give my average bill (MAD)",
+      "monthlyBillLabel": "Average monthly bill (MAD)",
+      "regionLabel": "Site region",
+      "regionPlaceholder": "Choose a region",
+      "roofLabel": "Available roof or land (m²)",
+      "roofHelp": "Optional — leave blank if unknown.",
+      "gridLabel": "Grid quality",
+      "gridStable": "Stable, few outages",
+      "gridUnstable": "Frequent outages",
+      "gridOff": "No grid (off-grid)",
+      "backupLabel": "Backup hours wanted (during outages)",
+      "distanceLabel": "Distance to delivery point",
+      "distanceOnSite": "On the site itself",
+      "distanceClose": "Close (under 5 km)",
+      "distanceMedium": "Medium (5–30 km)",
+      "distanceFar": "Far (over 30 km)"
+    },
+    "goals": {
+      "title": "Your goals and preferences.",
+      "sub": "These choices drive the commercial model and sizing.",
+      "budgetLabel": "Budget preference",
+      "budgetCapex": "Direct investment (CAPEX) — I buy the installation",
+      "budgetSubscription": "Monthly subscription — no upfront CAPEX",
+      "budgetAdvise": "Advise me — I'm open to either",
+      "horizonLabel": "Project horizon",
+      "horizon3": "Short term (under 6 months)",
+      "horizon6": "Medium term (6–18 months)",
+      "horizon12": "Long term (over 18 months)",
+      "storageLabel": "I'm interested in storage / autonomy",
+      "envLabel": "Importance of the low-carbon angle (1–5)"
+    },
+    "contact": {
+      "title": "How can we reach you?",
+      "sub": "We email your estimate and an engineer calls you to refine it.",
+      "offtakerLabel": "Offtaker (consuming company)",
+      "offtakerHelp": "The company that will consume the energy. Used to distinguish offtakers from one another.",
+      "siteLabel": "Site / project name",
+      "siteHelp": "Optional — useful when one offtaker submits multiple sites.",
+      "nameLabel": "Contact full name",
+      "companyLabel": "Company / Organisation",
+      "roleLabel": "Role",
+      "emailLabel": "Work email",
+      "phoneLabel": "Phone",
+      "consentLabel": "I agree to be contacted by DiaCorp about this estimate. My data will not be shared."
+    },
+    "buttons": {
+      "next": "Continue",
+      "back": "Back",
+      "submit": "See my recommendation",
+      "edit": "Edit my answers",
+      "bookCall": "Book a call"
+    },
+    "result": {
+      "kicker": "YOUR RECOMMENDATION",
+      "title": "Here's a first read on your site.",
+      "sub": "Indicative estimate generated from your answers. A DiaCorp engineer refines these numbers with a free site audit.",
+      "kwpLabel": "Recommended size",
+      "kwpUnit": "kWp",
+      "paybackLabel": "Payback period",
+      "paybackUnit": "yrs",
+      "capexLabel": "Direct investment estimate",
+      "capexUnit": "MAD",
+      "subscriptionLabel": "Monthly subscription estimate",
+      "subscriptionUnit": "MAD/mo",
+      "solutionGrid": "Grid-tied solution",
+      "solutionHybrid": "Hybrid solution with battery storage",
+      "solutionOffGrid": "Off-grid autonomous solution",
+      "modelCapex": "Direct CAPEX via private cable",
+      "modelSubscription": "Monthly subscription — ONEE wheeling",
+      "modelMixed": "Mixed CAPEX + subscription model",
+      "rationaleTitle": "Why this recommendation",
+      "ctaTitle": "Ready for the next step?",
+      "ctaSub": "Book a 20-minute call with a DiaCorp engineer."
+    }
   }
 }

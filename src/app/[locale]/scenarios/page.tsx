@@ -15,6 +15,19 @@ type Item = {
   points: string[];
 };
 
+type TechItem = {
+  label: string;
+  title: string;
+  body: string;
+};
+
+type TechBlock = {
+  kicker: string;
+  title: string;
+  sub: string;
+  items: TechItem[];
+};
+
 const TINTS = [
   '32 88% 60%', // sun
   '200 78% 58%',
@@ -45,6 +58,7 @@ export default async function ScenariosPage({
   setRequestLocale(locale);
   const t = await getTranslations('scenariosPage');
   const items = t.raw('items') as Item[];
+  const tech = t.raw('tech') as TechBlock | undefined;
 
   return (
     <>
@@ -84,6 +98,9 @@ export default async function ScenariosPage({
             </div>
           </div>
         </section>
+
+        {/* TECHNOLOGIES */}
+        {tech ? <TechSection block={tech} /> : null}
 
         {/* SCENARIOS */}
         {items.map((item, idx) => (
@@ -214,6 +231,55 @@ function ScenarioBlock({
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function TechSection({block}: {block: TechBlock}) {
+  return (
+    <section className="relative overflow-hidden border-b border-[var(--color-line)] bg-[var(--color-bg-elev)]/30">
+      <div
+        aria-hidden
+        className="absolute inset-0 opacity-40"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 80% 0%, rgba(86,240,200,0.06), transparent 60%)'
+        }}
+      />
+      <div className="relative mx-auto max-w-[1400px] px-6 lg:px-12 py-16 lg:py-24">
+        <div className="reveal-up max-w-[820px] mb-12 lg:mb-16">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="block w-10 h-px bg-[var(--color-sun)]" />
+            <span className="font-mono text-[11px] tracking-[0.24em] uppercase text-[var(--color-sun)]">
+              {block.kicker}
+            </span>
+          </div>
+          <h2 className="font-display text-[30px] lg:text-[44px] leading-[1.06] tracking-[-0.025em] mb-5">
+            {block.title}
+          </h2>
+          <p className="text-[15.5px] lg:text-[17px] leading-[1.6] text-[var(--color-ink-muted)] max-w-[62ch]">
+            {block.sub}
+          </p>
+        </div>
+        <div className="reveal-up grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {block.items.map((it, i) => (
+            <div
+              key={i}
+              className="border border-[var(--color-line)] bg-[var(--color-bg)] p-6 lg:p-7 hover:border-[var(--color-sun)]/40 transition-colors"
+            >
+              <div className="font-mono text-[10px] tracking-[0.22em] uppercase text-[var(--color-ink-faint)] mb-3">
+                {it.label}
+              </div>
+              <h3 className="font-display text-[19px] lg:text-[22px] leading-[1.15] tracking-[-0.015em] mb-3">
+                {it.title}
+              </h3>
+              <p className="text-[13.5px] lg:text-[14px] leading-[1.65] text-[var(--color-ink-muted)]">
+                {it.body}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

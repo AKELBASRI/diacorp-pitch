@@ -138,11 +138,12 @@
         "n": "01",
         "icon": "cloud",
         "q": "Et si le ciel est nuageux ?",
-        "short": "La production baisse mais ne s'arrête pas. Le réseau ONEE complète automatiquement via le wheeling — vos opérations ne voient aucune coupure.",
-        "detail": "L'irradiance globale au sol garde 20-40 % de sa valeur claire sous couvert nuageux moyen, et reste à 10-15 % même par temps très couvert grâce à la composante diffuse (rayonnement réfléchi par les nuages eux-mêmes). Notre système est dimensionné pour absorber cette variabilité : la part PV variable est complétée en temps réel par le réseau de transport national via wheeling. La transition est invisible côté usine — pas de coupure, pas de basculement perceptible. Sur une année moyenne dans l'Oriental, le taux de couverture PV pur reste supérieur à 75 % malgré la météo.",
+        "short": "La production baisse mais ne s'arrête pas. Nos panneaux mono / poly PERC captent le rayonnement diffus, et le réseau ONEE complète automatiquement via wheeling — vos opérations ne voient aucune coupure.",
+        "detail": "L'irradiance globale au sol garde 20-40 % de sa valeur claire sous couvert nuageux moyen, et reste à 10-15 % même par temps très couvert grâce à la composante diffuse. Nos panneaux mono-cristallin et poly PERC sont précisément optimisés pour capter ce rayonnement diffus — la technologie PERC ajoute une couche réfléchissante à l'arrière de la cellule qui récupère les photons non absorbés au premier passage. Couplés à des onduleurs MPPT multi-tracker à rendement 97 % (vs. 85 % anciennes générations), les pertes de conversion deviennent négligeables. Le solde variable est complété en temps réel par le réseau de transport national via wheeling. La transition est invisible côté usine.",
         "points": [
+          "Panneaux mono / poly PERC — captent le rayonnement diffus",
+          "Onduleurs MPPT — rendement 97 % (vs. 85 % anciennes générations)",
           "Production résiduelle par temps couvert : 20-40 %",
-          "Composante diffuse (jours très gris) : ~10-15 %",
           "Wheeling ONEE complète automatiquement le manque",
           "Aucune coupure perçue côté process industriel"
         ]
@@ -151,12 +152,13 @@
         "n": "02",
         "icon": "moon",
         "q": "Et la nuit ?",
-        "short": "Livraison continue 24/7 via le réseau national. Option BESS pour utiliser votre énergie solaire diurne en pointe du soir.",
-        "detail": "L'accord de fourniture porte sur une livraison continue, pas sur une production simultanée. La nuit, l'électron consommé par votre site provient du réseau national — l'énergie photovoltaïque injectée dans la journée est compensée dans le bilan annuel via le mécanisme de wheeling. Pour les industriels avec pointes nocturnes (cold storage, process 24/7), une option BESS dimensionnée à votre courbe de charge permet d'utiliser votre énergie solaire diurne pendant les heures de pointe du soir, réduisant le recours au tarif réseau pendant les heures les plus chères.",
+        "short": "Livraison continue 24/7 via le réseau national. Pour les sites critiques, BESS + onduleur de secours : votre énergie solaire diurne reste disponible la nuit.",
+        "detail": "L'accord de fourniture porte sur une livraison continue, pas sur une production simultanée. La nuit, l'électron consommé provient du réseau national, et l'énergie photovoltaïque injectée dans la journée est compensée dans le bilan annuel via wheeling. Pour les industriels avec pointes nocturnes (cold storage, process 24/7, pharma), nous intégrons un BESS (Battery Energy Storage System) dimensionné à votre courbe de charge, couplé à un onduleur hybride. Vous utilisez votre énergie solaire diurne pendant les heures de pointe du soir, réduisant fortement le recours au tarif réseau pendant les heures les plus chères. Le stockage et l'ondulation de secours ne sont pas une option — c'est ce qui rend une solution PV crédible pour une activité industrielle sérieuse.",
         "points": [
           "Livraison continue 24/7 garantie contractuellement",
+          "BESS dimensionné à la courbe de charge — 1-4 h de stockage",
+          "Onduleur hybride : bascule grid → île en < 20 ms",
           "Compensation annuelle wheeling pour le bilan PV",
-          "Option BESS : 1-4 h de stockage selon profil",
           "Réduction de la facture pointe-soir : jusqu'à -40 %"
         ]
       },
@@ -164,12 +166,12 @@
         "n": "03",
         "icon": "snow",
         "q": "Et en hiver ?",
-        "short": "L'irradiance baisse de ~30 % entre juillet et décembre. Cette saisonnalité est intégrée dès l'étude de faisabilité.",
-        "detail": "La région Oriental bénéficie de l'une des meilleures irradiances solaires du Maroc avec une moyenne annuelle de ~5,5 kWh/m²/jour, mais avec une variation saisonnière notable : ~7 kWh/m²/jour en juillet contre ~4 kWh/m²/jour en décembre. L'engagement contractuel porte sur une enveloppe annuelle, pas mensuelle — donc le surplus estival compense le manque hivernal. Pour les industriels saisonniers (agro-export, irrigation), nous adaptons la courbe d'engagement à votre courbe d'activité réelle.",
+        "short": "L'irradiance baisse de ~30 % entre juillet et décembre, mais le froid améliore le rendement des panneaux. Saisonnalité intégrée dès l'étude de faisabilité.",
+        "detail": "La région Oriental bénéficie d'une moyenne annuelle de ~5,5 kWh/m²/jour avec un pic ~7 en juillet contre ~4 en décembre. Point souvent ignoré : le froid améliore le rendement des panneaux mono / poly PERC — coefficient de température typique -0,35 %/°C, donc un panneau à 10 °C produit ~10 % de plus qu'à 35 °C par irradiance équivalente. La neige est rare dans l'Oriental et glisse rapidement sur des panneaux inclinés. L'engagement contractuel porte sur une enveloppe annuelle, pas mensuelle : le surplus estival compense le manque hivernal. Pour les industriels saisonniers (agro-export, irrigation), nous adaptons la courbe d'engagement à votre courbe d'activité réelle.",
         "points": [
           "Irradiance annuelle moyenne Oriental : ~5,5 kWh/m²/jour",
-          "Pic juillet : ~7 kWh/m²/jour",
-          "Creux décembre : ~4 kWh/m²/jour",
+          "Coefficient température mono : -0,35 %/°C → froid = meilleur rendement",
+          "Pic juillet : ~7 — Creux décembre : ~4 kWh/m²/jour",
           "Engagement annuel — pas de pénalité saisonnière",
           "Profils saisonniers ajustables (agro, irrigation)"
         ]
@@ -249,6 +251,33 @@
     },
     "labels": {
       "inPractice": "En pratique"
+    },
+    "tech": {
+      "kicker": "TECHNOLOGIES",
+      "title": "Le matériel utilisé — pas un détail.",
+      "sub": "Le rendement, la fiabilité et la continuité d'une solution énergétique tiennent à la qualité des panneaux, des onduleurs et du stockage. Voici ce que nous installons.",
+      "items": [
+        {
+          "label": "PANNEAUX",
+          "title": "Mono & Poly PERC",
+          "body": "Nos centrales utilisent des panneaux mono-cristallin et poly PERC (Passivated Emitter Rear Cell). La technologie PERC capte aussi le rayonnement diffus — donc une production utile même sous nuages, à l'aube et en fin de journée."
+        },
+        {
+          "label": "ONDULEURS",
+          "title": "Rendement 97 %",
+          "body": "Onduleurs nouvelle génération avec MPPT multi-tracker et rendement de conversion DC→AC de 97 % (vs. 85 % anciennes générations). Les pertes système ne sont plus le maillon faible — chaque kilowatt produit arrive utilisable."
+        },
+        {
+          "label": "STOCKAGE BESS",
+          "title": "Continuité 24/7",
+          "body": "Pour les sites industriels qui ne tolèrent pas l'intermittence (cold chain, pharma, process 24/7), nous intégrons un BESS dimensionné à votre courbe de charge — la nuit, les passages nuageux, ou les pointes du soir restent couverts."
+        },
+        {
+          "label": "ONDULATION SECOURS",
+          "title": "Bascule < 20 ms",
+          "body": "En cas de coupure réseau, l'onduleur hybride bascule automatiquement en mode îloté sous 20 ms. Vous restez alimenté par votre énergie stockée — c'est la garantie de continuité que tout offtaker industriel sérieux exige."
+        }
+      ]
     }
   },
   "contactPage": {
@@ -1192,5 +1221,114 @@
     "tagline": "Développeur-opérateur solaire — 1 GW dans l'Oriental marocain. Études, construction, exploitation, tout sous un seul toit.",
     "nav": "Navigation",
     "disclaimer": "DiaCorp Energy développe des solutions énergétiques renouvelables structurées pour des partenaires industriels au Maroc. Tout engagement est soumis à un alignement réglementaire et à une structuration spécifique au projet. Ce site web est fourni à titre indicatif uniquement et ne constitue pas une offre commerciale contraignante."
+  },
+  "solarAdvisor": {
+    "meta": {
+      "title": "Estimer mes besoins en énergie solaire — DiaCorp",
+      "description": "Répondez à quelques questions et recevez en 60 secondes un dimensionnement indicatif et le modèle commercial le plus adapté à votre site."
+    },
+    "hero": {
+      "kicker": "ÉVALUATION GRATUITE · 60 SECONDES",
+      "title": "Estimez vos besoins en énergie solaire.",
+      "sub": "Quelques questions adaptées à votre secteur. Nous vous proposons en retour une recommandation chiffrée — taille, autonomie, retour sur investissement et modèle commercial.",
+      "ctaPrimary": "Démarrer le questionnaire",
+      "ctaSecondary": "Voir comment ça marche"
+    },
+    "landing": {
+      "kicker": "OUTIL D'ESTIMATION",
+      "title": "Combien de solaire pour votre site ?",
+      "sub": "Un parcours guidé de 60 secondes. À la fin, recevez une recommandation indicative — taille en kWc, retour sur investissement et choix du modèle (CAPEX direct ou abonnement ONEE).",
+      "cta": "Estimer maintenant"
+    },
+    "steps": {
+      "industry": "Secteur",
+      "site": "Site & consommation",
+      "goals": "Objectifs",
+      "contact": "Contact",
+      "of": "sur"
+    },
+    "industry": {
+      "title": "Quel est votre secteur d'activité ?",
+      "sub": "Choisissez la catégorie qui correspond le mieux. Cela nous permet d'adapter les questions suivantes."
+    },
+    "site": {
+      "title": "Parlons de votre site et de votre consommation.",
+      "sub": "Plus les chiffres sont précis, plus la recommandation l'est aussi. Si vous ne savez pas, donnez une estimation.",
+      "monthlyKwhLabel": "Consommation mensuelle (kWh)",
+      "monthlyKwhHelp": "À défaut, indiquez le montant moyen de votre facture (en MAD). Nous convertirons.",
+      "useBillToggle": "Je préfère donner ma facture moyenne (MAD)",
+      "monthlyBillLabel": "Facture mensuelle moyenne (MAD)",
+      "regionLabel": "Région du site",
+      "regionPlaceholder": "Choisir une région",
+      "roofLabel": "Toiture ou terrain disponible (m²)",
+      "roofHelp": "Optionnel — laisser vide si inconnu.",
+      "gridLabel": "Qualité du réseau électrique",
+      "gridStable": "Stable, peu de coupures",
+      "gridUnstable": "Coupures fréquentes",
+      "gridOff": "Pas de réseau (off-grid)",
+      "backupLabel": "Heures d'autonomie souhaitées (en cas de coupure)",
+      "distanceLabel": "Distance du point de livraison",
+      "distanceOnSite": "Sur le site même",
+      "distanceClose": "Proche (moins de 5 km)",
+      "distanceMedium": "Moyenne (5–30 km)",
+      "distanceFar": "Éloignée (plus de 30 km)"
+    },
+    "goals": {
+      "title": "Vos objectifs et préférences.",
+      "sub": "Ces choix orientent le modèle commercial et le dimensionnement.",
+      "budgetLabel": "Préférence budgétaire",
+      "budgetCapex": "Investissement direct (CAPEX) — j'achète l'installation",
+      "budgetSubscription": "Abonnement mensuel — pas d'investissement initial",
+      "budgetAdvise": "Conseillez-moi — je suis ouvert aux deux",
+      "horizonLabel": "Horizon du projet",
+      "horizon3": "Court terme (moins de 6 mois)",
+      "horizon6": "Moyen terme (6–18 mois)",
+      "horizon12": "Long terme (plus de 18 mois)",
+      "storageLabel": "Le stockage / l'autonomie m'intéresse",
+      "envLabel": "Importance de l'aspect bas-carbone (1–5)"
+    },
+    "contact": {
+      "title": "Comment vous joindre ?",
+      "sub": "Nous vous renvoyons votre estimation par email et un ingénieur vous rappelle pour affiner.",
+      "offtakerLabel": "Offtaker (entreprise consommatrice)",
+      "offtakerHelp": "Le nom de la société qui consommera l'énergie. Sert à différencier les offtakers entre eux.",
+      "siteLabel": "Nom du site / projet",
+      "siteHelp": "Optionnel — utile si un même offtaker dépose plusieurs sites.",
+      "nameLabel": "Nom complet du contact",
+      "companyLabel": "Entreprise / Organisation",
+      "roleLabel": "Fonction",
+      "emailLabel": "Email professionnel",
+      "phoneLabel": "Téléphone",
+      "consentLabel": "J'accepte d'être contacté par DiaCorp au sujet de cette estimation. Mes données ne seront pas partagées."
+    },
+    "buttons": {
+      "next": "Continuer",
+      "back": "Retour",
+      "submit": "Voir ma recommandation",
+      "edit": "Modifier mes réponses",
+      "bookCall": "Réserver un appel"
+    },
+    "result": {
+      "kicker": "VOTRE RECOMMANDATION",
+      "title": "Voici une première lecture pour votre site.",
+      "sub": "Estimation indicative générée à partir de vos réponses. Un ingénieur DiaCorp affine ces chiffres avec un audit gratuit de votre site.",
+      "kwpLabel": "Taille recommandée",
+      "kwpUnit": "kWc",
+      "paybackLabel": "Retour sur investissement",
+      "paybackUnit": "ans",
+      "capexLabel": "Investissement direct estimé",
+      "capexUnit": "MAD",
+      "subscriptionLabel": "Abonnement mensuel estimé",
+      "subscriptionUnit": "MAD/mois",
+      "solutionGrid": "Solution raccordée au réseau",
+      "solutionHybrid": "Solution hybride avec stockage batterie",
+      "solutionOffGrid": "Solution autonome (off-grid)",
+      "modelCapex": "CAPEX en direct via câble privé",
+      "modelSubscription": "Abonnement mensuel — wheeling ONEE",
+      "modelMixed": "Modèle mixte CAPEX + abonnement",
+      "rationaleTitle": "Pourquoi cette recommandation",
+      "ctaTitle": "Prêt à passer à l'étape suivante ?",
+      "ctaSub": "Réservez un échange de 20 minutes avec un ingénieur DiaCorp."
+    }
   }
 }
